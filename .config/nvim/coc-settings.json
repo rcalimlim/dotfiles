@@ -1,0 +1,20 @@
+{
+  "suggest.noselect": false,
+  "suggest.enablePreview": true,
+  "suggest.removeDuplicateItems": true,
+  "coc.preferences.rootPatterns": [
+    ".git",
+    ".vscode"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "javascript",
+    "typescript",
+    "rust"
+  ],
+  "diagnostic.checkCurrentLine": false,
+  "diagnostic.messageTarget": "float",
+  "diagnostic.separateRelatedInformationAsDiagnostics": true,
+  "diagnostic.virtualText": false,
+  "diagnostic.virtualTextCurrentLineOnly": false
+}

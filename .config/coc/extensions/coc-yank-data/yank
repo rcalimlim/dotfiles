@@ -1,0 +1,1008 @@
+7205aa890b721d17a8619ccfb93756a2|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|81|5|V|typescript
+	      console.log
+878aa96893ca9f71ce962458920baf3b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|80|41|V|typescript
+	      console.log(queryResultRes.status);
+a5ff302599b4e4eeacf114a9bd04febd|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|81|34|V|typescript
+	      console.log(queryResultRes);
+f9357bdd0069fbcd014d15ef427ff4f7|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|73|5|v|typescript
+	console.log
+c03535e80534f324cec78e146d37cd3d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|74|24|V|typescript
+	    process.stdout.write("hello: ");
+bdafde6631fdd0e03a1daa7a890b0031|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|82|12|v|typescript
+	queryResultRes.
+eef6d2f10baae8583c9aa8d17d20af76|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|58|79|v|typescript
+	${args.start} - ${args.end}
+3902b2f2954ceb744d781ed25cebecc2|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|73|85|v|typescript
+	${sessionIdsQueryId}
+f93a31aac11fb96554433e5146e5ed96|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|73|1|V|typescript
+	    process.stdout.write(`[TickDelayScript]: Retrieving query results for queryId '${sessionIdsQueryId}'`);
+c4a1ea01b275f4895ff4b2737b947ae0|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|88|46|v|typescript
+	Retrieving query results for queryId
+178f41d21355e6ee7f168e1aa477d0c3|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|92|1|V|typescript
+	    process.stdout.write(`[TickDelayScript]: Generating random index values`);
+e29eb4b75941cacc38f53ca0aa0158e0|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|87|5|V|typescript
+	      console.log()
+7bb9e45ddb326ea8e0b934422c1dcb9c|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|87|39|v|typescript
+	Generating random index values
+d9e9f934038dc55ee256d501fe91ed19|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|80|1|V|typescript
+	      process.stdout.write(".");
+13cf7333f92b38874e1b720ffeec96f3|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|86|1|V|typescript
+	    if (!queryResultRes.results || queryResultRes.results.length === 0) {
+	      console.log(`[TickDelayScript]: Query returned no results`);
+	    }
+9095a37df44697dfa095615f8393059b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|91|9|v|typescript
+	!queryResultRes.results ||
+f32bf1d1735310f2901b5ea0c319765b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|91|39|v|typescript
+	=== 
+7653c4d4dc93934d5f56846fc816feea|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|92|39|v|typescript
+	Query returned no results
+d58434751f5118a170577226349eb4d6|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|92|57|v|typescript
+	queryResultRes.results.length >= CONSTANTS.SAMPLES
+1828155205437ab18aa81853bb5e0d3d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|98|1|V|typescript
+	      console.log(
+	        `[TickDelayScript]: Desired sample size is greater than number of results, defaulting to samples = ${CONSTANTS.SAMPLES}`
+	      );
+3e6ec4e09daa9d5a26e64dc9124e7c97|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|76|1|V|typescript
+	    if (!queryResultRes) {
+	      throw new Error(`[TickDelayScript Error]: malformed query response '${JSON.stringify(queryResultRes)}'`);
+	    }
+7ae80dbb68bf1bed543f547f4de4656d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|94|1|V|typescript
+	    queryResultRes = {
+	      ...queryResultRes,
+	      results: queryResultRes!.results.slice(0, 2),
+	    };
+8d17f01bf85eb7cd9de52b25c3e431eb|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|92|22|V|typescript
+	    let queryResultRes
+8baf851266c188eb9ae6f77cea911ef8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|90|7|v|typescript
+	console.log(
+e05b700618a9a39a55e875610cea8533|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|90|24|v|typescript
+	`[TickDelayScript]: Query returned no results`
+d9ad8598850ec6a7bd7e85cae06c52ee|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|57|1|V|typescript
+	  let sessionIdsQueryResults: any;
+43befc6037900551cfb5ce9b8f14bc92|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|57|1|V|typescript
+	  console.log({ sessionIdsQueryResults });
+a2bc1eddb26e96fc8a32c1df6f21920c|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|92|1|V|typescript
+	    queryResultRes = {
+	      ...(queryResultRes || null),
+	      results: queryResultRes.results.slice(0, 1),
+	    };
+7e1832b8a7ba6f58592c3f9a04f8d756|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|94|1|V|typescript
+	      console.log(queryResultRes.results.length, args.samples);
+d9560d7dc1b4980fb1dfa0d9c2d9eb5a|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|92|49|v|typescript
+	e as any, 4 as any
+47e05b03776b41b7e1b5fedb840d6b34|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|2|26|v|typescript
+	ResultField
+68fd015e52e175f348aabbd46fa6c768|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|92|1|V|typescript
+	    queryResultRes.results = [1 as any, 2 as any];
+dc26f009cf39ae9e72861536b50db096|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|92|1|V|typescript
+	    console.log(queryResultRes.results.length);
+f1fba9ac4e0ab171803fa69885be583e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|112|5|V|typescript
+	    p
+a51a528f35c02157e603a20c8796a684|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|116|17|v|typescript
+	indices
+6a992d5529f459a44fee58c733255e86|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|115|59|v|typescript
+	index
+add910413d73cb985e9047bac80bf0ad|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|115|16|V|typescript
+	    console.log()
+58ada278b0722f26287e218633e0ff4f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|117|1|V|typescript
+	    console.log(sessionIds);
+3c2faa7170d29134cdde0994febcaa2e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|115|27|V|typescript
+	    console.log([...indices]);
+1a7331c43b799a830f5616936687c61c|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|116|41|v|typescript
+	[...indices]
+1d4248fe3abf569803690ac7cc501c16|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|116|70|v|typescript
+	queryResultRes.results[i]
+4b50c990d13ed7b4786b604202fd1778|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|88|1|V|typescript
+	      throw new Error(`[TickDelayScript Error]: Query returned no results`);
+8065b63677eb1b17d7346e656fed1d59|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|119|7|V|typescript
+	        throw new Error()
+dd0bcceb9aad67f83ca9b3c10a8fce5e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|117|7|V|typescript
+	      i
+aa751f68fc541a157aeb971732462360|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|87|1|V|typescript
+	    if (!queryResultRes || !queryResultRes.results || queryResultRes.results.length === 0) {
+	      throw new Error(`[TickDelayScript Error]: Query returned no results`);
+	    }
+23436f7eae90efad973a74540d78c7bf|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|118|1|V|typescript
+	      if (!queryResultRes || !queryResultRes.results || queryResultRes.results.length === 0) {
+	        throw new Error(`[TickDelayScript Error]: Query returned no results`);
+	      }
+19fdea846cede0c09533eb150c5be558|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|117|1|V|typescript
+	      // TODO: THROW SOME ERROR HERE
+ea170e2cafb1337755c8b3d5ae4437f4|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|124|52|v|typescript
+	find
+623e22b608552620bd19feea31ec989d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|126|16|v|typescript
+	result.field === "sessionId"
+69dc8deb2f12d789bc0700a403bcca97|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|132|12|V|typescript
+	        null
+351b56bd9cabd97b3ae7208decc48d93|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|132|1|V|typescript
+	      .filter((val: string | null) => val !== null);
+a05fb6ecc9f72d8bcb3662624f462238|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|124|1|V|typescript
+	      .map((resultArr: ResultField[]) =>
+	        resultArr.reduce((sessionId: string | null, result: ResultField) => {
+	          if (sessionId === null && result.field === "sessionId") {
+	            return result.value;
+	          }
+	          return null;
+	        }, null)
+	      );
+8982b428cbfd328a75cc225d888dc9b5|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|123|9|V|typescript
+	    query
+ebf690e3633edf80088b2fe67801d9b0|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|124|20|v|typescript
+	val.reduce((sessionId: string | null, result: ResultField) => {
+	        // ...
+	        if (sessionId === null && result.field === "sessionId") {
+	          return result.value;
+	        }
+	        return null;
+	      }, null)
+	
+f7b0074a64817ad76ca21d19cb7ae915|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|125|1|V|typescript
+	        val.reduce((sessionId: string | null, result: ResultField) => {
+	          // ...
+	          if (sessionId === null && result.field === "sessionId") {
+	            return result.value;
+	          }
+	          return null;
+	        }, null)
+6d7e6b7872ff80f2806a8ce9cb835bc4|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|123|33|v|typescript
+	console.log(val)
+230300f19eed73ec10ac947b87c9c095|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|123|5|v|typescript
+	sessionIds.forEach
+f731142456229663a7d554779ef88550|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|133|8|V|typescript
+	        console.log(sessionId);
+84e2c64f38f78ba3ea5c905ab5a2da27|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|135|15|v|typescript
+	boolean
+db2581b6da45402da97095b9278e5d17|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|135|24|V|typescript
+	      .filter<string>((sessionId: string | null) => sessionId !== null);
+487b47649f92d25aa4489c38af68ace6|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|116|1|V|typescript
+	    const sessionIds: string[] = indeces
+	      .map((i: number) => {
+	        const result = queryResultRes?.results?.[i];
+	        if (!result) {
+	          throw new Error(`[TickDelayScript Error]: Indexing queryResults at '${i}' resulted in ${result}`);
+	        }
+	        return result;
+	      })
+	      .map<string>((val) => {
+	        let sessionId = "";
+	        val.some((result: ResultField) => {
+	          if (result.field === "sessionId" && result.value) {
+	            sessionId = result.value;
+	            return true;
+	          }
+	          return false;
+	        });
+	        return sessionId;
+	      });
+031c6fc1cc93e4537ddce1d781fcd45e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|124|5|v|typescript
+	const sessionIds: string[] = indeces
+	      
+7e93ac6f1e7f729ee71ea2a92c591847|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|124|5|v|typescript
+	resultArr
+1897e6b876e51cfe16352afe8f5fbfd4|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|126|22|v|typescript
+	queryResultRes
+ce3cca9936c8dacc4c07bbf027361e4f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|126|22|v|typescript
+	queryResultRes?.results?
+647126f8dc7cb8e6aa93e2f35870a04d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|22|39|V|sh
+	AWS_ACCESS_KEY_ID=ASIA3AKE7DLZOKMR4L7G
+	AWS_SECRET_ACCESS_KEY=aqB93xZb/WuG8B1N8MXqobUQrS6D5WKMyqHnwigd
+	AWS_SESSION_TOKEN=IQoJb3JpZ2luX2VjEB0aCXVzLWVhc3QtMSJHMEUCIDXNr8EXSUSgcbPiaijHhf+KROURjxP82SgOZ7Cqy8G+AiEA80fI7oVT14eWj25CzG6lZTPkwgqUsqSe2sMxGmyYqsMqhgMIVRAAGgw3NTY1OTU3NTk4NTgiDMG8ZxUFTdxpYFUZzSrjAt0c4w3fBi5TmdWGVlRmySgEOdWCB4ITedrwMSb+NyHU1Kzcul2jThpLYwVN6GkW8WfX6dtWosa+T9eCP1H2nbeqOz4mk20/piEnY8QY35nvf/NhcCJ+ms2a0OmSk0ybqa2nNwPekBipjxLhi0ZTorSIUGL1/RutPcXPi1VZmsjSmQpV7P/MVNvAW2NsAEfS97xZMqXiAHHJP5ZesSnG/LgKJjz08mnib+jDVQykQTbC54iFLqU9+PuhnfEPl6qhoFZIV9fBTcUUt8I1vSmSNtVaDfmfRikLgLfakN/jEXJ0E99WJNfetjRep+RWe7aHN40qOWc1SPx8f9EuPc8tW/SZrGfrX6gO/s/CuUJaWEjtGGKTe5DWbcE5nENjDSCTM2AD2O06st+BtOK0b+NO3zV1cwAOyJ4LXdLgUQ7MKFK2eBJo7htctIFiVAj4nHHMy0hPHX59KjEKiUk5lgkVNiid+4cwmaaciQY6pgEVz3H/lQB9CvneAz6zoXBGwQTPONUEfIv9Jcv7+j4JDwuajGN3qDS8ZIpzOK8hUIiZzK+/ffkP6rAGrSKmT8yu6kphMPQHAV2uXPuzETtCmegB4H1kGt2XXkhkt3s3v+FlhluIBKtIMumPRgOH5swyW2S0aq4CndgsJl6Rb+9cnwKUrN889H1tuNI/Bm5ckg6JJJF7r7Lss9a0OhF1xSXMLKmSnFru
+3bc29cff94b4687910970876d7c0280f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|146|10|v|typescript
+	getQueryResults
+1c40bd49d8c1fed10e13d916bb41e3ff|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|59|1|V|typescript
+	    const startQueryRes = await cloudWatchLogs.startQuery({
+	      startTime: args.start,
+	      endTime: args.end,
+	      // eslint-disable-next-line
+	      queryString: `fields @timestamp, @message | filter @message like /info: \\[TickPlugin\\] \\{\"name\":\"workout_time_changed\"/ | parse @message /\"sessionId\":\"(?<sessionId>[\\w\\-]+)\"/ | stats min(toMillis(@timestamp)) as timestamp by sessionId | sort by timestamp asc | limit 10000`,
+	      logGroupName: CONSTANTS.LOG_GROUP_NAME,
+	    });
+72877e2b1af1c7bd07aae3c878a96622|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|148|5|V|typescript
+	  const results = cloudWatchLogs.getQueryResults({ queryId: sessionId });
+8a4609c66a54504718191be6c48dd20c|file:///Users/ross.calimlim/.aws/credentials|1|1|V|
+	[756595759858_iFitPowerUserAccess]
+	aws_access_key_id=ASIA3AKE7DLZF6FHPE65
+	aws_secret_access_key=3ecXIGuCXAVP5SjgtwUkTYtoGr25ZecVvHYagvGH
+	aws_session_token=IQoJb3JpZ2luX2VjEBEaCXVzLWVhc3QtMSJHMEUCIQDr6zOeu0W2jQhjnlBzcw+5HSvZSbXFW9vRJ7OGpcMtlwIgYZAigaXotkZAEJBLZtiK7qt2dPwLxQDa32kW7HHvPUEqhgMIShAAGgw3NTY1OTU3NTk4NTgiDIhLdNl1nvbHfPmhOCrjAlsd5alaHRCzmzWZrAWilKIVM7FegE0pCTeefaKpN2C1OxgMMcXWByWYaIxmf8MLZZcaUURVnMSquK1xDOse6vidddTlxhUef09MlnvwdRxdlDtkkooTPAPfca2F1GhZZ98o/LuLLTV30dMKfVwDEEm/dagb1lEl322ekI9+SjIKA8+BgLASExHUAIIX2Q9CPRW2LoJhxj9QjJSR9YNnvuspDpcG2X4MfS7jkDGOs8Lkv5g6MiiLl8yJMV7QElMSQ3SuOLLOVs/UyfSFyNzRkhiCdfFcryTVRd1tbaEmSZhpmhi854KSKTK5oh8AbeDY20uVYHLpb+hp/EWylrcsHGUrQdfLqwfteWsUyWfaWxTRFSyxEJZ9OzZwOZGfostSkRRSKDVwIaCujtB+YW97mOMU521UBm/+vqYkgZWlC9c8G08RzTJApmhNKHohx4YcjtC+HDeJnAr0Ca4PRLZ1aG8XeqwwkeyZiQY6pgGRpZYFiskLS4H5iVFsY9F9hyneT9Pg6N9g7TrHee+D1JFsNvwooLjf6B4g6JCIOk54x2MFpLSI0jc4WftfA/ViaBwE5lqmrNDi5+rDtLGvZ8j5RsKwbbOMW2BmtsEQ4fkWHxfT+kKg73DGYiPBmacghlXHUu79VTANLSQMHo1VgREdpb6LGZPLD4ATS7QNlsBEsrEs7kPbglKtFc2WNEWe6jlBR+0u
+70f8bd0aa4f2125672a72dc9240a92ab|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|152|19|v|typescript
+	fields @timestamp, @message | filter @message like /info: \\[TickPlugin\\] \\{\"name\":\"workout_time_changed\"/ | parse @message /\"sessionId\":\"(?<sessionId>[\\w\\-]+)\"/ | stats min(toMillis(@timestamp)) as timestamp by sessionId | sort by timestamp asc | limit 10000
+d06f6e6e9128a2393b7358ff70124550|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|161|15|v|typescript
+	sessionId
+45c9f43fd49eed0bc3730648eeb6ef87|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|146|64|v|typescript
+	ResultField[][]
+716fa53e6ccd210485789a913cc0a694|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|159|32|v|typescript
+	de7c7e3e
+d7b0927361ad700f992b6039572a0691|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|159|32|v|typescript
+	-3454-4919-82ce-82748bb75ca2
+8545508f89f9b9f5c8853ef9186c211d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|166|22|V|typescript
+	  return startQueryRes
+969baac83c6108bd7fd444c789570927|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|62|1|V|typescript
+	      // eslint-disable-next-line
+6548a22511598c99c66b272d07e5f8a4|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|1|1|V|typescript
+	/* eslint-disable @typescript-eslint/no-explicit-any */
+b4dd9173f1b66b8c68a5dd4f83bd6ec2|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|2|19|v|typescript
+	@typescript-eslint/no-explicit-any
+fbaeaa067b4779725092e666acce8265|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|154|1|V|typescript
+	    // eslint-disable-next-line
+8404904f456bf455e17a0e4e05995891|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|164|28|V|typescript
+	  console.log(startQueryRes);
+22e57c9ca29d6c7701242580e25e68db|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|80|1|V|typescript
+	    while (queryResultRes.status !== "Complete") {
+	      process.stdout.write(".");
+	      queryResultRes = await cloudWatchLogs.getQueryResults({ queryId: sessionIdsQueryId });
+	      if (queryResultRes.status === "Complete") {
+	        process.stdout.write("\n");
+	      }
+	    }
+2b696e01e9ff71911410e116425d12aa|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|170|5|V|typescript
+	  try
+21637d487008152b839cd6d73ef6b672|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|174|1|V|typescript
+	  let retries = 0;
+	  let queryResults = await cloudWatchLogs.getQueryResults({ queryId });
+	  while (queryResults.status !== "Complete" || retries < retryLimit) {
+	    process.stdout.write(".");
+	    queryResults = await cloudWatchLogs.getQueryResults({ queryId });
+	    retries += 1;
+	    if (queryResults.status === "Complete") {
+	      process.stdout.write("\n");
+	    }
+	  }
+	  return queryResults;
+b1bc248a7ff2b2e95569f56de68615df|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|170|15|v|typescript
+	number
+4b4732a22946cdd171f3b38afe695591|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|164|30|v|typescript
+	cloudWatchLogs.getQueryResults({ queryId: startQueryRes.queryId })
+4432b3a637c233f888d152fb257b0926|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|164|60|v|typescript
+	queryId
+b4dedd0d7d0d781a668d8f9316013d4e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|156|1|V|typescript
+	      | filter @message like /info: \[TickPlugin\] \{"name":"workout_time_changed"/
+	      | parse @message /"sessionId":"(?<sessionId>[\w\-]+)"/
+	      | filter sessionId like '${sessionId}'
+	      | sort timestamp asc
+	      | limit 10000
+4aed934b5570a2065c3f24694b8c741b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|162|1|V|typescript
+	// | filter @message like /info: \[TickPlugin\] \{"name":"workout_time_changed"/
+8423b045dca9a571713486b5abb2dc97|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|63|51|v|typescript
+	filter @message like /info: \\[TickPlugin\\] \\{\"name\":\"workout_time_changed\"/
+8f145bab60df8b470c91d053b8406f51|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|156|8|V|typescript
+	      | filter @message like /info: \[TickPlugin\] \{"name":"workout_time_changed"/
+68b3d3a6564575076594149e4f11faa1|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|65|136|v|typescript
+	parse @message /\"sessionId\":\"(?<sessionId>[\\w\\-]+)\"/ | stats min(toMillis(@timestamp)) as timestamp by sessionId | sort by timestamp asc | limit 10000
+2a2fc41b98e4ef29d67bd51bf6bff4d8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|160|6|V|typescript
+	      | stats min(toMillis(@timestamp)) as timestamp by sessionId
+7f251013f4387abe2e88d3c33eb470df|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|160|32|v|typescript
+	de7c7e3e-3454-4919-82ce-82748bb75ca2
+1dddd79cd8d7dd020505463d504f59d7|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|167|1|V|typescript
+	  console.log(queryResults);
+7e9c8a937047840351360add0bfb0504|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|168|1|V|typescript
+	// | parse @message /"sessionId":"(?<sessionId>[\w\-]+)"/
+	// | filter sessionId like '${sessionId}'
+	// | sort timestamp asc
+	// | limit 10000
+16fa7529f010e3cb2e94dfe9c0efadc8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|123|1|V|typescript
+	    console.log(res);
+9f564b49ba637fc033186d7ab8227896|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|165|3|v|typescript
+	const queryResults =
+2b0513850fa1e5c7ebc853f2df6af7ca|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|165|10|v|typescript
+	await
+2f9db31ac8623469b3cec640a711f552|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|82|1|V|typescript
+	
+	    // while (queryResultRes.status !== "Complete") {
+	    //   process.stdout.write(".");
+	    //   queryResultRes = await cloudWatchLogs.getQueryResults({ queryId: sessionIdsQueryId });
+	    //   if (queryResultRes.status === "Complete") {
+	    //     process.stdout.write("\n");
+	    //   }
+	    // }
+	    // query
+a3cdee0a2b2459543eb6ee175c546344|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|77|5|V|typescript
+	    // let queryResultRes = await cloudWatchLogs.getQueryResults({ queryId: sessionIdsQueryId });
+821e8a3ad5ae309b35fb7134a00e46e7|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|91|1|V|typescript
+	        console.log(
+	          `[TickDelayScript]: Desired sample size is greater than number of results, defaulting to samples = ${queryResultRes.results.length}`
+	        );
+1690b7ce2d8a71075321ffc3430a79b4|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|110|27|v|typescript
+	Desired sample size is greater than number of results, defaulting to samples =
+265cf17eeaec61a6cdf8e7f8745ca3a9|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|110|50|v|typescript
+	queryResultRes.results.length
+1c3375d7469de81da55d58478f1725c7|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|109|1|V|typescript
+	    console.log(`[TickDelayScript]: Selected sessionIds:\n    - '${sessionIds.join("'\n    - '")}'    `);
+912cc19e412804c7d90c99d7b0327420|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|112|37|v|typescript
+	Selected sessionIds
+60556bdec1f9d0c0d170ecf88bba3df2|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|112|37|v|typescript
+	:\n    - '${sessionIds.join("'\n    - '")}'
+b7d4cdbfef5ffc51f89083b803310210|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|113|71|v|typescript
+	sessionIds[0]
+2801b077070b4ed8a4974d022bc04f13|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|115|5|V|typescript
+	    console.log(res.results);
+fb21cd8dd87b8f1e58288b7cac11b487|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|185|10|v|typescript
+	mapFilter
+1ba4fd9eb8da037178921f10b42660e5|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|185|59|v|typescript
+	Record<string, string>
+db7b7d7b81969085f778aaeaa37a4a59|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|193|1|V|typescript
+	  //   {
+	  //     field: '@ptr',
+	  //     value: 'CmIKJwojNzU2NTk1NzU5ODU4OlNoYWRvd2ZheEVjc0xHLVNhbmRib3gQAhI3GhgCBfv/DxoAAAABAaUZwQAGEmwdUAAAB6IgASjy2ZT7ty8w7ISc+7cvOL0BQOiFA0ibH1DCGxB9GAE='
+	  //   }
+77bfb1aaf78aea731456b58efdd3d334|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|196|108|v|typescript
+	"");
+0c27c1c1e813630665ab92d2dbe1f211|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|198|100|v|typescript
+	result.value
+37a6259cc0c1dae299a7866489dff0bd|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|198|115|v|typescript
+	null
+dd440b2ba692294bae6c9031994d05e8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|199|72|V|typescript
+	          result.field === "timestamp" ? Number(result.value) : timestamp,
+6a33a8dd263c40be0697b4858d773465|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|186|7|V|typescript
+	  // [
+	  // [
+	  //   { field: 'timestamp', value: '1629930029258' },
+	  //   {
+	  //     field: 'sessionId',
+	  //     value: '4ece1bff-cf49-491f-801f-63ec4ab3a702'
+	  //   },
+	  // ]
+	  // ]
+9fa0840b100a172c0ecd22319dcfdf8c|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|194|8|V|typescript
+	      .filter((val: number | null) => !!val);
+ddf33188b9733414dfca5415b3c741cc|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|113|1|V|typescript
+	    process.stdout.write(`[TickDelayScript]: Getting sessionId tick data for ${sessionId} `);
+	    const res = await getSessionTickData(sessionId);
+50a99186d238dca74bb5e85647dce9c3|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|112|5|V|typescript
+	    const sessionId = sessionIds[0];
+22f05e608c26fdc205098a0524de44bb|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|80|1|V|typescript
+	      throw new Error(`[TickDelayScript Error]: Malformed query response '${JSON.stringify(queryResultRes)}'`);
+165d6d2d447ae6c408bf070aa922685b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|79|1|V|typescript
+	    if (!queryResultRes || !queryResultRes.results || queryResultRes.results.length === 0) {
+	      throw new Error(`[TickDelayScript Error]: Malformed query response '${JSON.stringify(queryResultRes)}'`);
+	    }
+5519507ded601e5a0e252d47efb5506a|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|179|5|V|typescript
+	    if (!queryResults.results || !queryResults.results.length === 0) {
+	      throw new Error("")
+	    }
+0dc7301026e66d38061d7eaba481c9a5|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|180|49|v|typescript
+	Malformed
+9904d5fdb5d5f9d7fa15fa1263bc05f8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|180|1|V|typescript
+	    if (!queryResults || !queryResults.results || queryResults.results.length === 0) {
+	      throw new Error(`[TickDelayScript Error]: Bad query response '${JSON.stringify(queryResults)}'`);
+	    }
+9895d10c39d4a9622e79eb8009d15dde|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|72|10|v|typescript
+	queryResults
+1e6e28aa0d584dba03485314b3f11ea9|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|69|1|V|typescript
+	    if (!startQueryRes.queryId) {
+ffbcc7365f80008aae30b9adf190d737|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|71|5|V|typescript
+	    if (!startQueryRes || !startQueryRes.results || startQueryRes.results.length === 0) {
+20e6fc505e294e077b8c7290e73b7737|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|69|5|V|typescript
+	      throw new Error(`[TickDelayScript Error]: malformed query response '${JSON.stringify(startQueryRes)}'`);
+	    }
+b9d4f4f364dfa82092cf20c499e0cc56|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|203|34|v|typescript
+	number | null
+243a35d4702e52ad5d2a080966315fc8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|113|82|v|typescript
+	${sessionId}
+5f0e809ae38c958201bd0ee97df98e18|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|116|17|V|typescript
+	      console.log(timestamps.slice(0, 10));
+a90f1d94e14d18b86b37f9a537f23254|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|215|8|v|typescript
+	const timestamp of timestamps
+5f22f6a62922da587f6a2b55ac1f3e86|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|216|1|V|typescript
+	    const current = timestamps[i];
+43b5c9175984c071f30b873fdce0a000|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|217|11|v|typescript
+	current
+17724fa2670b95bb8598978f242930f9|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|216|11|V|typescript
+	    if (tim)
+bc03ddce411b259598d0068e1f1cd33b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|216|5|V|typescript
+	    console.log
+b8e31756139249c1687d43e8345139f1|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|216|37|v|typescript
+	Selected sessionIds:\n    - '${sessionIds.join("'\n    - '")}'    
+2327346e833efcd6b2e7b3f0a4df8ebb|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|235|15|v|typescript
+	previous
+d75dbc9d7937a7eeafcd0e10b4796599|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|3|8|v|typescript
+	mathjs
+990bf9cfebcc680496b7bed57d2a181d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|241|13|v|typescript
+	mathjs.
+e2942a04780e223b215eb8b663cf5353|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|3|46|v|typescript
+	count
+beeb1b749c3d395c7c9340ef6bc2e831|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|219|1|V|typescript
+	  // [
+	  //   1629930000257, 1629930001258, 1629930002258, 1629930003258, 1629930004258, 1629930005258, 1629930006258,
+	  //   1629930007257, 1629930008258, 1629930009259, 1629930010257, 1629930011257, 1629930012258, 1629930013257,
+	  //   1629930014259, 1629930015258, 1629930016259, 1629930017258, 1629930018258, 1629930019258, 1629930020258,
+	  //   1629930021259, 1629930022259, 1629930023258, 1629930024259, 1629930025257, 1629930026258, 1629930027259,
+	  //   1629930028257, 1629930029259,
+	  // ];
+705ec82ef96f67a4e58b9b0d5ed0e5ef|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|117|19|v|typescript
+	timestamps
+bac3431c67f7fc9077ae5dbe21e2bb38|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|233|18|v|typescript
+	mean(difs)
+402abcff69efddbe14e0eaf95e14f69b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|234|20|v|typescript
+	median(difs)
+cb17b6a3fd91ec3b8f2fe3fddc83c61a|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|238|17|v|typescript
+	std(difs)
+0fb10af9dfc2bbe199edcc5f7b6b05ed|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|248|5|v|typescript
+	const row =
+7c92bc8bfcb2d89f3011012863eb1e24|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|248|18|v|typescript
+	[mean, median, mode, min, max, std, count]
+0a35da6d9ceacd64950129bc3543dabd|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|247|3|v|typescript
+	const mapped = 
+8d777f385d3dfec8815d20f7496026dc|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|249|69|v|typescript
+	data
+87b938ab10125ed2ae73a2846cbbdc6d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|123|17|v|typescript
+	deisp
+1a78420390ddc07048882b2bab6a0d56|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|119|22|v|typescript
+	analyzeTimestamps(timestamps, sessionId))
+722f02acebff959fc40356c3fe3a2087|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|120|21|v|typescript
+	analyzeTimestamps(timestamps, sessionId)
+4bd38d73f812ff2221c279defbf78b0f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|123|1|V|typescript
+	      analyses.push();
+7c4f29407893c334a6cb7a87bf045c0d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|253|119|v|typescript
+	right
+ae9fd8821b291a4b517204cb70aa1aa6|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|253|124|v|typescript
+	, "right"
+7f515b5af21e9260449758f479e43b11|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|263|1|V|typescript
+	  console.log(table.toString());
+9d380b29eafc04de257d05a3e3a7be7f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|127|5|V|typescript
+	    console.log();
+b9987a246a537f4fe86f1f2e3d10dbdb|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|127|39|v|typescript
+	Display
+59d4e6b6900d17f90e7a0f2b161cf755|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|242|1|V|typescript
+	    sessionId: sessionId,
+	    mean: round(mean(difs)),
+	    median: round(median(difs)),
+	    mode: mode(difs),
+	    min: min(difs),
+	    max: max(difs),
+	    std: round(std(difs)),
+	    count: timestamps.length,
+87e4e41c841dc715c7666f506eab9b26|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|261|11|v|typescript
+	round(mean(difs))
+2d28cf5c9c9957b3f3c100495992cb08|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|262|13|v|typescript
+	round(median(difs))
+7b6b051dda4ebe264af185fd293765d8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|263|11|v|typescript
+	mode(difs)
+5c401e13f6ec79ba024911803789fd02|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|264|10|v|typescript
+	min(difs)
+58e3d27b1650a906ad4ef12ba5ae198c|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|265|9|v|typescript
+	 max(difs)
+3f2bd585a76daff501d64d56b76b98bc|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|266|10|v|typescript
+	round(std(difs))
+fd5d701e166f5ecefe5be614f166e84f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|267|12|v|typescript
+	timestamps.length
+7f433c103fee43ba242d7ecfc038d122|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|260|18|V|typescript
+	    sessionId: [],
+a4b0a950e6417bd384179f09f6d057e4|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|270|1|V|typescript
+	    aggregateValues.mean.push(mean)
+b93db188572fc4d76cce5660f3823b0a|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|271|21|v|typescript
+	mean
+82a29b3c6758e55c343c703f27579874|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|269|1|V|typescript
+	    const { sessionId, mean, median, mode, min, max, std, count, earliestTs } = analysis;
+3b671c883959a8ef434b85a104c293d4|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|279|81|v|typescript
+	analysis
+3bd3c3ec250ca65ff024a49602c2dc27|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|279|66|v|typescript
+	earliestTs
+2309e19612da5c57c8f4b904675ce2cf|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|279|13|v|typescript
+	sessionId, 
+000d1a90c36194cda44945bde7c0265b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|279|23|V|typescript
+	  const { mean, median, mode, min, max, std, count } = aggregateValues;
+b8d8e84740031ebfb96cd6dbea5f4f53|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|270|5|v|typescript
+	aggregateValues
+436321e2c9d637cb8a755073ffd22b7d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|286|1|V|typescript
+	      mean(aggVals.std),
+f3eca65c0d242f7adadfdfff39cc3ce7|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|259|19|v|typescript
+	{
+	    mean: [],
+	    median: [],
+	    mode: [],
+	    min: [],
+	    max: [],
+	    std: [],
+	    count: [],
+	  }
+69328d5028d3e161b82b341dfde5ed9b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|289|14|v|typescript
+	mean(aggVals.mean)
+56cc566b927c38c75309cc646a3e6946|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|290|13|v|typescript
+	mean(aggVals.median)
+788870447bb0511687bcc18055f58bbc|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|291|13|v|typescript
+	mean(aggVals.mode)
+fc53257a85314085c6f20d0bb12973d1|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|292|13|v|typescript
+	mean(aggVals.min)
+70260c4a503cdf70edcb63bd25051e29|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|293|13|v|typescript
+	mean(aggVals.max)
+4e832d666de6bb9f70cce3e46d25a2b5|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|294|13|v|typescript
+	mean(aggVals.std)
+edce7c9c29a4fd5416b89f70716b5958|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|295|13|v|typescript
+	mean(aggVals.count)
+b298a5250ddbd7135e022a598f548d4a|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|118|1|V|typescript
+	      const res = await getSessionTickData(sessionId);
+08f5ffc0fa73b24c32ce87f194ca208d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|116|7|v|typescript
+	const res = await 
+13222ddcc1fc590c1308ae897c35f07d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|116|26|v|typescript
+	getSessionTickData(sessionId)
+ff2dcd7e2f8db1ffe22abd0bcfebf4b1|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|122|23|v|typescript
+	sessionIds
+f5c8003718f34d1a55eaa258f6fdb085|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|117|7|v|typescript
+	dataRequests
+e52e969cf4119a983253efe7443383cc|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|117|40|v|typescript
+	{ sessionId, data: getSessionTickData(sessionId) }
+737fb3ad2c9c88ede9acfdb03314d829|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|117|26|v|typescript
+	async () => 
+5e8d0cf170197453702e2c7d20efaf98|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|163|91|v|typescript
+	GetQueryResultsCommandOutput
+0523cb827fb8247441f91587b7460409|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|179|10|v|typescript
+	pollQueryResultsUntilComplete(startQueryRes.queryId || "")
+bd897229c2cb81548e15b19996b445f5|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|123|10|v|typescript
+	const res of dataResponses
+68b0ae370b7a2e97aea20e9b1e025ef7|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|114|33|V|typescript
+	    // send all requests at once
+	    const dataResponses = [];
+	    for (const sessionId of sessionIds) {
+	      dataResponses.push(Promise.resolve({ sessionId, data: getSessionTickData(sessionId) }));
+	    }
+	    await Promise.all(dataResponses.map(({ data }) => data));
+	    console.log(dataResponses);
+b7b66a0518e9817c8c25a6c9c4c98ecb|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|118|46|v|typescript
+	.data
+25b664971dcae0eba7b6cb24ec7eeae6|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|288|5|v|typescript
+	avgs
+26d59e24afcb9c11f03ffe8392b68734|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|181|12|v|typescript
+	queryResult
+30eb5001914d29dd8461898b5b8094fe|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|114|33|v|typescript
+	forEach
+000ac35637a91371f7144193ff1ab9c8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|114|11|v|typescript
+	tickData
+affc52ac10d70e931f4df2b1a1832c64|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|114|11|v|typescript
+	queryIds
+563823f1146478733a83972bfd5adaca|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|114|44|v|typescript
+	sessionIds.map((id: string) => getSessionTickData(id))
+67b4b801368af7abc99d2efb73b01b1f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|115|26|V|typescript
+	    Promise.all(queryIds);
+e0159833c5c3e332b40a6842a70876e1|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|115|21|v|typescript
+	queryIds =
+ac052054739e3bfccdd34e35a295dad1|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|165|1|V|typescript
+	  const startQueryRes = await cloudWatchLogs.startQuery({
+	    startTime: args.start,
+	    endTime: args.end,
+	    queryString: `
+	      fields toMillis(@timestamp) as timestamp
+	      | filter @message like /info: \\[TickPlugin\\] \\{\"name\":\"workout_time_changed\"/
+	      | parse @message /\"sessionId\":\"(?<sessionId>[\\w\\-]+)\"/
+	      | filter sessionId like '${sessionId}'
+	      | sort by timestamp asc
+	      | limit 10000
+	    `,
+	    logGroupName: CONSTANTS.LOG_GROUP_NAME,
+	  });
+c628c897a137cf6e59817e86436694f7|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|161|3|v|typescript
+	const startQueryRes = await
+cee1a60096258e50fdc230af0620d994|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|114|80|v|typescript
+	getSessionTickData
+19d80603653724870c5560059549efe9|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|114|98|v|typescript
+	startSessionTickQuery(id)
+db40d16cc01f6996911c602d211d4e93|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|120|13|v|typescript
+	{ sessionId: string; response: GetQueryResultsCommandOutput }
+5ad99d080fe5ed5561140df64d80a0a0|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|115|5|v|typescript
+	const tickDataResponses = 
+d1d15352f0eef00e24332721e8525f7d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|116|7|v|typescript
+	timestampedQueryResponse
+687338db5f0974a81fd69611356579b4|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|118|20|v|typescript
+	await startSessionTickQuery(sessionId)
+bda697c939384035096aa82de4aa8acc|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|121|1|V|typescript
+	    sessionIds.map(async (sessionId: string) => ({
+	      sessionId,
+	      response: startSessionTickQuery(sessionId),
+	    }));
+50e203a0188fcba1a60d03cb320462c5|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|121|68|V|typescript
+	    await Promise.all(tickDataResponses.map((val) => val.response));
+7d2954645da841206aa6a7d8a79c2b76|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|114|11|v|typescript
+	queryIdBySessionId
+ca96f5c6357e30a1a3d15b09547a400e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|121|1|V|typescript
+	    const queryIds = tickDataResponses.map(
+	      (val): val is { sessionId: string; response: GetQueryResultsCommandOutput } => val.reponse.$metadata.requestId
+	    );
+a9f0a3a63fe6b5bd954760c6ac09e85c|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|114|11|v|typescript
+	responses
+8d4a4d6313e4d309efefc37e912af9a8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|121|20|V|typescript
+	    console.log(queryIds);
+ac321fedae178ccb27acaf678c993c8c|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|125|32|V|typescript
+	      const res = await pollQueryResultsUntilComplete(sessionId);
+a4c802cdaea32064094310ad13ff6a7f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|125|17|V|typescript
+	      await data;
+510ff634fce407eea1763854519fd3ce|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|124|11|v|typescript
+	requestId
+cd29cf46221949315fbd08edee3d2a41|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|116|58|V|typescript
+	      console.log(await startSessionTickQuery(sessionId));
+933f8b1742f9fb66b2f74aab5d711d7b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|127|5|V|typescript
+	    console.log(queryResponses);
+e11d372bb68d6f866a9cbd31a8197ea1|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|210|27|V|typescript
+	  console.log({ queryId });
+219c28ce84a32becb8a90694a1d8a14d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|293|1|V|typescript
+	    style: { compact: false },
+e6056448930b05e72b079400b5889d5e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|311|8|V|typescript
+	  table.
+68934a3e9455fa72420237eb05902327|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|293|23|v|typescript
+	false
+71e4970983cf647f84f8d95038b63a7c|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|292|16|v|typescript
+	["left", "right", "right", "right", "right", "right", "right", "right", "right"]
+6be65a153d206b7fc72251be0e0423fd|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|293|17|v|typescript
+	"left"
+13dfd29dc8e4c7bf99058009dc2124c8|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|293|17|V|typescript
+	    colWidths: [, "right", "right", "right", "right", "right", "right", "right", "right"],
+5169db6d7d355ee950a1062e995888c7|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|293|22|v|typescript
+	"right"
+55aec6984a19203e7f28f9b2c6629f2f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|293|1|V|typescript
+	    colWidths: [100, 100, 100, 200, 100, 100, 100, 100, 100],
+	    style: { compact: true },
+fa24b8e1b9196f922f46476995f345af|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|293|14|v|typescript
+	compact: true,
+90f4359d1e672e4ff0f537cc95f9e70e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|55|16|V|typescript
+	if (args.samples > CONSTANTS.MAX_SAMPLES) {
+	  throw new Erro
+4825bef4ec6b3856b959e8e798160395|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|56|7|V|typescript
+	  throw new Erro
+6ea24c46f9718f236748cc50561961d3|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|56|91|v|typescript
+	${key}
+006b9f97ccfb76dffe2a4698e9337dc1|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|224|1|V|typescript
+	      if (queryResults.status === "Complete") {
+	        process.stdout.write("\n");
+	      } else {
+e82f3e56d2a6718da3f068e5e6f91343|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|226|7|V|typescript
+	      }
+c654047f275ee755f6e7810be70210b4|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|218|1|V|typescript
+	      process.stdout.write(".\n");
+ddf4d7d8b207e8217a7ae3db8f79e097|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|217|1|V|typescript
+	    if (queryResults.status === "Complete") {
+	      process.stdout.write(".\n");
+	    }
+96d8e9e3b92248258403f7fc4cb25644|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|46|49|v|typescript
+	unrecognized
+03cde060e90acdd58ff9f0a4d785d43b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|46|61|v|typescript
+	argument
+0fa70ad8a6a19b82486b3c3be8d89337|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|22|39|V|sh
+	AWS_ACCESS_KEY_ID=ASIA3AKE7DLZIKTSKWMO
+	AWS_SECRET_ACCESS_KEY=pMVMlay4MVPmiJXUoNF9t+SZ4ggDlLd7bJCoLjbH
+	AWS_SESSION_TOKEN=IQoJb3JpZ2luX2VjECgaCXVzLWVhc3QtMSJHMEUCIDBAEpLTZQ00e1BBxo87nqU7p2UjjgZknLMfDD/p5sHoAiEAxX0k/P9o0MiFygDlAa9kDa6FA74P6MkD9nJLJ5S/1hsqhgMIYRAAGgw3NTY1OTU3NTk4NTgiDI3BdR9s/JNenuk7OCrjAlPRxeprt+Z1h3BMlI4xfZceLkHRYbeWINOu7VQ56gnBkgsilJPkfjg5xK0Q5K4AsqTAOzMkM6zlYA7Qa6YEd9ec7qh1o7py650DYeTagydcZ8HoMOLj0yLUSiE3+M38HTlTAPick26vRdL7FrSTvDNS9zQk9sGSbIdolFF9kYKsjfXduL9ZlZoHmzwefK2lyTJUjpwMEHkITUom2qlV8jU6yKX+QdsMKJ3RuHAA1CE47IxaXIC/4H5g7gPawuZL59WGWcMICsmxiXX0BwVWRlzumnWaRWoZCGWqqKyfflUaF9xfd0gNiWcPaY4Pxk42pvo7rdhaK2lUpURistDD3Q/XgFxs4tebB666eAgkKf8kXv1jEi2ZOzF2kT8lJp9GtfDFdhmrJ5ZSaiMXa5arHIrBx9cBJa/VNI+Myy4vFt4kI4UtENO+rQJYKAHNJyzJ3LZaSuUF+atqTDU22vK1/y6MCJEwo+yeiQY6pgEHddi2p6atkXdbt9MvUzhy0ye1Cyr8ekSBs7oRMltomrDHR6WcsIM/ZSB62YO/ifA2fjRsRQSC15h4sMX95JmROSvDoEsbtZqjm3RIr6JaCR1RNU3FClfsd92XAMa34yy55+qoR+0KIVRNaiqs/SEZLitoqSAA7q+vYb+lCGNQy2vA4Z7/APGmm//N5pz850WzDj3WcteOM1T3PN7H1GOMaUmbPXK3
+	[756595759858_iFitPowerUserAccess]
+859f92f08243e5c2ebf77129972f93de|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|81|58|V|typescript
+	| stats min(toMillis(createdAt)) as timestamp by sessionId
+3e2928b74e1e1d148f692e3dece58f77|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|81|30|v|typescript
+	@timestamp
+78e731027d8fd50ed642340b7c9a63b3|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|77|29|v|typescript
+	message
+bd6dc324c0e55edbf6d792861f9f278b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|188|1|V|typescript
+	      fields toMillis(@timestamp) as timestamp
+	      | filter @message like /info: \\[TickPlugin\\] \\{\"name\":\"workout_time_changed\"/
+	      | parse @message /\"sessionId\":\"(?<sessionId>[\\w\\-]+)\"/
+	      | filter sessionId like '${sessionId}'
+	      | sort by timestamp asc
+	      | limit 10000
+7230c1becbbea3a13aea2f1690e32c4e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|206|1|V|typescript
+	      | parse @message /\"sessionId\":\"(?<sessionId>[\\w\\-]+)\"/
+ce6470f3d34d347372ee59c54c624ad2|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|204|35|V|typescript
+	      fields toMillis(@timestamp) as timestamp
+177020365b4e0aba9f4afb333d5e09e5|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|199|1|V|typescript
+	async function getSessionTickData(sessionId: string): Promise<GetQueryResultsCommandOutput> {
+	  const startQueryRes = await cloudWatchLogs.startQuery({
+	    startTime: args.start,
+	    endTime: args.end,
+	    queryString: `
+	      filter @message like /info: \\[TickPlugin\\] \\{\"name\":\"workout_time_changed\"/
+	      | parse @message /\"sessionId\":\"(?<sessionId>[\\w\\-]+)\"/
+	      | parse @message /\"createdAt\":(?<timestamp>[\\w\\-]+)/
+	      | filter sessionId like '${sessionId}'
+	      | sort by timestamp asc
+	      | limit 10000
+	    `,
+	    logGroupName: CONSTANTS.LOG_GROUP_NAME,
+	  });
+	  return pollQueryResultsUntilComplete(startQueryRes.queryId || "");
+	}
+d7e6d55ba379a13d08c25d15faf2a23b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|192|17|v|typescript
+	timestamp
+b576ed5f5bc31397efe71c0cf361912d|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|77|25|V|typescript
+	        fields @timestamp
+79a70aa89897b152a5402294c4fd50ee|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|77|1|V|typescript
+	        filter @message like /info: \\[TickPlugin\\] \\{\"name\":\"workout_time_changed\"/
+	        | parse @message /\"sessionId\":\"(?<sessionId>[\\w\\-]+)\"/
+	        | parse @message /"createdAt":(?<createdAt>[\d\-]+)/
+	        | stats min(toMillis(createdAt)) as timestamp by sessionId
+	        | sort by timestamp asc
+	        | limit 10000`,
+0a1568c1973fda257ae231883dcab0bc|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|187|1|V|typescript
+	      filter @message like /info: \\[TickPlugin\\] \\{\"name\":\"workout_time_changed\"/
+	      | parse @message /\"sessionId\":\"(?<sessionId>[\\w\\-]+)\"/
+	      | parse @message /\"createdAt\":(?<createdAt>[\\d\\-]+)/
+	      | filter sessionId like '${sessionId}'
+	      | sort by createdAt asc
+	      | limit 10000
+5abb608b811b68a8f1dcdddcdd5a8653|file:///Users/ross.calimlim/.aws/credentials|1|35|V|
+	[756595759858_iFitPowerUserAccess]
+	aws_access_key_id=ASIA3AKE7DLZIKTSKWMO
+	aws_secret_access_key=pMVMlay4MVPmiJXUoNF9t+SZ4ggDlLd7bJCoLjbH
+	aws_session_token=IQoJb3JpZ2luX2VjECgaCXVzLWVhc3QtMSJHMEUCIDBAEpLTZQ00e1BBxo87nqU7p2UjjgZknLMfDD/p5sHoAiEAxX0k/P9o0MiFygDlAa9kDa6FA74P6MkD9nJLJ5S/1hsqhgMIYRAAGgw3NTY1OTU3NTk4NTgiDI3BdR9s/JNenuk7OCrjAlPRxeprt+Z1h3BMlI4xfZceLkHRYbeWINOu7VQ56gnBkgsilJPkfjg5xK0Q5K4AsqTAOzMkM6zlYA7Qa6YEd9ec7qh1o7py650DYeTagydcZ8HoMOLj0yLUSiE3+M38HTlTAPick26vRdL7FrSTvDNS9zQk9sGSbIdolFF9kYKsjfXduL9ZlZoHmzwefK2lyTJUjpwMEHkITUom2qlV8jU6yKX+QdsMKJ3RuHAA1CE47IxaXIC/4H5g7gPawuZL59WGWcMICsmxiXX0BwVWRlzumnWaRWoZCGWqqKyfflUaF9xfd0gNiWcPaY4Pxk42pvo7rdhaK2lUpURistDD3Q/XgFxs4tebB666eAgkKf8kXv1jEi2ZOzF2kT8lJp9GtfDFdhmrJ5ZSaiMXa5arHIrBx9cBJa/VNI+Myy4vFt4kI4UtENO+rQJYKAHNJyzJ3LZaSuUF+atqTDU22vK1/y6MCJEwo+yeiQY6pgEHddi2p6atkXdbt9MvUzhy0ye1Cyr8ekSBs7oRMltomrDHR6WcsIM/ZSB62YO/ifA2fjRsRQSC15h4sMX95JmROSvDoEsbtZqjm3RIr6JaCR1RNU3FClfsd92XAMa34yy55+qoR+0KIVRNaiqs/SEZLitoqSAA7q+vYb+lCGNQy2vA4Z7/APGmm//N5pz850WzDj3WcteOM1T3PN7H1GOMaUmbPXK3
+111047a4f95f2ba7d94db8eb72f011ae|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|22|39|V|sh
+	AWS_ACCESS_KEY_ID=ASIA3AKE7DLZGGNO6N4E
+	AWS_SECRET_ACCESS_KEY=BPP1s0sNnWGJkB7gJdAiSpYhpHf1yzgJJqoUn+r2
+	AWS_SESSION_TOKEN=IQoJb3JpZ2luX2VjEDgaCXVzLWVhc3QtMSJIMEYCIQChTDaNvfChAa6VwWL3YqwEVKzfHT4wOLNt9ztX3TmJ0QIhAOQ3AS3Tc1HdGtyVHBVSxHhagywX6vV0jL3Tb+KuoHrhKoYDCHEQABoMNzU2NTk1NzU5ODU4Igz8TH5Acn+cf4t60QIq4wL0DRkZ8movgJRKWfqJYDbc9LfFU8GiHLqXgpycA0VEiXMtoe7SATL/eahRFFLcDRto6IHCi7zPIQCJKf7HJZGeorIZG5io3hsW9BzLGly3MwyneBuFgL9b9UwGGQc6Mqj2BhWo9K0vMo3okAJD+vGXeYHhuWf1FZ3XzLm5AWEaDJXV6W7EeBYBrD+c8B3aBgEkZZYJDielfy1NcRUxN4HxtiuOpvDcJElXvM2F3vTMDXPUq6k6YuajbMMgF/Po6Nl7sMP5kASjAfpV1eRMnEjwhQ/A8srEY4YQqs4uJQq9DMAPP5QDx0crvESWysZHOQ9wHoCD42FpVFA7XZiREXzhgAlUmxL+eBBzN1HM8YTMFyYKLAE8JcxeVTnVPP0461sqZVFv2+jYo+KCRnjcoKOijF4uJX4sedo3niH99xqbkX5WycYWqjFvCZgfGgG3ZecxZ2YIxbaX8B1xL9Nwc8OkQrcfMOazookGOqUByTpWgsyXLRsnvqmcFJaRBdPEg+xBiJM/blfaa6Jpf2czOUw2MkG5bvmVccLADKAo97QgLTKzSLOZh/aDBi71A0uP6JT7rgIH0jr63MNbu+zUYqrlSI4DVcLTKAlRNX1S9cylozno6ahYENJFtR941VSWk1djDaeddPwEQWLgkGQ6r8pxcWKLmhBq3HD14pGBp3kyratMR6lVvPPiWgNJmeTeO/5I
+	[756595759858_iFitPowerUserAccess]
+c0b6119feeec5b5ce7dd7827b428fd56|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|22|1|v|sh
+	aws_access_key_id
+fb2f2622ccec7844b6cb611408833ffc|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|194|8|v|typescript
+	parse @message /\"createdAt\":(?<createdAt>[\\d\\-]+)/
+ae3d3c2f4732a758d224df8dffe9b30c|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|189|8|V|typescript
+	      | parse @message /\"createdAt\":(?<createdAt>[\\d\\-]+)/
+df1d463b68083fcb0c91d25fea267a2e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|194|17|V|typescript
+	    // parse @message /\"createdAt\":(?<createdAt>[\\d\\-]+)/\n| filter sessionId like 'fa2282f7-cd5f-49b4-8726-33edf94b3202'\n| sort by createdAt asc\n
+97defd20a4830b556e53934f53e6b736|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|192|17|v|typescript
+	createdAt
+4ffb2f5777c0ff2e0ce52c3352440821|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|197|50|V|typescript
+	// | parse @message /\"createdAt\":(?<createdAt>[\\d\\-]+)/
+f13177346ce8e2c7c10b9379e66bf21f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|214|5|V|typescript
+	    console.log(queryResults);
+421edeffdf39e82850da33a6981cc553|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|287|1|V|typescript
+	    mode: number[][];
+d074e625a07d6a5c222487b986a1a800|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|294|1|V|typescript
+	    mode: [],
+e7e2a2f62734a9c430059d5a52676dd3|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|303|1|V|typescript
+	    aggVals.mode.push(mode);
+21b74aed1b4740080121b06949447b84|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|313|1|V|typescript
+	      round(mean(aggVals.mode)),
+709ea0f0eb71db3c7e85f4f3b33b431b|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|269|1|V|typescript
+	    mode: mode(difs),
+0a854d970477dac16371622b20b26896|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|241|1|V|typescript
+	  mode: number[];
+1e343b12ec9b284cc088fe99aea29c19|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|298|38|v|typescript
+	mode, 
+0a0c791c337fdf3732632fa2d8ff6131|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|278|43|v|typescript
+	"mode", 
+96aabaa32da914ee64eb9fc80758a276|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|279|43|v|typescript
+	"right", 
+a4e020c6cfe47001ced11fb11e8b2f4f|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/scripts/tick-delay/measure-tick-delay.ts|262|15|V|typescript
+	  console.log(mode(difs), mode(difs).length);
+73ca578777cc879cf7e1cbcd578390d1|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|12|14|v|sh
+	"localhost:9093"
+3b2ce99614859faf50b46b6a2d023fd6|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|12|1|V|sh
+	KAFKA_URLS="localhost:9093"
+651844f88aa65c1cc4eb355b4b3f6543|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|12|1|V|sh
+	KAFKA_URLS="localhost:9093"
+	MEMCACHED_URLS="localhost:11211"
+	AWS_REGION="us-east-1"
+	AWS_ECR_REGISTRY="756595759858.dkr.ecr.us-east-1.amazonaws.com"
+	AWS_GLUE_REGISTRY_NAME="Shadowfax_POC"
+	AWS_CLOUDWATCH_NAMESPACE="Test/ShadowfaxRunner"
+fa8ffb0d81b011061db8560f4b93cfee|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|12|1|V|sh
+	KAFKA_URLS="localhost:9093"
+	MEMCACHED_URLS="localhost:11211"
+daa8d33bc11b521ed21c641efd304ff6|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.gitignore|82|1|V|conf
+	# scripting output
+	scripts/timer-drift/times.txt
+	scripts/timer-drift/timer-log.txt
+d93f1b1f2d0f8098c711313587ce0bb7|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/README.md|1|1|V|markdown
+	# 🐎 Shadowfax Runner
+	
+	[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+	[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+	[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ifit_shadowfax-runner&metric=alert_status&token=b8b6305586c753c886ff01f1fce038cf101647d0)](https://sonarcloud.io/dashboard?id=ifit_shadowfax-runner)
+	[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ifit_shadowfax-runner&metric=coverage&token=b8b6305586c753c886ff01f1fce038cf101647d0)](https://sonarcloud.io/dashboard?id=ifit_shadowfax-runner)
+	
+	- Shadowfax Simulator: [docs](./docs/tools/Simulator.md), [repository](https://github.com/ifit/shadowfax-simulator)
+	
+	### Summary
+	
+	Cloud runner for in-progress workouts. Manages workout data ingestion, transformation, and dispatch to the Shadowfax Event Broker (Kafka). This application is built to be pluggable, so implementing new behaviors should not require manipulating the `Core` kernel.
+	
+	### Plugins
+	
+	- Speed
+	- Incline
+	- Tick
+	- Status
+	
+	### Config
+	
+	| Name                        | Default Value                                | Description                                                        |
+	| --------------------------- | -------------------------------------------- | ------------------------------------------------------------------ |
+	| PORT                        | 9044                                         | WorkoutInitializer HTTP Server Port                                |
+	| APP_USE_WORKOUT_INITIALIZER | 0                                            | Set `1` to enable WorkoutInitializer app                           |
+	| APP_USE_MESSAGE_BROKER      | 0                                            | Set `1` to enable MessageBroker app                                |
+	| APP_USE_AVRO                | 0                                            | Set `1` to log CloudWatch metrics                                  |
+	| APP_ALLOW_CORS              | 0                                            | Set `1` to allow CORS requests (for simulator only)                |
+	| LLAMA_LE_TOKEN              | unknown                                      | Llama token, not used in local env                                 |
+	| LLAMA_LOG_LEVEL             | debug                                        | Llama log level                                                    |
+	| LLAMA_NAMESPACES            | `*`                                          | Log namespaces to print. `*`=all                                   |
+	| KAFKA_URLS                  | localhost:9093                               | Comma-separated Kafka URLs                                         |
+	| PAPI_URL                    | https://papi.ifit-test.com/v1/graphql/       | Public API Endpoint                                                |
+	| MEMCACHED_URLS              | localhost:11211                              | Comma-separated memcached URLs                                     |
+	| AWS_ACCESS_KEY_ID           | -                                            | Your AWS (Sandbox) Access Key                                      |
+	| AWS_SECRET_ACCESS_KEY       | -                                            | Your AWS Secret Access Key                                         |
+	| AWS_SESSION_TOKEN           | -                                            | Your AWS Session Token (Valid for 12 hours)                        |
+	| AWS_REGION                  | us-east-1                                    | AWS Region                                                         |
+	| AWS_ECR_REGISTRY            | 756595759858.dkr.ecr.us-east-1.amazonaws.com | AWS ECR Registry URI (to push/pull runner images)                  |
+	| AWS_GLUE_REGISTRY_NAME      | Shadowfax_POC                                | Name of the AWS Glue Schema Registry                               |
+	| AWS_CLOUDWATCH_NAMESPACE    | Test/ShadowfaxRunner                         | Name of the AWS CloudWatch namespace for metrics                   |
+	| NPM_TOKEN                   | -                                            | Search 1Password for NPM_TOKEN (Required to build base/prod images |
+	
+	# Running the application
+	
+	### Option A: all-in-docker
+	
+	```
+	cp .env.example .env
+	bash start.prod.sh
+	```
+	
+	Then open [http://localhost:3000](http://localhost:3000) (simulator)
+	
+	If you see error: `no basic auth credentials`, then
+	
+	1. Login to AWS SSO: https://ifitsso.awsapps.com/start/
+	2. Open AWS Account -> `shadowfax-sandbox` -> Command line or programmatic access
+	3. Follow Option 2 to update your `~/.aws/credentials` file
+	4. Run `aws ecr get-login-password --region us-east-1 --profile 756595759858_iFitPowerUserAccess | docker login --username AWS --password-stdin 756595759858.dkr.ecr.us-east-1.amazonaws.com`
+	5. Run `bash start.prod.sh`
+	
+	### Option B: kafka+memcached in docker; node.js runner - locally
+	
+	yarn start
+	
+	```shell
+	nvm use
+	cp .env.example .env
+	yarn start
+	
+	# Start the workout
+	curl -X POST http://localhost:9044/workouts/60a6d754dcd622000770946f/start -H "Authorization: $TKN"
+	```
+	
+	### CLI Commands
+	
+	- `bash build.base.sh` - Build, tag and push base image to AWS ECR Registry (node.js dependencies only) - NPM_TOKEN is required in your .env file
+	- `bash build.prod.sh` - Build, tag and push production image to AWS ECR Registry (runner with production dependencies only) - NPM_TOKEN is required in your .env file
+	- `bash start.prod.sh` - Start all-in-docker local environment
+	- `yarn kafka:logs` - Watch kafka & zookeeper logs
+	- `yarn kafka:consume topic_name` - Start `topic_name` consumer (receive values from the topic)
+	- `yarn kafka:produce topic_name` - Start `topic_name` producer (send values to the topic)
+	  - send `[key]:[value]` pairs via the prompt that pops up
+	  - ```
+	    example
+	    $ yarn kafka:produce workout_time_changed    # starts the producer prompt
+	    > 602569fca5d90f0008ebea41:paused            # pauses the workout for session id 602569fca5d90f0008ebea41
+	    ```
+	- `yarn load:local` - Calls `yarn start` (unless a runner is already running locally) and then runs a very small load test of 10 workouts started over 10 seconds against your local instance of the Shadowfax runner. To change the number of workouts started update the `arrivalCount` in the `local` section of `load-test/start-workout.yml`.
+	- `yarn load:test` - Runs a load test of 600 workouts started over 60 seconds against the sandbox environment. To change the number of workouts started update the `arrivalCount` in the `test` section of `load-test/start-workout.yml`.
+	
+	### Scripts
+	
+	Some scripts in the `scripts/` folder are meant to be run manually by the developer. Here's a list of those workflows.
+	
+	1. `timer-drift` - scripts to measure accuracy of Shadowfax's event-based timer. It does this in a few ways, see [here](https://ifitdev.atlassian.net/l/c/Q91WxMN0) for an explanation.
+	   - In the root project folder, run `./scripts/timer-drift/log.sh`.
+	     - This will pipe stdout/stderr into a file for analysis (the script gets the timing information from the console debug information)
+	     - Note: the script provides no way to control how long the timer runs, so you'll need to Ctrl-c manually when you want to stop collecting data.
+	   - After the logging process has stopped, run `./scripts/timer-drift/extract.sh`
+	     - This will search the `timer-log.txt` for the timestamps related to the Shadowfax timer.
+	   - Next, run `yarn script scripts/timer-drift/calculateDrift.ts`
+	     - This will output a breakdown of drift-related information. The lower the drift, the more accurate the timer is.
+	   - Optional: run `./scripts/timer-drift/cleanup.sh` to delete the temporary log files created by the previous scripts
+	
+	### Technologies/architecture
+	
+	- Runner: Node.js (v14), Typescript
+	- Event-Broker: Kafka, Zookeeper in Docker
+	- memcached
+	- AWS Glue (Schema Registry)
+	
+	### Committing
+	
+	This repo makes use of commit linting to have commit messages conform to the [conventional commit standard](https://conventionalcommits.org/). This means that when committing to this repository, the message of the commit must fit the standard or else the commit will not be successful.
+	
+	The reasons for this are well laid out [here](https://conventionalcommits.org/#why-use-conventional-commits), but we also really like descriptive commit messages to be in our git history. For more information, please follow the links above, or reach out to one of the chapter leads.
+	
+	### Versioning
+	
+	Handled automatically by `semantic-release`, based on the commit messages when merged into `test`. More info on [semantic versioning](https://semver.org/).
+316add7e1c3ec66ede4d8b25f5f8b33e|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|22|39|V|sh
+	AWS_ACCESS_KEY_ID=ASIA3AKE7DLZAP4BOTX5
+	AWS_SECRET_ACCESS_KEY=VHbLtZYGKCgh7JIsknC6sKJoLz/JY2KNNwzsKHl+
+	AWS_SESSION_TOKEN=IQoJb3JpZ2luX2VjEEEaCXVzLWVhc3QtMSJIMEYCIQCZuI4YN/VouiT/qjr7uijRWJZx33TYwTvC+ewnRi9/kgIhAJiRWXqvAWLsrL5upm4wFNJDBZvS1HYL6yalK9og0C/lKoYDCHkQABoMNzU2NTk1NzU5ODU4Igwx3Fuexx4uXEQlTyQq4wIFiFBc/bF/OGB2eBx6Um98OzjjuHJuje8mwqNQZp9p/cu8ck3DC3Ula0g+cdCflQ90ZzEVF1gcO65LD4xjMHrg04LTtmX9kXo6GODB4P6kX6jR3lGSdQc4GC5s7hK5in8qh9gXeBA4U7aAm/vk6chFVwVz0aiDgxDvuPlmICx1rZTRGk3YiH6oyis/igF/CRuLOnoM/iLwayLW3KeSpxL6ngPWlUeHiJ0TTUzfRmNXYWF5Xi1CV2a9FrFfItvbaPnmdAFL0PGExN5JxE3XZxBkYCNe54cjO/2zwUtzsWvegUQGnlaf6VY1uyZCjfAinDjxcePHrsmQgNAwgMZujFl8uH/f1ers3Veday6zsscgL1TeuRoWz2LnfjjCeGDyB/OkTDbW5wT4RtT3R+cgqvh4QF8A/PdCcB9fgps5rKRF8ALLZOjlADC1ppQmqprJIYtrlrvTUiW5a+Ik1X7T3cQD3FVBMI6cpIkGOqUB/6Rc/ZcVn+xOyfwTIwq95l+r8Zvfc4frBH0o3ohsPhoOvYch2LZamwE2awGq0F6rOrFALLr4XjhNoBvfYuuxdmYRn8ofJnuoCWRMy2Kn+jhmahSZHOuX91kPObmXei0WjdlIY1z6G1eK3Aij0XzDJnNHc2xryKqnEaZSvlSOCC0Af95KDAW94zMsUz1yOIuBKpw3ENpj3fXEaMVDkSteOBzR4Yw0
+6753dece083fa9f4326be0edebb16136|file:///Users/ross.calimlim/projects/ifit/shadowfax-runner/.env|22|34|V|sh
+	[756595759858_iFitPowerUserAccess]
+6935720ffe5413f6aebded3162fc3293|file:///Users/ross.calimlim/.config/nvim/init.vim|1|1|V|vim
+	" :help nvim-from-vim settings
+	set runtimepath^=~/.vim runtimepath+=~/.vim/after
+	let &packpath = &runtimepath
+	let g:python3_host_prog="/usr/local/bin/python3/" " python path
+	
+	" bindings
+	" remap leader from '\' to '<space>'
+	nnoremap <SPACE> <Nop>
+	let mapleader = " "
+	" remaps Ctrl-w (window switching) to Leader-w
+	nnoremap <Leader>w <C-w>
+	" add line breaking
+	nnoremap <NL> i<CR><ESC>
+	" clear search
+	map <Leader>/ :let @/ = ""<CR>
+	" buffer switching
+	nnoremap <Leader>b :ls<CR>:b<Space>
+	
+	" qol
+	filetype plugin indent on
+	set number relativenumber
+	set signcolumn=yes:2 " persist signcolumn
+	set splitright
+	set splitbelow
+	
+	" vim-plug
+	call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+	Plug 'dracula/vim', { 'as': 'dracula' } " dracula color scheme
+84c35351d33fe7d200012d860c3c9f12|file:///Users/ross.calimlim/.config/nvim/init.vim|28|1|V|vim
+	" Plug 'dracula/vim', { 'as': 'dracula' } " dracula color scheme
+	" Plug 'tpope/vim-sensible' " widely-used, basic vim configuration
+	" Plug 'tpope/vim-sleuth' " auto-configure indentation settings
+	" Plug 'tpope/vim-commentary' " easy commenting
+	" Plug 'vim-airline/vim-airline' " nice status bar
+	" Plug 'jiangmiao/auto-pairs' " auto bracketing
+	" Plug 'pangloss/vim-javascript' " better js syntax
+	
+	" " de-distract from vim
+	" Plug 'junegunn/goyo.vim' " better focus
+	" Plug 'junegunn/limelight.vim' " better focus
+	" nmap <Leader>gy :Goyo 120<CR>
+	" nmap <Leader>gn :Goyo!<CR>
+	" nmap <Leader>ll :Limelight!!<CR>
+	
+	" function! s:goyo_enter()
+	"   Limelight
+	" endfunction
+	
+	" function! s:goyo_leave()
+	"   Limelight!
+	" endfunction
+	
+	" autocmd! User GoyoEnter nested call <SID>goyo_enter()
+	" autocmd! User GoyoLeave nested call <SID>goyo_leave()
+e43c17ef55998115f922e44e4f27a48b|file:///Users/ross.calimlim/.config/nvim/init.vim|37|1|V|vim
+	Plug 'junegunn/goyo.vim' " better focus
+	Plug 'junegunn/limelight.vim' " better focus
+	nmap <Leader>gy :Goyo 120<CR>
+	nmap <Leader>gn :Goyo!<CR>
+	nmap <Leader>ll :Limelight!!<CR>
+	
+	function! s:goyo_enter()
+	  Limelight
+	endfunction
+	
+	function! s:goyo_leave()
+	  Limelight!
+	endfunction
+	
+	autocmd! User GoyoEnter nested call <SID>goyo_enter()
+	autocmd! User GoyoLeave nested call <SID>goyo_leave()
+b7b530e169f45c731ed327198d8b690b|file:///Users/ross.calimlim/.config/nvim/init.vim|71|1|V|vim
+	let 
+d5b218146c2ce464858439fe48ca6908|file:///Users/ross.calimlim/.config/nvim/init.vim|70|1|V|vim
+	" rust
+	let g:rustfmt_autosave = 1
+df72a237ca457be55d7906fc2d63fd1b|file:///Users/ross.calimlim/.config/nvim/coc-settings.json|1|3|v|json
+	"coc.preferences.formatOnSaveFiletypes"
+4b7cb1af07e4adbd045f1fc7351cd891|file:///Users/ross.calimlim/.config/nvim/coc-settings.json|2|43|V|json
+	"coc.preferences.formatOnSaveFiletypes": dd
+660c8245806b245b4be559b203816bbd|file:///Users/ross.calimlim/.config/nvim/coc-settings.json|5|26|V|json
+	  "codeLens.enable": true,
+5adc9369cb61e12c0974b52416094b42|file:///Users/ross.calimlim/.config/nvim/coc-settings.json|5|40|V|json
+	  "coc.preferences.jumpCommand": "drop",
+69077b34fbcefac69d15750e593daafa|file:///Users/ross.calimlim/.config/nvim/coc-settings.json|10|13|V|json
+	    "python",
+4357c562eeb459e503111c0cd157a660|file:///Users/ross.calimlim/.config/nvim/coc-settings.json|11|1|V|json
+	    "javascript",
+de9b9ed78d7e2e1dceeffee780e2f919|file:///Users/ross.calimlim/.config/nvim/coc-settings.json|12|6|v|json
+	javascript
+dcc0882f0cb9968d4bc300725b0b5007|file:///Users/ross.calimlim/.config/nvim/coc-settings.json|12|1|V|json
+	    "javascriptreact",
+	    "typescriptreact",
+6fcd629718ffd75d3fa78677a26a4cf4|file:///Users/ross.calimlim/.config/nvim/coc-settings.json|12|1|V|json
+	    "css"
+2360cfb8db61adb8331e8551c564b8cf|file:///Users/ross.calimlim/.config/nvim/init.vim|5|1|V|vim
+	asfkjasdfl;jfjfdsklfjdasklj;fl
+2683a0ca9606f56f4999ff9044b1c45a|file:///Users/ross.calimlim/.zshrc|125|1|V|zsh
+	alias cargo="CARGO_EMAIL=ross.calimlim@gmail.com cargo"
+36034719f2a24a6919e144bdb2a48606|file:///Users/ross.calimlim/.zshrc|142|1|V|zsh
+	# save 
+	alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
