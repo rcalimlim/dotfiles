@@ -23,9 +23,13 @@ set signcolumn=yes:2 " persist signcolumn
 set splitright
 set splitbelow
 
+" use true color
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
 " vim-plug
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
-Plug 'dracula/vim', { 'as': 'dracula' } " dracula color scheme
+" Plug 'dracula/vim', { 'as': 'dracula' } " dracula color scheme
+Plug 'morhetz/gruvbox' " gruvbox color scheme
 Plug 'tpope/vim-sensible' " widely-used, basic vim configuration
 Plug 'tpope/vim-sleuth' " auto-configure indentation settings
 Plug 'tpope/vim-commentary' " easy commenting
@@ -39,15 +43,12 @@ Plug 'junegunn/limelight.vim' " better focus
 nmap <Leader>gy :Goyo 120<CR>
 nmap <Leader>gn :Goyo!<CR>
 nmap <Leader>ll :Limelight!!<CR>
-
 function! s:goyo_enter()
   Limelight
 endfunction
-
 function! s:goyo_leave()
   Limelight!
 endfunction
-
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
@@ -59,8 +60,7 @@ command! -nargs=? -complete=dir Explore Dirvish <args>
 command! -nargs=? -complete=dir Sexplore belowright split | silent Dirvish <args>
 command! -nargs=? -complete=dir Vexplore leftabove vsplit | silent Dirvish <args>
 
-" formatting
-" js
+" formatting  - js
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] } " prettier settings
@@ -68,13 +68,14 @@ let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat_config_present = 1
 let g:prettier#autoformat_config_files = [".prettierrc.js"]
 
+" conquer of completion - modern IDE feature suite
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " colorscheme
 syntax enable
 set termguicolors
-colorscheme dracula
+colorscheme gruvbox
 
 " limelight
 nmap <Leader>l <Plug>(Limelight)
@@ -130,8 +131,8 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> gk <Plug>(coc-diagnostic-prev)
+nmap <silent> gj <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd :vsp<CR><Plug>(coc-definition)
@@ -159,7 +160,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
