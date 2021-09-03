@@ -135,16 +135,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 
 # get rid of percent cursor
-setopt PROMPT_CR
+# setopt PROMPT_CR
 setopt PROMPT_SP
 export PROMPT_EOL_MARK=""
-
-# zsh told me to
-echo '(( ! ${+functions[p10k]} )) || p10k finalize' >>! ~/.zshrc
-(( ! ${+functions[p10k]} )) || p10k finalize
-(( ! ${+functions[p10k]} )) || p10k finalize
-(( ! ${+functions[p10k]} )) || p10k finalize
-(( ! ${+functions[p10k]} )) || p10k finalize
-(( ! ${+functions[p10k]} )) || p10k finalize
-(( ! ${+functions[p10k]} )) || p10k finalize
-(( ! ${+functions[p10k]} )) || p10k finalize
