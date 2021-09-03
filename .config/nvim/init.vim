@@ -33,6 +33,7 @@ Plug 'morhetz/gruvbox' " gruvbox color scheme
 Plug 'tpope/vim-sensible' " widely-used, basic vim configuration
 Plug 'tpope/vim-sleuth' " auto-configure indentation settings
 Plug 'tpope/vim-commentary' " easy commenting
+Plug 'tpope/vim-unimpaired' " handy navigation (SCM conflit markers, etc.)
 Plug 'vim-airline/vim-airline' " nice status bar
 Plug 'jiangmiao/auto-pairs' " auto bracketing
 Plug 'pangloss/vim-javascript' " better js syntax
@@ -131,8 +132,8 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> gk <Plug>(coc-diagnostic-prev)
-nmap <silent> gj <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd :vsp<CR><Plug>(coc-definition)

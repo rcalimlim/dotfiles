@@ -139,4 +139,12 @@ setopt PROMPT_CR
 setopt PROMPT_SP
 export PROMPT_EOL_MARK=""
 
-# echo '(( ! ${+functions[p10k]} )) || p10k finalize' >>! ~/.zshrc
+# zsh told me to
+echo '(( ! ${+functions[p10k]} )) || p10k finalize' >>! ~/.zshrc
+(( ! ${+functions[p10k]} )) || p10k finalize
+(( ! ${+functions[p10k]} )) || p10k finalize
+(( ! ${+functions[p10k]} )) || p10k finalize
+(( ! ${+functions[p10k]} )) || p10k finalize
+(( ! ${+functions[p10k]} )) || p10k finalize
+(( ! ${+functions[p10k]} )) || p10k finalize
+(( ! ${+functions[p10k]} )) || p10k finalize
