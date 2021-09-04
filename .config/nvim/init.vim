@@ -12,7 +12,7 @@ Plug 'tpope/vim-unimpaired' " handy navigation (SCM conflit markers, etc.)
 Plug 'vim-airline/vim-airline' " nice status bar
 
 " language help
-Plug 'pangloss/vim-javascript' " better js syntax
+Plug 'sheerun/vim-polyglot' " many language packs
 Plug 'rust-lang/rust.vim' " rust
 
 " telescope
