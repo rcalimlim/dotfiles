@@ -10,6 +10,7 @@ Plug 'tpope/vim-sleuth' " auto-configure indentation settings
 Plug 'tpope/vim-commentary' " easy commenting
 Plug 'tpope/vim-unimpaired' " handy navigation (SCM conflit markers, etc.)
 Plug 'vim-airline/vim-airline' " nice status bar
+Plug 'junegunn/goyo.vim' " center buffer
 
 " language help
 Plug 'sheerun/vim-polyglot' " many language packs
@@ -30,6 +31,7 @@ call plug#end()
 
 " general config
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 
 " remap
 let mapleader = " "
@@ -37,13 +39,13 @@ nnoremap <Leader>w <C-w>
 
 " colorscheme
 syntax enable
-colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 let g:gruvbox_invert_selection='0'
+colorscheme gruvbox
 
 " lsp language server init
 lua <<EOF
