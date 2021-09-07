@@ -15,6 +15,7 @@ Plug 'junegunn/goyo.vim' " center buffer
 " language help
 Plug 'sheerun/vim-polyglot' " many language packs
 Plug 'rust-lang/rust.vim' " rust
+Plug 'niftylettuce/vim-jinja' " nunjucks
 
 " telescope
 Plug 'nvim-lua/plenary.nvim'
