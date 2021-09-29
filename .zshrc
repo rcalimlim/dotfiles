@@ -122,6 +122,7 @@ alias lsr="tree -L 3 -I node_modules"
 alias npmls="npm list --depth=0"
 alias cd-prj="cd ~/projects && ll"
 alias cd-ifit="cd ~/projects/ifit"
+alias golang="/usr/local/Cellar/go/1.17/bin/go"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -132,7 +133,7 @@ export PATH="/usr/local/opt/mongodb-community@3.4/bin:$PATH"
 
 # load nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # get rid of percent cursor
 # setopt PROMPT_CR

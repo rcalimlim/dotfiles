@@ -13,6 +13,8 @@ nnoremap <leader>vh :lua vim.lsp.buf.hover()<cr>
 nnoremap <leader>vca :lua vim.lsp.buf.code_action()<cr>
 nnoremap <leader>vsd :lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.util.show_line_diagnostics()<cr>
 nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<cr>
+nnoremap <leader>vp :lua vim.lsp.diagnostic.goto_prev()<cr>
+nnoremap <leader>vt :TroubleToggle<cr>
 nnoremap <leader>vll :call LspLocationList()<cr>
 
 augroup THE_PRIMEAGEN_LSP
