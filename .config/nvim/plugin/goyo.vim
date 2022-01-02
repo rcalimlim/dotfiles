@@ -26,4 +26,4 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
-nnoremap <leader>c <cmd>Goyo<cr>
+nnoremap <leader>cm <cmd>Goyo<cr>

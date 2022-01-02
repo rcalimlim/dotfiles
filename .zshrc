@@ -138,3 +138,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # setopt PROMPT_CR
 setopt PROMPT_SP
 export PROMPT_EOL_MARK=""
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/sls.zsh
