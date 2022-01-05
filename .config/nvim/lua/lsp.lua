@@ -72,7 +72,9 @@ local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protoco
 local lspconfig = require "lspconfig"
 lspconfig.util.default_config.capabilities = capabilities
 
--- ls json
+-- ls: eslint (does this need to be enabled alongside tsserver ??)
+lspconfig.eslint.setup{}
+-- ls: json
 lspconfig.jsonls.setup{}
 -- ls: typescript
 lspconfig.tsserver.setup {
@@ -125,5 +127,7 @@ lspconfig.tsserver.setup {
         vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
     end
 }
+-- ls: yaml
 lspconfig.yamlls.setup{}
+-- ls: markdown
 lspconfig.zk.setup{}
