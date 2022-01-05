@@ -1,5 +1,11 @@
--- dirvish file browser config
-vim.g.dirvish_mod = ':sort ,^.*[/],' -- sort folders top
+-- justinmk/vim-dirvish file browser config
+
+-- sort folders to top
+vim.api.nvim_exec(
+[[
+let g:dirvish_mode = ':sort ,^.*[\/],'
+]],
+false)
 
 -- use dirvish when (Explore)ing
 vim.cmd(':command! -nargs=? -complete=dir Explore Dirvish <args>')

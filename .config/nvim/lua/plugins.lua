@@ -24,12 +24,41 @@ return require('packer').startup(function(use)
   -- language server protocol
   use 'neovim/nvim-lspconfig' -- base lsp config for nvim
   use 'williamboman/nvim-lsp-installer' -- lsp server manager
+  use 'jose-elias-alvarez/nvim-lsp-ts-utils' -- ts-completion and autoimports
+
+  -- lsp autocompletion
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp' -- autocompletion
+
+  -- lsp snippets
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip' -- snippets
+
+  -- lsp formatting
+  use { -- prettier for ts
+    'prettier/vim-prettier',
+    run = 'yarn install --frozen-lockfile --production',
+  }
+
+  -- tree sitter
+  use 'nvim-telescope/telescope.nvim' -- file list traverser
+
 
   -- file browser
   use 'justinmk/vim-dirvish' -- dirvish file browser (netrw alternative)
 
-  -- ergonomics
-  use "b0o/mapx.nvim" -- makes key mapping in lua easier
+  -- general plugins
+  use 'morhetz/gruvbox' -- gruvbox color scheme
+  use 'tpope/vim-sensible' -- widely-used, basic vim configuration
+  use 'tpope/vim-sleuth' -- auto-configure indentation settings
+  use 'tpope/vim-commentary' -- easy commenting
+
+  -- general dependencies
+  use 'nvim-lua/plenary.nvim' -- dep
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- dep
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
