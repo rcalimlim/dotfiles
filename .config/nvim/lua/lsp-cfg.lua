@@ -53,22 +53,22 @@ for _, lsp in ipairs(servers) do nvim_lsp[lsp].setup {flags = {debounce_text_cha
 
 -- custom server configs
 -- efm (https://www.chrisatmachine.com/Neovim/28-neovim-lua-development/)
--- nvim_lsp.efm.setup {
---    init_options = {documentFormatting = true},
---    filetypes = {"lua"},
---    settings = {
---       rootMarkers = {".git/"},
---       languages = {
---          lua = {
---             {
---                -- based on https://github.com/luarocks/lua-style-guide
---                formatCommand = "lua-format -i --no-use-tab --indent-width=3 --no-keep-simple-function-one-line --no-break-after-operator --column-limit=150 --break-after-table-lb --single-quote-to-double-quote",
---                formatStdin = true
---             }
---          }
---       }
---    }
--- }
+nvim_lsp.efm.setup {
+   init_options = {documentFormatting = true},
+   filetypes = {"lua"},
+   settings = {
+      rootMarkers = {".git/"},
+      languages = {
+         lua = {
+            {
+               -- based on https://github.com/luarocks/lua-style-guide
+               formatCommand = "lua-format -i --no-use-tab --indent-width=3 --no-keep-simple-function-one-line --no-break-after-operator --column-limit=150 --break-after-table-lb --single-quote-to-double-quote",
+               formatStdin = true
+            }
+         }
+      }
+   }
+}
 
 -- lua (https://www.chrisatmachine.com/Neovim/28-neovim-lua-development/)
 USER = vim.fn.expand("$USER")
