@@ -147,3 +147,4 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/sls.zsh
+alias luamake=/Users/ross.calimlim/lua-language-server/3rd/luamake/luamake

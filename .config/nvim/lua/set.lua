@@ -1,5 +1,4 @@
-vim.api.nvim_exec(
-[[
+vim.api.nvim_exec([[
 set exrc
 set guicursor=
 set number
@@ -50,5 +49,4 @@ set updatetime=50
 " don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-]],
-false)
+]], false)
