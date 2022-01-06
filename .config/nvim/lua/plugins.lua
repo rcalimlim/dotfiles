@@ -10,7 +10,7 @@ vim.cmd([[
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-   packer_bootstrap = fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
+   Packer_Bootstrap = fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
 end
 
 -- instruct packer to load and manage the listed plugins
@@ -50,15 +50,7 @@ return require("packer").startup(function(use)
    use "justinmk/vim-dirvish" -- dirvish file browser (netrw alternative)
 
    -- status line
-   use({
-      "NTBBloodbath/galaxyline.nvim",
-      -- your statusline
-      config = function()
-         require("galaxyline.themes.eviline")
-      end,
-      -- some optional icons
-      requires = {"kyazdani42/nvim-web-devicons", opt = true}
-   })
+   use "ojroques/nvim-hardline" -- vim-airline-inspired statusline
 
    -- general plugins
    use "morhetz/gruvbox" -- gruvbox color scheme
@@ -72,5 +64,5 @@ return require("packer").startup(function(use)
 
    -- Automatically set up your configuration after cloning packer.nvim
    -- Put this at the end after all plugins
-   if packer_bootstrap then require("packer").sync() end
+   if Packer_Bootstrap then require("packer").sync() end
 end)
