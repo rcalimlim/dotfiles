@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/vim-dirvish",
     url = "https://github.com/justinmk/vim-dirvish"
   },
+  ["vim-kitty"] = {
+    loaded = true,
+    path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/vim-kitty",
+    url = "https://github.com/fladson/vim-kitty"
+  },
   ["vim-prettier"] = {
     loaded = true,
     path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/vim-prettier",

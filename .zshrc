@@ -75,7 +75,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  # tmux
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,7 +121,7 @@ alias gp="git push"
 alias gr="git reset head"
 alias gre="git rebase"
 alias gap="git add -p"
-alias ll="gls -alh --color --group-directories-first"
+alias ll="gls -alh --color --group-directories-first | awk '{print \$5,\$9}' | column -t"
 alias lsr="tree -L 3 -I node_modules"
 alias npmls="npm list --depth=0"
 alias cd-prj="cd ~/projects && ll"
@@ -138,13 +143,3 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # setopt PROMPT_CR
 setopt PROMPT_SP
 export PROMPT_EOL_MARK=""
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ross.calimlim/projects/ifit/noche/node_modules/tabtab/.completions/sls.zsh
-alias luamake=/Users/ross.calimlim/lua-language-server/3rd/luamake/luamake

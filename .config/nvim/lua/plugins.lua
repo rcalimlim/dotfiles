@@ -42,6 +42,7 @@ return require("packer").startup(function(use)
       "prettier/vim-prettier",
       run = "yarn install --frozen-lockfile --production"
    }
+   use "fladson/vim-kitty" -- kitty formatting
 
    -- tree sitter
    use "nvim-telescope/telescope.nvim" -- file list traverser
