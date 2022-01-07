@@ -48,5 +48,4 @@ set updatetime=50
 
 " don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
 ]], false)
