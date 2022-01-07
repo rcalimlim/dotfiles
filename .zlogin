@@ -1,0 +1,1 @@
+/Users/ross.calimlim/.zprezto/runcoms/zlogin
