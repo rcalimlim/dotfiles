@@ -47,31 +47,37 @@ return require("packer").startup(function(use)
    use "fladson/vim-kitty" -- kitty formatting
 
    -- lsp utils
-   use {"ray-x/lsp_signature.nvim", config = require("lsp_signature").setup({max_width = 85})} -- show fn signature
+   use {"ray-x/lsp_signature.nvim", config = require("lsp_signature").setup {max_width = 85}} -- show fn signature
 
    -- fuzzy file lister
    use { -- file list traverser
       "nvim-telescope/telescope.nvim",
-      config = require("telescope").setup({defaults = {layout_strategy = "vertical", layout_config = {height = 0.95, width = 0.85}}}),
+      config = require("telescope").setup {defaults = {layout_strategy = "vertical", layout_config = {height = 0.95, width = 0.85}}},
       requires = {"nvim-lua/plenary.nvim"}
    }
 
    -- file browser
    use "justinmk/vim-dirvish" -- dirvish file browser (netrw alternative)
 
+   -- preview window
+   use {"rmagatti/goto-preview", config = require("goto-preview").setup {}}
+
    -- buffers as tabs
    vim.opt.termguicolors = true
-   use {"akinsho/bufferline.nvim", config = require("bufferline").setup({options = {show_buffer_close_icons = false, show_close_icons = false}})}
+   use {"akinsho/bufferline.nvim", config = require("bufferline").setup {options = {show_buffer_close_icons = false, show_close_icons = false}}} -- shows buffers as tabs
 
    -- statusline
-   use {"nvim-lualine/lualine.nvim", config = require("lualine").setup(), requires = {"kyazdani42/nvim-web-devicons", opt = true}}
+   use {"nvim-lualine/lualine.nvim", config = require("lualine").setup {}, requires = {"kyazdani42/nvim-web-devicons", opt = true}} -- bottom of nvim info line
 
    -- cursor
-   use {"yamatsum/nvim-cursorline"}
+   use {"yamatsum/nvim-cursorline"} -- underlines words under cursor
 
    -- indents
    vim.opt.list = true
-   use {"lukas-reineke/indent-blankline.nvim", config = require("indent_blankline").setup {show_end_of_line = true}}
+   use {"lukas-reineke/indent-blankline.nvim", config = require("indent_blankline").setup {show_end_of_line = true}} -- displays indent context
+
+   -- git
+   use {"f-person/git-blame.nvim"} -- shows git blame
 
    -- general
    use "tpope/vim-sensible" -- widely-used, basic vim configuration

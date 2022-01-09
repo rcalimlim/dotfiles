@@ -33,14 +33,6 @@ vim.api.nvim_set_keymap("n", "<leader>bn", ":bn<cr>", options) -- goto next buff
 vim.api.nvim_set_keymap("n", "<leader>bp", ":bp<cr>", options) -- goto previous buffer
 vim.api.nvim_set_keymap("n", "<leader>bad", ":%bd<cr>", options) -- goto previous buffer
 
--- telescope keys
-vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", options)
-vim.api.nvim_set_keymap("n", "<leader>fd", "<cmd>lua require('telescope.builtin').file_browser()<cr>", options)
-vim.api.nvim_set_keymap("n", "<leader>fs", "<cmd>lua require('telescope.builtin').grep_string()<cr>", options)
-vim.api.nvim_set_keymap("n", "<leader>fl", "<cmd>lua require('telescope.builtin').live_grep()<cr>", options)
-vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", options)
-vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", options)
-
 -- load everything in /lua folder
 require("find-and-search")
 require("lsp-cfg")
