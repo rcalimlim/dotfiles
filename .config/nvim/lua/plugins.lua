@@ -18,13 +18,15 @@ return require("packer").startup(function(use)
    -- package management (this)
    use "wbthomason/packer.nvim" -- packer plugin manager (managing itself)
 
+   -- colorscheme
+   use {"ellisonleao/gruvbox.nvim"} -- gruvbox port in lua for speed
+
    -- performance benchmarking
    use "tweekmonster/startuptime.vim" -- measures nvim startup times w/ breakdown
 
    -- language server protocol
    use "neovim/nvim-lspconfig" -- base lsp config for nvim
    use "jose-elias-alvarez/nvim-lsp-ts-utils" -- ts-completion and autoimports
-   use "jose-elias-alvarez/null-ls.nvim" -- hook into LSP with non-lsp source
 
    -- lsp autocompletion
    use "hrsh7th/cmp-nvim-lsp"
@@ -44,24 +46,37 @@ return require("packer").startup(function(use)
    }
    use "fladson/vim-kitty" -- kitty formatting
 
-   -- tree sitter
-   use "nvim-telescope/telescope.nvim" -- file list traverser
+   -- lsp utils
+   use {"ray-x/lsp_signature.nvim", config = require("lsp_signature").setup({max_width = 85})} -- show fn signature
+
+   -- fuzzy file lister
+   use { -- file list traverser
+      "nvim-telescope/telescope.nvim",
+      config = require("telescope").setup({defaults = {layout_strategy = "vertical", layout_config = {height = 0.95, width = 0.85}}}),
+      requires = {"nvim-lua/plenary.nvim"}
+   }
 
    -- file browser
    use "justinmk/vim-dirvish" -- dirvish file browser (netrw alternative)
 
-   -- status line
-   use "ojroques/nvim-hardline" -- vim-airline-inspired statusline
+   -- buffers as tabs
+   vim.opt.termguicolors = true
+   use {"akinsho/bufferline.nvim", config = require("bufferline").setup({options = {show_buffer_close_icons = false, show_close_icons = false}})}
 
-   -- general plugins
-   use "morhetz/gruvbox" -- gruvbox color scheme
+   -- statusline
+   use {"nvim-lualine/lualine.nvim", config = require("lualine").setup(), requires = {"kyazdani42/nvim-web-devicons", opt = true}}
+
+   -- cursor
+   use {"yamatsum/nvim-cursorline"}
+
+   -- indents
+   vim.opt.list = true
+   use {"lukas-reineke/indent-blankline.nvim", config = require("indent_blankline").setup {show_end_of_line = true}}
+
+   -- general
    use "tpope/vim-sensible" -- widely-used, basic vim configuration
    use "tpope/vim-sleuth" -- auto-configure indentation settings
    use "tpope/vim-commentary" -- easy commenting
-
-   -- general dependencies
-   use "nvim-lua/plenary.nvim" -- dep
-   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"} -- dep
 
    -- Automatically set up your configuration after cloning packer.nvim
    -- Put this at the end after all plugins

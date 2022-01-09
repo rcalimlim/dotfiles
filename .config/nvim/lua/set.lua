@@ -22,7 +22,7 @@ set termguicolors
 set scrolloff=8
 set noshowmode
 set completeopt=menuone,noinsert,noselect
-set signcolumn=yes:2
+set signcolumn=yes
 set cmdheight=1
 
 " find
