@@ -27,7 +27,8 @@ prompt powerlevel10k
 
 # dotfiles are cloned to a bare repo and working tree is home dir
 # interact with it using `config`
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+config config --local status.showUntrackedFiles no
 
 # aliases - listing
 alias ll="gls -alh --color --group-directories-first | awk '{print \$5,\$9}' | column -t"
