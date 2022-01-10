@@ -25,6 +25,10 @@ autoload -Uz promptinit
 promptinit
 prompt powerlevel10k
 
+# dotfiles are cloned to a bare repo and working tree is home dir
+# interact with it using `config`
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
 # aliases - listing
 alias ll="gls -alh --color --group-directories-first | awk '{print \$5,\$9}' | column -t"
 alias lsr="tree -L 3 -I node_modules"
@@ -39,3 +43,6 @@ alias gd="git diff"
 alias gp="git push"
 alias gr="git reset head"
 alias gh="git log --graph --decorate --pretty=oneline --abbrev-commit"
+
+# need this shit for lua-language-server probably
+alias luamake=/usr/local/bin/lua-language-server/3rd/luamake/luamake

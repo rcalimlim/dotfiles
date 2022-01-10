@@ -13,6 +13,18 @@ if fn.empty(fn.glob(install_path)) > 0 then
    Packer_Bootstrap = fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
 end
 
+-- add safe 'require' function for bootstrapping
+-- this prevents packages from being setup if they don't exist yet!
+local function safeconfig(module, setupConfig)
+	local function requiref(module)
+		require(module)
+	end
+	res = pcall(requiref, module)
+	if res then
+		require(module).setup(setupConfig)
+	end
+end
+
 -- instruct packer to load and manage the listed plugins
 return require("packer").startup(function(use)
    -- package management (this)
@@ -27,6 +39,9 @@ return require("packer").startup(function(use)
    -- language server protocol
    use "neovim/nvim-lspconfig" -- base lsp config for nvim
    use "jose-elias-alvarez/nvim-lsp-ts-utils" -- ts-completion and autoimports
+
+   -- lsp server manager
+   use {"williamboman/nvim-lsp-installer"}
 
    -- lsp autocompletion
    use "hrsh7th/cmp-nvim-lsp"
@@ -47,12 +62,16 @@ return require("packer").startup(function(use)
    use "fladson/vim-kitty" -- kitty formatting
 
    -- lsp utils
-   use {"ray-x/lsp_signature.nvim", config = require("lsp_signature").setup {max_width = 85}} -- show fn signature
+    use {"ray-x/lsp_signature.nvim", -- show fn signature
+    config = safeconfig("lsp_signature", {max_width = 85})}
+    -- require("lsp_signature").setup {max_width = 85}} -- show fn signature
+
+
 
    -- fuzzy file lister
    use { -- file list traverser
       "nvim-telescope/telescope.nvim",
-      config = require("telescope").setup {defaults = {layout_strategy = "vertical", layout_config = {height = 0.95, width = 0.85}}},
+      config = safeconfig("telescope", {layout_strategy = "vertical", layout_config = {height = 0.95, width = 0.85}}),
       requires = {"nvim-lua/plenary.nvim"}
    }
 
@@ -60,21 +79,21 @@ return require("packer").startup(function(use)
    use "justinmk/vim-dirvish" -- dirvish file browser (netrw alternative)
 
    -- preview window
-   use {"rmagatti/goto-preview", config = require("goto-preview").setup {}}
+   use {"rmagatti/goto-preview", config = safeconfig("goto-preview", {})}
 
    -- buffers as tabs
    vim.opt.termguicolors = true
-   use {"akinsho/bufferline.nvim", config = require("bufferline").setup {options = {show_buffer_close_icons = false, show_close_icons = false}}} -- shows buffers as tabs
+   use {"akinsho/bufferline.nvim", config = safeconfig("bufferline", {options = {show_buffer_close_icons = false, show_close_icons = false}})} -- shows buffers as tabs
 
    -- statusline
-   use {"nvim-lualine/lualine.nvim", config = require("lualine").setup {}, requires = {"kyazdani42/nvim-web-devicons", opt = true}} -- bottom of nvim info line
+   use {"nvim-lualine/lualine.nvim", config = safeconfig("lualine", {}), requires = {"kyazdani42/nvim-web-devicons", opt = true}} -- bottom of nvim info line
 
    -- cursor
    use {"yamatsum/nvim-cursorline"} -- underlines words under cursor
 
    -- indents
    vim.opt.list = true
-   use {"lukas-reineke/indent-blankline.nvim", config = require("indent_blankline").setup {show_end_of_line = true}} -- displays indent context
+   use {"lukas-reineke/indent-blankline.nvim", config = safeconfig("indent_blankline", {show_end_of_line = true})} -- displays indent context
 
    -- git
    use {"f-person/git-blame.nvim"} -- shows git blame

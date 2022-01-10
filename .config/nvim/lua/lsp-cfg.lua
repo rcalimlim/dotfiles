@@ -43,13 +43,33 @@ local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protoco
 -- default all server to use completion capabilities
 nvim_lsp.util.default_config.capabilities = capabilities
 
--- loop over servers that only need default config
+-- loop over all server and install if not installed
+local lsp_installer_servers = require("nvim-lsp-installer.servers")
 local servers = {
-   "eslint", -- eslint (js, ts)
-   "zk", -- markdown
-   "yamlls" -- yaml
+   "efm",
+   "eslint",
+   "sumneko_lua",
+   "tsserver",
+   "zk",
+   "yamlls",
 }
-for _, lsp in ipairs(servers) do nvim_lsp[lsp].setup {flags = {debounce_text_changes = 150}} end
+
+local function install_server(lsp)
+   local _, requested_server = lsp_installer_servers.get_server(lsp)
+   if not requested_server:is_installed() then
+      requested_server:install()
+   end
+end
+
+for _, lsp in ipairs(servers) do install_server(lsp) end
+
+-- loop over servers that only need default config
+local easy_servers = {
+   "eslint",
+   "zk",
+   "yamlls"
+}
+for _, lsp in ipairs(easy_servers) do nvim_lsp[lsp].setup {flags = {debounce_text_changes = 150}} end
 
 -- custom server configs
 -- efm (https://www.chrisatmachine.com/Neovim/28-neovim-lua-development/)

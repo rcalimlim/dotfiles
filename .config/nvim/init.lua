@@ -1,3 +1,11 @@
+-- load everything in /lua folder
+require("plugins")
+require("find-and-search")
+require("lsp-cfg")
+require("lsp-cmd")
+require("set")
+require("whitespace")
+
 -- disable default plugins for performance
 vim.g.loaded_matchparen = 1
 vim.g.loaded_matchit = 1
@@ -32,11 +40,3 @@ vim.api.nvim_set_keymap("n", "<leader>bd", ":bd<cr>", options) -- delete current
 vim.api.nvim_set_keymap("n", "<leader>bn", ":bn<cr>", options) -- goto next buffer
 vim.api.nvim_set_keymap("n", "<leader>bp", ":bp<cr>", options) -- goto previous buffer
 vim.api.nvim_set_keymap("n", "<leader>bad", ":%bd<cr>", options) -- goto previous buffer
-
--- load everything in /lua folder
-require("find-and-search")
-require("lsp-cfg")
-require("lsp-cmd")
-require("plugins")
-require("set")
-require("whitespace")
