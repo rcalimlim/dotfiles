@@ -13,13 +13,13 @@ cmp.setup({
       end
    },
    mapping = {
-       ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'}),
-       ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), {"i", "c"}),
-       ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), {"i", "c"}),
-       ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
-       ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-       ["<C-e>"] = cmp.mapping({i = cmp.mapping.abort(), c = cmp.mapping.close()}),
-       ["<CR>"] = cmp.mapping.confirm({select = true}) -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), {"i", "s"}),
+      ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), {"i", "c"}),
+      ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), {"i", "c"}),
+      ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
+      ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+      ["<C-e>"] = cmp.mapping({i = cmp.mapping.abort(), c = cmp.mapping.close()}),
+      ["<CR>"] = cmp.mapping.confirm({select = true}) -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
    },
    sources = cmp.config.sources({
       {name = "nvim_lsp"}, {name = "vsnip"} -- For vsnip users.
@@ -31,7 +31,6 @@ cmp.setup({
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline("/", {sources = {{name = "buffer"}}})
-
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(":", {sources = cmp.config.sources({{name = "path"}}, {{name = "cmdline"}})})
@@ -45,30 +44,17 @@ nvim_lsp.util.default_config.capabilities = capabilities
 
 -- loop over all server and install if not installed
 local lsp_installer_servers = require("nvim-lsp-installer.servers")
-local servers = {
-   "efm",
-   "eslint",
-   "sumneko_lua",
-   "tsserver",
-   "zk",
-   "yamlls",
-}
+local servers = {"efm", "eslint", "rust_analyzer", "sumneko_lua", "tsserver", "zk", "yamlls"}
 
 local function install_server(lsp)
    local _, requested_server = lsp_installer_servers.get_server(lsp)
-   if not requested_server:is_installed() then
-      requested_server:install()
-   end
+   if not requested_server:is_installed() then requested_server:install() end
 end
 
 for _, lsp in ipairs(servers) do install_server(lsp) end
 
 -- loop over servers that only need default config
-local easy_servers = {
-   "eslint",
-   "zk",
-   "yamlls"
-}
+local easy_servers = {"eslint", "zk", "rust_analyzer", "yamlls"}
 for _, lsp in ipairs(easy_servers) do nvim_lsp[lsp].setup {flags = {debounce_text_changes = 150}} end
 
 -- custom server configs
@@ -118,7 +104,7 @@ nvim_lsp.sumneko_lua.setup {
          },
          diagnostics = {
             -- Get the language server to recognize the `vim` global
-            globals = {"vim"}
+            globals = {"vim", "use", "packer_plugins"}
          },
          workspace = {
             -- Make the server aware of Neovim runtime files

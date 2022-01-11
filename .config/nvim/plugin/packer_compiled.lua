@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["alpha-nvim"] = {
+    loaded = true,
+    path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -115,6 +120,7 @@ _G.packer_plugins = {
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["indent-blankline.nvim"] = {
+    config = {},
     loaded = true,
     path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
@@ -217,6 +223,9 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+time([[Config for indent-blankline.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
