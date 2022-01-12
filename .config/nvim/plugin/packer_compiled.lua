@@ -145,6 +145,11 @@ _G.packer_plugins = {
     path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
     url = "https://github.com/yamatsum/nvim-cursorline"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -174,6 +179,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/Users/ross.calimlim/.local/share/nvim/site/pack/packer/start/rust.vim",
+    url = "https://github.com/rust-lang/rust.vim"
   },
   ["startuptime.vim"] = {
     loaded = true,

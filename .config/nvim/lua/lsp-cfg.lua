@@ -54,7 +54,7 @@ end
 for _, lsp in ipairs(servers) do install_server(lsp) end
 
 -- loop over servers that only need default config
-local easy_servers = {"eslint", "zk", "rust_analyzer", "yamlls"}
+local easy_servers = {"eslint", "zk", "yamlls"}
 for _, lsp in ipairs(easy_servers) do nvim_lsp[lsp].setup {flags = {debounce_text_changes = 150}} end
 
 -- custom server configs
@@ -113,6 +113,10 @@ nvim_lsp.sumneko_lua.setup {
       }
    }
 }
+
+-- rust
+nvim_lsp.rust_analyzer.setup {}
+vim.g.rustfmt_autosave = 1 -- autoformat on save
 
 -- ts
 nvim_lsp.tsserver.setup {

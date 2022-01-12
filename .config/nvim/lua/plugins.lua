@@ -58,6 +58,8 @@ return require("packer").startup(function(use)
       run = "yarn install --frozen-lockfile --production"
    }
    use "fladson/vim-kitty" -- kitty formatting
+   use {"rust-lang/rust.vim"}
+   use {"simrat39/rust-tools.nvim", config = safeconfig("rust-tools", {}), requires = {"nvim-lua/plenary.nvim", "mfussenegger/nvim-dap"}}
 
    -- lsp utils
    use {

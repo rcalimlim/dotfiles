@@ -1,3 +1,6 @@
+-- remappings
+vim.g.mapleader = " " -- set leader to <Space>
+
 -- load everything in /lua folder
 require("plugins")
 require("find-and-search")
@@ -28,9 +31,6 @@ vim.o.background = "dark" -- or "light" for light mode
 vim.g.gruvbox_contrast_dark = "hard"
 vim.g.gruvbox_invert_selection = "0"
 vim.cmd("colorscheme gruvbox")
-
--- remappings
-vim.g.mapleader = " " -- set leader to <Space>
 
 local options = {noremap = true, silent = true}
 vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", options) -- map <Leader>w to change windows
