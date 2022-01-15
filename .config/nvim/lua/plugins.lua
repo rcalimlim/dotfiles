@@ -37,6 +37,7 @@ return require("packer").startup(function(use)
    -- language server protocol
    use "neovim/nvim-lspconfig" -- base lsp config for nvim
    use "jose-elias-alvarez/nvim-lsp-ts-utils" -- ts-completion and autoimports
+   use "mfussenegger/nvim-jdtls" -- java
 
    -- lsp server manager
    use {"williamboman/nvim-lsp-installer"}
@@ -55,7 +56,8 @@ return require("packer").startup(function(use)
    -- lsp formatting
    use { -- prettier for ts
       "prettier/vim-prettier",
-      run = "yarn install --frozen-lockfile --production"
+      run = "yarn install --frozen-lockfile --production",
+      ft = {"typescript", "css", "less", "scss", "graphql", "markdown", "vue", "html"}
    }
    use "fladson/vim-kitty" -- kitty formatting
    use {"rust-lang/rust.vim"}
@@ -71,7 +73,9 @@ return require("packer").startup(function(use)
    -- fuzzy file lister
    use { -- file list traverser
       "nvim-telescope/telescope.nvim",
-      config = safeconfig("telescope", {layout_strategy = "vertical", layout_config = {height = 0.95, width = 0.95}}),
+      config = safeconfig("telescope", {
+         defaults = {file_ignore_patterns = {".git/*"}, layout_strategy = "horizontal", layout_config = {height = 0.95, width = 0.95}}
+      }),
       requires = {"nvim-lua/plenary.nvim"}
    }
 

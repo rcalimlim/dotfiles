@@ -44,7 +44,11 @@ nvim_lsp.util.default_config.capabilities = capabilities
 
 -- loop over all server and install if not installed
 local lsp_installer_servers = require("nvim-lsp-installer.servers")
-local servers = {"efm", "eslint", "rust_analyzer", "sumneko_lua", "tsserver", "zk", "yamlls"}
+local servers = {
+   "efm", "eslint", "rust_analyzer", "sumneko_lua", "tsserver"
+   -- "zk", -- markdown
+   -- "yamlls" -- yaml
+}
 
 local function install_server(lsp)
    local _, requested_server = lsp_installer_servers.get_server(lsp)

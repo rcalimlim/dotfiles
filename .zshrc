@@ -30,8 +30,12 @@ prompt powerlevel10k
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
 
+# set nvim as default editor for system
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 # aliases - listing
-alias ll="gls -alh --color --group-directories-first | awk '{print \$5,\$9}' | column -t"
+alias ll="gls -alh --color --group-directories-first"
 alias lsr="tree -L 3 -I node_modules"
 
 # aliases - git
@@ -40,6 +44,7 @@ alias gap="git add -p"
 alias gs="git status"
 alias gc="git commit"
 alias go="git checkout"
+alias gb="git branch"
 alias gd="git diff"
 alias gp="git push"
 alias gr="git reset head"
