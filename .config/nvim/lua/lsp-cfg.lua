@@ -58,7 +58,11 @@ end
 for _, lsp in ipairs(servers) do install_server(lsp) end
 
 -- loop over servers that only need default config
-local easy_servers = {"eslint", "zk", "yamlls"}
+local easy_servers = {
+   "eslint" -- eslint
+   -- "zk", -- markdown
+   -- "yamlls" -- yaml
+}
 for _, lsp in ipairs(easy_servers) do nvim_lsp[lsp].setup {flags = {debounce_text_changes = 150}} end
 
 -- custom server configs
