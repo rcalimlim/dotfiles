@@ -52,13 +52,3 @@ alias gh="git log --graph --decorate --pretty=oneline --abbrev-commit"
 
 # need this shit for lua-language-server probably
 alias luamake=/usr/local/bin/lua-language-server/3rd/luamake/luamake
-
-# point docker to minikube because we can't use Docker Desktop
-eval $(minikube -p minikube docker-env)
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/ross.calimlim/projects/ifit/janus/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ross.calimlim/projects/ifit/janus/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/ross.calimlim/projects/ifit/janus/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ross.calimlim/projects/ifit/janus/node_modules/tabtab/.completions/sls.zsh
