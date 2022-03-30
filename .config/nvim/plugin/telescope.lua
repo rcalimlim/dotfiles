@@ -9,12 +9,6 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap(
 	"n",
-	"<leader>fd",
-	"<cmd>lua require('telescope.builtin').file_browser({hidden=true})<cr>",
-	options
-)
-vim.api.nvim_set_keymap(
-	"n",
 	"<leader>fs",
 	"<cmd>lua require('telescope.builtin').grep_string({hidden=true})<cr>",
 	options

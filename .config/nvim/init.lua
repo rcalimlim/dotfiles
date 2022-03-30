@@ -3,6 +3,7 @@ vim.g.mapleader = " " -- set leader to <Space>
 
 -- load everything in /lua folder
 require("plugins")
+require("autochdir")
 require("find-and-search")
 require("lsp-cfg")
 require("lsp-cmd")
