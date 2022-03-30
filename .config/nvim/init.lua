@@ -32,7 +32,7 @@ vim.g.gruvbox_contrast_dark = "hard"
 vim.g.gruvbox_invert_selection = "0"
 vim.cmd("colorscheme gruvbox")
 
-local options = {noremap = true, silent = true}
+local options = { noremap = true, silent = true }
 vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", options) -- map <Leader>w to change windows
 
 -- buffer manipulation

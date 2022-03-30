@@ -35,7 +35,7 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # aliases - listing
-alias ll="gls -a --color --group-directories-first"
+alias ll="gls -1shX --color=auto --group-directories-first"
 alias lsr="tree -L 3 -I node_modules"
 
 # aliases - git
@@ -43,7 +43,7 @@ alias ga="git add"
 alias gap="git add -p"
 alias gs="git status"
 alias gc="git commit"
-alias go="git checkout"
+alias gout="git checkout"
 alias gb="git branch"
 alias gd="git diff"
 alias gp="git push"
@@ -52,3 +52,10 @@ alias gh="git log --graph --decorate --pretty=oneline --abbrev-commit"
 
 # need this shit for lua-language-server probably
 alias luamake=/usr/local/bin/lua-language-server/3rd/luamake/luamake
+
+# add go bin to path
+export PATH=$PATH:$(go env GOPATH)/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
