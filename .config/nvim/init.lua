@@ -4,6 +4,7 @@ vim.g.mapleader = " " -- set leader to <Space>
 -- load everything in /lua folder
 require("plugins")
 require("autochdir")
+require("buffers")
 require("find-and-search")
 require("lsp-cfg")
 require("lsp-cmd")
@@ -32,12 +33,3 @@ vim.o.background = "dark" -- or "light" for light mode
 vim.g.gruvbox_contrast_dark = "hard"
 vim.g.gruvbox_invert_selection = "0"
 vim.cmd("colorscheme gruvbox")
-
-local options = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", options) -- map <Leader>w to change windows
-
--- buffer manipulation
-vim.api.nvim_set_keymap("n", "<leader>bd", ":bd<cr>", options) -- delete current buffer
-vim.api.nvim_set_keymap("n", "<leader>bn", ":bn<cr>", options) -- goto next buffer
-vim.api.nvim_set_keymap("n", "<leader>bp", ":bp<cr>", options) -- goto previous buffer
-vim.api.nvim_set_keymap("n", "<leader>bad", ":%bd<cr>", options) -- goto previous buffer
