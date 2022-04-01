@@ -55,6 +55,8 @@ alias luamake=/usr/local/bin/lua-language-server/3rd/luamake/luamake
 
 # add go bin to path
 export PATH=$PATH:$(go env GOPATH)/bin
+# add rust bin to path
+source $HOME/.cargo/env
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

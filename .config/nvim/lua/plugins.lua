@@ -20,18 +20,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	})
 end
 
--- add safe 'require' function for bootstrapping
--- this prevents packages from being setup if they don't exist yet!
-local function safeconfig(module, setupConfig)
-	local function requiref(mod)
-		require(mod)
-	end
-	local res = pcall(requiref, module)
-	if res then
-		require(module).setup(setupConfig)
-	end
-end
-
 -- instruct packer to load and manage the listed plugins
 return require("packer").startup(function(use)
 	-- package management (this)
@@ -84,21 +72,20 @@ return require("packer").startup(function(use)
 	use({ "rust-lang/rust.vim" })
 	use({
 		"simrat39/rust-tools.nvim",
-		config = safeconfig("rust-tools", {}),
+		config = require("rust-tools").setup({}),
 		requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" },
 	})
 
 	-- lsp utils
 	use({
 		"ray-x/lsp_signature.nvim", -- show fn signature
-		config = safeconfig("lsp_signature", { max_width = 85 }),
+		config = require("lsp_signature").setup({ max_width = 85 }),
 	})
-	-- require("lsp_signature").setup {max_width = 85}} -- show fn signature
 
 	-- fuzzy file lister
 	use({ -- file list traverser
 		"nvim-telescope/telescope.nvim",
-		config = safeconfig("telescope", {
+		config = require("telescope").setup({
 			defaults = {
 				file_ignore_patterns = { ".git/*" },
 				layout_strategy = "horizontal",
@@ -112,14 +99,14 @@ return require("packer").startup(function(use)
 	use("justinmk/vim-dirvish") -- dirvish file browser (netrw alternative)
 
 	-- preview window
-	use({ "rmagatti/goto-preview", config = safeconfig("goto-preview", {}) })
+	use({ "rmagatti/goto-preview", config = require("goto-preview").setup({}) })
 
 	-- buffers as tabs
 	vim.opt.termguicolors = true
 	use({
 		"akinsho/bufferline.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
-		config = safeconfig("bufferline", {
+		config = require("bufferline").setup({
 			options = { show_buffer_close_icons = false, show_close_icons = false },
 		}),
 	})
@@ -127,7 +114,7 @@ return require("packer").startup(function(use)
 	-- statusline
 	use({
 		"nvim-lualine/lualine.nvim",
-		config = safeconfig("lualine", {}),
+		config = require("lualine").setup({}),
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	}) -- bottom of nvim info line
 
