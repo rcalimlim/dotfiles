@@ -87,9 +87,12 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		config = require("telescope").setup({
 			defaults = {
-				file_ignore_patterns = { ".git/*" },
+				file_ignore_patterns = {
+					".git/*",
+					"node_modules/*",
+				},
 				layout_strategy = "horizontal",
-				layout_config = { height = 0.95, width = 0.95 },
+				layout_config = { height = 0.95, width = 0.85 },
 			},
 		}),
 		requires = { "nvim-lua/plenary.nvim" },
@@ -105,17 +108,23 @@ return require("packer").startup(function(use)
 	vim.opt.termguicolors = true
 	use({
 		"akinsho/bufferline.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
 		config = require("bufferline").setup({
-			options = { show_buffer_close_icons = false, show_close_icons = false },
+			options = {
+				show_buffer_icons = true,
+				show_buffer_close_icons = false,
+				show_close_icon = false,
+			},
 		}),
+		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
 	-- statusline
 	use({
 		"nvim-lualine/lualine.nvim",
-		config = require("lualine").setup({}),
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		config = require("lualine").setup({
+			options = { icons_enabled = true },
+		}),
+		requires = { "kyazdani42/nvim-web-devicons" },
 	}) -- bottom of nvim info line
 
 	-- cursor
@@ -134,10 +143,7 @@ return require("packer").startup(function(use)
 	use({ "f-person/git-blame.nvim" }) -- shows git blame
 
 	-- greeter
-	use({
-		"goolord/alpha-nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
-	})
+	use({ "goolord/alpha-nvim" }) -- cool splash screen
 
 	-- general
 	use("tpope/vim-sensible") -- widely-used, basic vim configuration
