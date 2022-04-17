@@ -35,7 +35,7 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # aliases - listing
-alias ll="gls -1shX --color=auto --group-directories-first"
+alias ll="gls -1shAX --color=auto --group-directories-first"
 alias lsr="tree -L 3 -I node_modules"
 
 # aliases - git

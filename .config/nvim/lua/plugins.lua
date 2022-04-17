@@ -1,12 +1,4 @@
--- automatically source this plugin file when it's updated
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
-
--- add bootstrapping portability (download packer if it doesn't exist on current system)
+-- bootstrap packer
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -23,132 +15,110 @@ end
 -- instruct packer to load and manage the listed plugins
 return require("packer").startup(function(use)
 	-- package management (this)
-	use("wbthomason/packer.nvim") -- packer plugin manager (managing itself)
+	use({ "wbthomason/packer.nvim" }) -- packer plugin manager (managing itself)
 
-	-- colorscheme
+	-- general
+	use({ "tpope/vim-sensible" }) -- widely-used, basic vim configuration
+	use({ "tpope/vim-sleuth" }) -- auto-configure indentation settings
+	use({ "tpope/vim-commentary" }) -- easy commenting
 	use({ "ellisonleao/gruvbox.nvim" }) -- gruvbox port in lua for speed
-
-	-- performance benchmarking
-	use("tweekmonster/startuptime.vim") -- measures nvim startup times w/ breakdown
+	use({ "tweekmonster/startuptime.vim" }) -- measures nvim startup times w/ breakdown
+	use({ "f-person/git-blame.nvim" }) -- git blame
+	use({ "yamatsum/nvim-cursorline" }) -- underlines words under cursor
 
 	-- language server protocol
-	use("neovim/nvim-lspconfig") -- base lsp config for nvim
-	use("jose-elias-alvarez/nvim-lsp-ts-utils") -- ts-completion and autoimports
-	use("mfussenegger/nvim-jdtls") -- java
-	use("williamboman/nvim-lsp-installer") -- lsp installer
-	use("jose-elias-alvarez/null-ls.nvim") -- lsp hook for things like stylua
-
-	-- lsp autocompletion
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
-	use("hrsh7th/nvim-cmp") -- autocompletion
+	use({ "neovim/nvim-lspconfig" }) -- base lsp config for nvim
+	use({ "jose-elias-alvarez/nvim-lsp-ts-utils" }) -- ts-completion and autoimports
+	use({ "williamboman/nvim-lsp-installer" }) -- lsp installer
+	use({ "jose-elias-alvarez/null-ls.nvim" }) -- lsp hook for things like stylua
 
 	-- lsp snippets
-	use("hrsh7th/cmp-vsnip")
-	use("hrsh7th/vim-vsnip") -- snippets
+	use({ "hrsh7th/cmp-vsnip" })
+	use({ "hrsh7th/vim-vsnip" })
 
-	-- lsp formatting
-	use({ -- prettier for js ecosystem
-		"prettier/vim-prettier",
-		run = "yarn install --frozen-lockfile --production",
-		ft = {
-			"javascript",
-			"typescript",
-			"css",
-			"less",
-			"scss",
-			"json",
-			"graphql",
-			"markdown",
-			"vue",
-			"svelte",
-			"yaml",
-			"html",
-		},
-	})
-	use("fladson/vim-kitty") -- kitty formatting
+	-- rust support
 	use({ "rust-lang/rust.vim" })
 	use({
 		"simrat39/rust-tools.nvim",
-		config = require("rust-tools").setup({}),
+		config = [[ require("plugins/rust-tools") ]],
 		requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" },
 	})
 
-	-- lsp utils
 	use({
-		"ray-x/lsp_signature.nvim", -- show fn signature
-		config = require("lsp_signature").setup({ max_width = 85 }),
+		-- completion plugin
+		"hrsh7th/nvim-cmp",
+		requires = {
+			"hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for neovim builtin LSP client
+			"hrsh7th/cmp-nvim-lua", -- nvim-cmp source for nvim lua
+			"hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words.
+			"hrsh7th/cmp-path", -- nvim-cmp source for filesystem paths.
+			"hrsh7th/cmp-calc", -- nvim-cmp source for math calculation.
+			"saadparwaiz1/cmp_luasnip", -- luasnip completion source for nvim-cmp
+		},
+		config = [[ require('plugins/cmp') ]],
 	})
 
-	-- fuzzy file lister
-	use({ -- file list traverser
-		"nvim-telescope/telescope.nvim",
-		config = require("telescope").setup({
-			defaults = {
-				file_ignore_patterns = {
-					".git/*",
-					"node_modules/*",
-				},
-				layout_strategy = "horizontal",
-				layout_config = { height = 0.95, width = 0.85 },
-			},
-		}),
-		requires = { "nvim-lua/plenary.nvim" },
+	use({
+		-- alpha splash screen
+		"goolord/alpha-nvim",
+		config = [[ require("plugins/alpha") ]],
 	})
 
-	-- file browser
-	use("justinmk/vim-dirvish") -- dirvish file browser (netrw alternative)
-
-	-- preview window
-	use({ "rmagatti/goto-preview", config = require("goto-preview").setup({}) })
-
-	-- buffers as tabs
-	vim.opt.termguicolors = true
 	use({
+		-- tabline
 		"akinsho/bufferline.nvim",
-		config = require("bufferline").setup({
-			options = {
-				show_buffer_icons = true,
-				show_buffer_close_icons = false,
-				show_close_icon = false,
-			},
-		}),
+		config = [[ require("plugins/bufferline") ]],
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
-	-- statusline
 	use({
+		-- statusline
 		"nvim-lualine/lualine.nvim",
-		config = require("lualine").setup({
-			options = { icons_enabled = true },
-		}),
+		config = [[ require("plugins/lualine") ]],
 		requires = { "kyazdani42/nvim-web-devicons" },
-	}) -- bottom of nvim info line
+	})
 
-	-- cursor
-	use({ "yamatsum/nvim-cursorline" }) -- underlines words under cursor
-
-	-- indents
-	vim.opt.list = true
 	use({
+		-- js ecosystem formatting using Prettier
+		"MunifTanjim/prettier.nvim",
+		config = [[ require("plugins/prettier") ]],
+		requires = { "neovim/nvim-lspconfig", "jose-elias-alvarez/null-ls.nvim" },
+	})
+
+	use({
+		-- fuzzy file lister
+		"nvim-telescope/telescope.nvim",
+		config = [[ require("plugins/telescope") ]],
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope-file-browser.nvim",
+		},
+	})
+
+	use({
+		-- preview window
+		"rmagatti/goto-preview",
+		config = [[ require("plugins/goto-preview") ]],
+	})
+
+	use({
+		-- fn signature
+		"ray-x/lsp_signature.nvim", -- show fn signature
+		config = [[ require("plugins/lsp_signature") ]],
+	})
+
+	use({
+		-- displays indent context
 		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			require("indent_blankline").setup({ filetype_exclude = { "alpha", "lua" } })
-		end,
-	}) -- displays indent context
+		config = [[ require("plugins/indent-blankline") ]],
+	})
 
-	-- git
-	use({ "f-person/git-blame.nvim" }) -- shows git blame
-
-	-- greeter
-	use({ "goolord/alpha-nvim" }) -- cool splash screen
-
-	-- general
-	use("tpope/vim-sensible") -- widely-used, basic vim configuration
-	use("tpope/vim-sleuth") -- auto-configure indentation settings
-	use("tpope/vim-commentary") -- easy commenting
+	use({
+		-- distraction-free mode
+		"folke/zen-mode.nvim",
+		config = [[ require("plugins/zen-mode") ]],
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

@@ -1,5 +1,3 @@
--- language server protocol config
--- nvim-cmp setup (completion plugin)
 local cmp = require("cmp")
 
 cmp.setup({
@@ -108,3 +106,6 @@ nvim_lsp.tsserver.setup({
 		ts_utils.setup_client(client)
 	end,
 })
+
+-- autoformat efm
+vim.cmd("autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_sync(nil, 100)")
