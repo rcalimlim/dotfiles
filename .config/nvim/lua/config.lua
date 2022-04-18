@@ -56,4 +56,4 @@ vim.cmd([[ autocmd BufWritePre * :%s/\s\+$//e ]]) -- strip trailing whitespace o
 vim.o.background = "dark" -- or "light" for light mode
 vim.g.gruvbox_contrast_dark = "hard"
 vim.g.gruvbox_invert_selection = "0"
-vim.cmd("colorscheme gruvbox")
+cmd([[colorscheme gruvbox]])

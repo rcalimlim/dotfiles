@@ -21,7 +21,11 @@ return require("packer").startup(function(use)
 	use({ "tpope/vim-sensible" }) -- widely-used, basic vim configuration
 	use({ "tpope/vim-sleuth" }) -- auto-configure indentation settings
 	use({ "tpope/vim-commentary" }) -- easy commenting
-	use({ "ellisonleao/gruvbox.nvim" }) -- gruvbox port in lua for speed
+	use({
+		-- gruvbox port in lua for speed
+		"ellisonleao/gruvbox.nvim",
+		commit = "dc6bae93ded04ac542d429ff5cc87189dde44294",
+	})
 	use({ "tweekmonster/startuptime.vim" }) -- measures nvim startup times w/ breakdown
 	use({ "f-person/git-blame.nvim" }) -- git blame
 	use({ "yamatsum/nvim-cursorline" }) -- underlines words under cursor
@@ -79,10 +83,24 @@ return require("packer").startup(function(use)
 	})
 
 	use({
-		-- js ecosystem formatting using Prettier
-		"MunifTanjim/prettier.nvim",
+		-- prettier for js ecosystem
+		"prettier/vim-prettier",
+		run = "yarn install --frozen-lockfile --production",
+		ft = {
+			"css",
+			"graphql",
+			"html",
+			"javascript",
+			"json",
+			"less",
+			"markdown",
+			"scss",
+			"svelte",
+			"typescript",
+			"vue",
+			"yaml",
+		},
 		config = [[ require("plugins/prettier") ]],
-		requires = { "neovim/nvim-lspconfig", "jose-elias-alvarez/null-ls.nvim" },
 	})
 
 	use({
