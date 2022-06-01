@@ -1,15 +1,3 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -17,13 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#
+# Executes commands at the start of an interactive session.
 
-# load statusline
-autoload -Uz promptinit
-promptinit
-prompt powerlevel10k
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 # dotfiles are cloned to a bare repo and working tree is home dir
 # interact with it using `config`
@@ -35,29 +23,22 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # aliases - listing
-alias ll="gls -1shAX --color=auto --group-directories-first"
-alias lsr="tree -L 3 -I node_modules"
+alias ll="gls -1shAX --color=auto --group-directories-first --format=across"
 
 # aliases - git
 alias ga="git add"
 alias gap="git add -p"
 alias gs="git status"
 alias gc="git commit"
-alias gout="git checkout"
+alias go="git checkout"
 alias gb="git branch"
 alias gd="git diff"
 alias gp="git push"
 alias gr="git reset head"
 alias gh="git log --graph --decorate --pretty=oneline --abbrev-commit"
 
-# need this shit for lua-language-server probably
-alias luamake=/usr/local/bin/lua-language-server/3rd/luamake/luamake
+# custom homebrew for meta
+export PATH="$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH"
 
-# add go bin to path
-export PATH=$PATH:$(go env GOPATH)/bin
-# add rust bin to path
-source $HOME/.cargo/env
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

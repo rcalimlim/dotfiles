@@ -21,8 +21,7 @@ return require("packer").startup(function(use)
 	use({ "tpope/vim-sensible" }) -- widely-used, basic vim configuration
 	use({ "tpope/vim-sleuth" }) -- auto-configure indentation settings
 	use({ "tpope/vim-commentary" }) -- easy commenting
-	use({
-		-- gruvbox port in lua for speed
+	use({ -- gruvbox port in lua for speed
 		"ellisonleao/gruvbox.nvim",
 		commit = "dc6bae93ded04ac542d429ff5cc87189dde44294",
 	})
