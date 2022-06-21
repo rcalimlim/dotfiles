@@ -2,7 +2,7 @@
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-	Packer_Bootstrap = fn.system({
+	packer_bootstrap = fn.system({
 		"git",
 		"clone",
 		"--depth",
@@ -30,9 +30,23 @@ return require("packer").startup(function(use)
 	use({ "yamatsum/nvim-cursorline" }) -- underlines words under cursor
 
 	-- language server protocol
-	use({ "neovim/nvim-lspconfig" }) -- base lsp config for nvim
+	use({
+		"williamboman/nvim-lsp-installer",
+		config = function()
+			require("nvim-lsp-installer").setup({
+				automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+				ui = {
+					icons = {
+						server_installed = "✓",
+						server_pending = "➜",
+						server_uninstalled = "✗",
+					},
+				},
+			})
+		end,
+	}) -- lsp installer
+	use({ "neovim/nvim-lspconfig", after = "nvim-lsp-installer" }) -- base lsp config for nvim
 	use({ "jose-elias-alvarez/nvim-lsp-ts-utils" }) -- ts-completion and autoimports
-	use({ "williamboman/nvim-lsp-installer" }) -- lsp installer
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- lsp hook for things like stylua
 
 	-- lsp snippets

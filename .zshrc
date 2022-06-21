@@ -20,7 +20,7 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # aliases - listing
-alias ll="gls -1shAX --color=auto --group-directories-first --format=across"
+alias ll="gls -1shAX --color=auto --group-directories-first"
 
 # aliases - git
 alias ga="git add"
