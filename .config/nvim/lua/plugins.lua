@@ -30,22 +30,8 @@ return require("packer").startup(function(use)
 	use({ "yamatsum/nvim-cursorline" }) -- underlines words under cursor
 
 	-- language server protocol
-	use({
-		"williamboman/nvim-lsp-installer",
-		config = function()
-			require("nvim-lsp-installer").setup({
-				automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
-				ui = {
-					icons = {
-						server_installed = "✓",
-						server_pending = "➜",
-						server_uninstalled = "✗",
-					},
-				},
-			})
-		end,
-	}) -- lsp installer
-	use({ "neovim/nvim-lspconfig", after = "nvim-lsp-installer" }) -- base lsp config for nvim
+	use({ "neovim/nvim-lspconfig" }) -- base lsp config for nvim
+	use({ "williamboman/nvim-lsp-installer" }) -- lsp installer
 	use({ "jose-elias-alvarez/nvim-lsp-ts-utils" }) -- ts-completion and autoimports
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- lsp hook for things like stylua
 
@@ -54,12 +40,12 @@ return require("packer").startup(function(use)
 	use({ "hrsh7th/vim-vsnip" })
 
 	-- rust support
-	use({ "rust-lang/rust.vim" })
-	use({
-		"simrat39/rust-tools.nvim",
-		config = [[ require("plugins/rust-tools") ]],
-		requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" },
-	})
+	-- use({ "rust-lang/rust.vim" })
+	-- use({
+	-- 	"simrat39/rust-tools.nvim",
+	-- 	config = [[ require("plugins/rust-tools") ]],
+	-- 	requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" },
+	-- })
 
 	use({
 		-- completion plugin
