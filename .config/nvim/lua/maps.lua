@@ -40,12 +40,14 @@ map("n", "<leader>vf", "<cmd>lua vim.lsp.buf.formatting()<CR>")
 map("i", "<expr> <Tab>", 'pumvisible() ? "<C-n>" : "<Tab>"')
 map("i", "<expr> <S-Tab>", 'pumvisible() ? "<C-p>" : "<S-Tab>"')
 
+-- nvim-tree
+map("n", "-", ":NvimTreeToggle<cr>")
+
 -- telescope
 map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 map("n", "<leader>fs", "<cmd>lua require('telescope.builtin').grep_string()<cr>")
 map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
-map("n", "-", ":Telescope file_browser<cr>")
 
 -- zen-mode
 map("n", "<leader>ll", ":ZenMode<cr>")

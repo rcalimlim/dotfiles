@@ -33,19 +33,16 @@ return require("packer").startup(function(use)
 	use({ "neovim/nvim-lspconfig" }) -- base lsp config for nvim
 	use({ "williamboman/nvim-lsp-installer" }) -- lsp installer
 	use({ "jose-elias-alvarez/nvim-lsp-ts-utils" }) -- ts-completion and autoimports
-	use({ "jose-elias-alvarez/null-ls.nvim" }) -- lsp hook for things like stylua
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	}) -- lsp hook for things like stylua
 
 	-- lsp snippets
 	use({ "hrsh7th/cmp-vsnip" })
 	use({ "hrsh7th/vim-vsnip" })
-
-	-- rust support
-	-- use({ "rust-lang/rust.vim" })
-	-- use({
-	-- 	"simrat39/rust-tools.nvim",
-	-- 	config = [[ require("plugins/rust-tools") ]],
-	-- 	requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" },
-	-- })
 
 	use({
 		-- completion plugin
@@ -109,8 +106,17 @@ return require("packer").startup(function(use)
 		requires = {
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope-file-browser.nvim",
 		},
+	})
+
+	use({
+		-- simple file tree
+		"kyazdani42/nvim-tree.lua",
+		config = [[ require("plugins/nvim-tree") ]],
+		requires = {
+			"kyazdani42/nvim-web-devicons", -- optional, for file icons
+		},
+		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 
 	use({
