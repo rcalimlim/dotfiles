@@ -1,1 +1,0 @@
-/Users/rcalimlim/.zprezto/runcoms/zprofile

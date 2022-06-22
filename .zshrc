@@ -19,10 +19,11 @@ config config --local status.showUntrackedFiles no
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
-# aliases - listing
-alias ll="gls -1shAX --color=auto --group-directories-first"
+# prompt style
+prompt cloud '>' 'yellow' 'red'
 
-# aliases - git
+# aliases
+alias ll="gls -1shAX --color=auto --group-directories-first"
 alias ga="git add"
 alias gap="git add -p"
 alias gs="git status"
