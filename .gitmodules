@@ -1,3 +1,6 @@
-[submodule ".config/alacritty/themes"]
-	path = .config/alacritty/themes
+[submodule "stow/.config/alacritty/themes"]
+	path = stow/.config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme
+[submodule "stow/.config/xplr/plugins/fzf"]
+	path = stow/.config/xplr/plugins/fzf
+	url = https://github.com/sayanarijit/fzf.xplr
