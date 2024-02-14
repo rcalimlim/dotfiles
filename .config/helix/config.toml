@@ -1,0 +1,22 @@
+theme = "gruvbox_dark_soft"
+
+[editor]
+auto-completion = true
+bufferline = "always"
+line-number = "relative"
+mouse = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.indent-guides]
+render = true
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal.space]
+c = "toggle_comments"
+m = ":format"
