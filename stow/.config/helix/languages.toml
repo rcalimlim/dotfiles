@@ -14,7 +14,6 @@ procMacro = { enable = true }
 
 [[language]]
 name = "typescript"
-# language-servers = ["typescript-language-server", "eslint", "graphql"]
 language-servers = ["typescript-language-server", "eslint"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
