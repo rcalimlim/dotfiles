@@ -12,5 +12,5 @@
 ## installation
 * clone this repo into where you want to store it: `git clone https://github.com/rcalimlim/dotfiles`
 * cd into the cloned repo: `cd [SOME PATH]/dotfiles`
-* create symlinks in $HOME with gnu stow: `stow -vv -t /Users/ross stow`
+* create symlinks in $HOME with gnu stow: `stow -t $HOME .config`
 * done
