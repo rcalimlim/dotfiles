@@ -6,6 +6,7 @@
 # install binaries
 brew install \
   alacritty \
+  corepack \
   eza \
   fish \
   fisher \
