@@ -6,7 +6,7 @@ else if test "usr/local/bin/fish"
 end
 
 # theme
-fish_config theme choose none
+# fish_config theme choose none
 
 
 # path
