@@ -47,6 +47,7 @@ brew install \
   lua-language-server \
   marksman \
   pnpm \
+  stow \
   taplo \
   tree-sitter \
   vscode-langservers-extracted \
