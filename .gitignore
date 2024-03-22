@@ -1,3 +1,4 @@
 stow/.config/fish/functions/_*.*
 stow/.config/fish/functions/**
 stow/.config/fish/conf.d*
+stow/.config/fish/fish_variables
