@@ -1,0 +1,3 @@
+stow/.config/fish/functions/_*.*
+stow/.config/fish/functions/**
+stow/.config/fish/conf.d*

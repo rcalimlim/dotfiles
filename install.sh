@@ -55,3 +55,6 @@ brew install \
   zls
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # rust
+
+# fish shell plugins managed by fisher
+fisher install pure-fish/pure
