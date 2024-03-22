@@ -8,7 +8,6 @@ end
 # theme
 # fish_config theme choose none
 
-
 # path
 fish_add_path /bin
 fish_add_path /sbin
@@ -61,10 +60,12 @@ if status is-interactive
     # eval (zellij setup --generate-auto-start fish | string collect)
 end
 
-
 # pnpm
 set -gx PNPM_HOME "/Users/ross/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# non-ui mac config options
+defaults write -g ApplePressAndHoldEnabled -bool false # disables long press key to show alternative letters
