@@ -4,8 +4,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install binaries
+brew install --cask alacritty
 brew install \
-  alacritty \
   corepack \
   eza \
   fish \
@@ -23,10 +23,10 @@ brew install \
   visual-studio-code
 
 # clone dotfiles
-mkdir -p $HOME/src/dotfiles
-git clone https://github.com/rcalimlim/dotfiles.git $HOME/src/dotfiles
-cd $HOME/src/dotfiles
-stow --restow -vv -t $HOME -d stow .
+mkdir -p "$HOME"/src/dotfiles
+git clone https://github.com/rcalimlim/dotfiles.git "$HOME"/src/dotfiles
+cd "$HOME"/src/dotfiles || exit
+stow --restow -vv -t "$HOME" -d stow .
 
 # use modern yarn
 yarn set version berry
@@ -47,7 +47,6 @@ brew install \
   lua-language-server \
   marksman \
   pnpm \
-  stow \
   taplo \
   tree-sitter \
   vscode-langservers-extracted \
