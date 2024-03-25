@@ -54,6 +54,9 @@ set -Ux EDITOR hx
 # vi bindings
 set -g fish_key_bindings fish_vi_key_bindings
 
+# force true color
+set -g fish_term24bit 1
+
 # pnpm
 set -gx PNPM_HOME "/Users/ross/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
