@@ -19,7 +19,7 @@ _pure_set_default pure_color_prompt_on_success pure_color_success
 
 # Current Working Directory
 _pure_set_default pure_color_current_directory pure_color_primary
-_pure_set_default pure_shorten_prompt_current_directory_length 2
+_pure_set_default pure_shorten_prompt_current_directory_length 3
 _pure_set_default pure_truncate_prompt_current_directory_keeps -1
 
 # Git
