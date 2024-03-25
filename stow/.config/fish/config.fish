@@ -1,3 +1,6 @@
+#------------------------------------------------------------------------------
+# Fish general conf
+#------------------------------------------------------------------------------
 # shell - brew dir differs between x86 and Apple Silicon
 if test "/opt/homebrew/bin/fish"
     set -g SHELL /opt/homebrew/bin/fish
@@ -6,7 +9,7 @@ else if test "usr/local/bin/fish"
 end
 
 # theme
-# fish_config theme choose none
+fish_config theme choose none
 
 # path
 fish_add_path /bin
@@ -51,15 +54,6 @@ set -Ux EDITOR hx
 # vi bindings
 set -g fish_key_bindings fish_vi_key_bindings
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-
-    # Configure auto-attach/exit to your likings (default is off).
-    # set ZELLIJ_AUTO_ATTACH true
-    # set ZELLIJ_AUTO_EXIT false
-    # eval (zellij setup --generate-auto-start fish | string collect)
-end
-
 # pnpm
 set -gx PNPM_HOME "/Users/ross/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
@@ -69,3 +63,26 @@ end
 
 # non-ui mac config options
 defaults write -g ApplePressAndHoldEnabled -bool false # disables long press key to show alternative letters
+
+#------------------------------------------------------------------------------
+# Plugin config
+#------------------------------------------------------------------------------
+
+# pure - prompt
+set --universal pure_shorten_prompt_current_directory_length 1
+set --universal pure_color_mute yellow
+set -g async_prompt_functions _pure_prompt_git # async git update for speed
+set -g pure_show_prefix_root_prompt true
+
+#------------------------------------------------------------------------------
+# Interactive session only
+#------------------------------------------------------------------------------
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+
+    # Configure auto-attach/exit to your likings (default is off).
+    # set ZELLIJ_AUTO_ATTACH true
+    # set ZELLIJ_AUTO_EXIT false
+    # eval (zellij setup --generate-auto-start fish | string collect)
+end
+

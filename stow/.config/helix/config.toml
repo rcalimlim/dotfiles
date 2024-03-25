@@ -5,6 +5,7 @@ auto-completion = true
 bufferline = "always"
 line-number = "relative"
 mouse = true
+rulers = [80, 100]
 
 [editor.cursor-shape]
 insert = "bar"
