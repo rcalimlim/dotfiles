@@ -23,5 +23,5 @@ function _pure_prompt_git_dirty
         set git_dirty_color (_pure_set_color $pure_color_git_dirty)
     end
 
-    echo "$git_dirty_color$git_dirty_symbol"
+    echo " $git_dirty_color$git_dirty_symbol"
 end
