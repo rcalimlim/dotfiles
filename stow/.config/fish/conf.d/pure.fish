@@ -3,7 +3,7 @@ set --global pure_version 4.11.0 # For bug report and tag-after-merge workflow
 # Base colors
 _pure_set_default pure_color_primary blue
 _pure_set_default pure_color_info cyan
-_pure_set_default pure_color_mute brblack
+_pure_set_default pure_color_mute yellow
 _pure_set_default pure_color_success magenta
 _pure_set_default pure_color_normal normal
 _pure_set_default pure_color_danger red
@@ -19,7 +19,7 @@ _pure_set_default pure_color_prompt_on_success pure_color_success
 
 # Current Working Directory
 _pure_set_default pure_color_current_directory pure_color_primary
-_pure_set_default pure_shorten_prompt_current_directory_length 0
+_pure_set_default pure_shorten_prompt_current_directory_length 2
 _pure_set_default pure_truncate_prompt_current_directory_keeps -1
 
 # Git
