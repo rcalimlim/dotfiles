@@ -64,14 +64,8 @@ end
 # non-ui mac config options
 defaults write -g ApplePressAndHoldEnabled -bool false # disables long press key to show alternative letters
 
-#------------------------------------------------------------------------------
-# Plugin config
-#------------------------------------------------------------------------------
-
-# pure - prompt
-set --universal pure_shorten_prompt_current_directory_length 1
-set --universal pure_color_mute yellow
-set -g async_prompt_functions _pure_prompt_git # async git update for speed
+# async git update for speed
+set -g async_prompt_functions _pure_prompt_git 
 set -g pure_show_prefix_root_prompt true
 
 #------------------------------------------------------------------------------
