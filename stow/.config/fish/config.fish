@@ -11,43 +11,6 @@ end
 # theme
 fish_config theme choose none
 
-# path
-fish_add_path /bin
-fish_add_path /sbin
-fish_add_path /opt/homebrew/bin
-fish_add_path /opt/homebrew/opt/llvm/bin
-fish_add_path /opt/pkg/bin
-fish_add_path /opt/pkg/sbin
-fish_add_path /opt/X11/bin
-fish_add_path /usr/bin
-fish_add_path /usr/sbin
-fish_add_path /usr/local/bin
-fish_add_path /usr/local/sbin
-fish_add_path /usr/local/texlive/2023/bin/universal-darwin/ # latex
-fish_add_path $HOME/.cargo/bin
-fish_add_path $HOME/.local/share/nvim/mason/bin
-fish_add_path $HOME/.local/bin
-
-# abbreviations
-abbr --add ga git add
-abbr --add gap git add -p
-abbr --add gs git status
-abbr --add gc git commit
-abbr --add go git checkout
-abbr --add gb git branch
-abbr --add gd git diff
-abbr --add gp git push
-abbr --add gr git reset head
-abbr --add glog git log --graph --decorate --pretty=oneline --abbrev-commit
-abbr --add ghd git reset --hard
-abbr --add gu git reset HEAD~1
-abbr --add x xplr
-abbr --add z zellij
-
-# eza (ls) abbr
-abbr --add l eza
-abbr --add ll eza --group --header --group-directories-first --long --all --binary --icons
-
 # editor
 set -Ux EDITOR hx
 
@@ -70,6 +33,45 @@ defaults write -g ApplePressAndHoldEnabled -bool false # disables long press key
 # async git update for speed
 set -g async_prompt_functions _pure_prompt_git 
 set -g pure_show_prefix_root_prompt true
+
+#------------------------------------------------------------------------------
+# PATH variables
+#------------------------------------------------------------------------------
+fish_add_path /bin
+fish_add_path /sbin
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/opt/llvm/bin
+fish_add_path /opt/pkg/bin
+fish_add_path /opt/pkg/sbin
+fish_add_path /opt/X11/bin
+fish_add_path /usr/bin
+fish_add_path /usr/sbin
+fish_add_path /usr/local/bin
+fish_add_path /usr/local/sbin
+fish_add_path /usr/local/texlive/2023/bin/universal-darwin/ # latex
+fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/.local/share/nvim/mason/bin
+fish_add_path $HOME/.local/bin
+
+#------------------------------------------------------------------------------
+# Abbreviations (aliases that expand)
+#------------------------------------------------------------------------------
+abbr --add ga git add
+abbr --add gap git add -p
+abbr --add gs git status
+abbr --add gc git commit
+abbr --add go git checkout
+abbr --add gb git branch
+abbr --add gd git diff
+abbr --add gp git push
+abbr --add gr git reset head
+abbr --add glog git log --graph --decorate --pretty=oneline --abbrev-commit
+abbr --add ghd git reset --hard
+abbr --add gu git reset HEAD~1
+abbr --add x xplr
+abbr --add z zellij
+abbr --add l eza
+abbr --add ll eza --group --header --group-directories-first --long --all --binary --icons
 
 #------------------------------------------------------------------------------
 # Interactive session only
