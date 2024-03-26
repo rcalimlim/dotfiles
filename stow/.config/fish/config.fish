@@ -11,14 +11,17 @@ end
 # theme
 fish_config theme choose none
 
+# no greeting
+set -U fish_greeting
+
 # editor
 set -Ux EDITOR hx
 
 # vi bindings
-set -g fish_key_bindings fish_vi_key_bindings
+set -U fish_key_bindings fish_vi_key_bindings
 
 # force true color
-set -g fish_term24bit 1
+set -U fish_term24bit 1
 
 # pnpm
 set -gx PNPM_HOME "/Users/ross/Library/pnpm"
@@ -29,10 +32,6 @@ end
 
 # non-ui mac config options
 defaults write -g ApplePressAndHoldEnabled -bool false # disables long press key to show alternative letters
-
-# async git update for speed
-set -g async_prompt_functions _pure_prompt_git 
-set -g pure_show_prefix_root_prompt true
 
 #------------------------------------------------------------------------------
 # PATH variables
@@ -68,8 +67,9 @@ abbr --add gr git reset head
 abbr --add glog git log --graph --decorate --pretty=oneline --abbrev-commit
 abbr --add ghd git reset --hard
 abbr --add gu git reset HEAD~1
+abbr --add c clear
 abbr --add x xplr
-abbr --add z zellij
+abbr --add z zellij attach --create
 abbr --add l eza
 abbr --add ll eza --group --header --group-directories-first --long --all --binary --icons
 
@@ -79,9 +79,8 @@ abbr --add ll eza --group --header --group-directories-first --long --all --bina
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
-    # Configure auto-attach/exit to your likings (default is off).
-    # set ZELLIJ_AUTO_ATTACH true
-    # set ZELLIJ_AUTO_EXIT false
-    # eval (zellij setup --generate-auto-start fish | string collect)
+    # zellij terminal multiplexer auto attach on start
+    set ZELLIJ_AUTO_ATTACH true
+    eval (zellij setup --generate-auto-start fish | string collect)
 end
 

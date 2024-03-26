@@ -6,7 +6,6 @@ brew install \
   corepack \
   eza \
   fish \
-  fisher \
   fzf \
   helix \
   node \
