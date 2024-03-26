@@ -10,12 +10,12 @@ args = ["--login"]
 
 [font]
 normal = { family = "MesloLGS NF" }
-size = 23.0
+size = 23.5
 
 [window]
-decorations = "buttonless"
-dimensions = { columns = 100, lines = 30 }
+decorations = "None"
+# dimensions = { columns = 100, lines = 30 }
 option_as_alt = "Both"
-padding = { x = 5, y = 5 }
-position = { x = 15, y = 50 }
-startup_mode = "windowed"
+padding = { x = 0, y = 0 }
+position = { x = 60, y = 120 }
+startup_mode = "Windowed"
