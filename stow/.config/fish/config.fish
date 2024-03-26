@@ -31,7 +31,13 @@ end
 # pnpm end
 
 # non-ui mac config options
-defaults write -g ApplePressAndHoldEnabled -bool false # disables long press key to show alternative letters
+# disables long press key to show alternative letters
+defaults write -g ApplePressAndHoldEnabled -bool false 
+
+#------------------------------------------------------------------------------
+# Plugin conf
+#------------------------------------------------------------------------------
+set -g hydro_multiline true
 
 #------------------------------------------------------------------------------
 # PATH variables
