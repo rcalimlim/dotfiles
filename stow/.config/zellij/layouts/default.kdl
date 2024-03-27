@@ -1,25 +1,27 @@
 layout {
-    pane size=1 borderless=true {
-        plugin location="zellij:tab-bar"
-    }
-    pane split_direction="vertical" {
-        pane {
-            name "noop-spacer"
-            borderless true 
-            command "echo"
-            size "10%"
+    tab name="main" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
         }
-        pane {
-            name "edit" 
-            focus true
-            size "65%"
+        pane split_direction="vertical" {
+            pane {
+                name "noop-spacer"
+                borderless true 
+                command "echo"
+                size "10%"
+            }
+            pane {
+                name "edit" 
+                focus true
+                size "65%"
+            }
+            pane split_direction="horizontal" {
+                pane name="top"
+                pane name="bot"
+            }
         }
-        pane split_direction="horizontal" {
-            pane name="top"
-            pane name="bot"
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
         }
-    }
-    pane size=2 borderless=true {
-        plugin location="zellij:status-bar"
     }
 }
