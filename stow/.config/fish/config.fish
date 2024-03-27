@@ -37,7 +37,11 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 #------------------------------------------------------------------------------
 # Plugin conf
 #------------------------------------------------------------------------------
+# Hydro - prompt with Gruvbox colors
 set -g hydro_multiline true
+set -g hydro_color_pwd dbc4a1
+set -g hydro_color_git 504945
+set -g hydro_color_prompt d79921
 
 #------------------------------------------------------------------------------
 # PATH variables
