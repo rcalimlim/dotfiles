@@ -2,9 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:hx
 SETUVAR __fish_initialized:3400
-SETUVAR _hydro_git_54250:main\u2022\x20
-SETUVAR _hydro_git_54251:main\u2022\x20
-SETUVAR _hydro_git_54252:main\u2022\x20
+SETUVAR _hydro_git_56035:main\u2022\x20
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
@@ -35,4 +33,4 @@ SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_term24bit:1
-SETUVAR fish_user_paths:/Users/ross/\x2ecargo/bin\x1e/usr/local/texlive/2023/bin/universal\x2ddarwin\x1e/Users/rc723u/\x2elocal/bin\x1e/Users/rc723u/\x2elocal/share/nvim/mason/bin\x1e/Users/rc723u/\x2ecargo/bin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/opt/homebrew/opt/llvm/bin\x1e/opt/homebrew/bin\x1e/sbin\x1e/bin
+SETUVAR fish_user_paths:/Users/ross/\x2elocal/bin\x1e/Users/ross/\x2ecargo/bin\x1e/usr/local/texlive/2023/bin/universal\x2ddarwin\x1e/Users/rc723u/\x2elocal/bin\x1e/Users/rc723u/\x2elocal/share/nvim/mason/bin\x1e/Users/rc723u/\x2ecargo/bin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/opt/homebrew/opt/llvm/bin\x1e/opt/homebrew/bin\x1e/sbin\x1e/bin
