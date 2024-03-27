@@ -3,10 +3,20 @@ layout {
         plugin location="zellij:tab-bar"
     }
     pane split_direction="vertical" {
-        pane size="60%"
+        pane {
+            name "noop-spacer"
+            borderless true 
+            command "echo"
+            size "10%"
+        }
+        pane {
+            name "edit" 
+            focus true
+            size "65%"
+        }
         pane split_direction="horizontal" {
-            pane
-            pane
+            pane name="top"
+            pane name="bot"
         }
     }
     pane size=2 borderless=true {
