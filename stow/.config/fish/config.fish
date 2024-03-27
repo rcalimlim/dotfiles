@@ -77,7 +77,8 @@ abbr --add c clear
 abbr --add x xplr
 abbr --add z zellij attach --create
 abbr --add l eza
-abbr --add ll eza --group --header --group-directories-first --long --all --binary --icons
+abbr --add ll eza --group --group-directories-first --all --icons --width 40
+abbr --add lla eza --group --header --group-directories-first --long --all --binary --icons
 
 #------------------------------------------------------------------------------
 # Interactive session only
