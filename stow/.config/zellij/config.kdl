@@ -204,7 +204,7 @@ simplified_ui true
 // Options:
 //   - true (default)
 //   - false
-pane_frames false
+pane_frames true
 
 // Choose the theme that is specified in the themes section.
 // Default: default
@@ -216,4 +216,4 @@ default_layout "default"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
-default_mode "normal"
+gefault_mode "normal"
