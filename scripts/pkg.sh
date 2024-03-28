@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# install binaries
+# brew
 brew install --cask alacritty
 brew install \
   corepack \
+  curl \
   eza \
   fish \
   fzf \
@@ -15,5 +16,8 @@ brew install \
   vue-language-server \
   yarn \
   xplr \
-  zellij \
   visual-studio-code
+
+# cargo
+cargo install \
+  zellij
