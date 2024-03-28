@@ -1,0 +1,37 @@
+layout {
+    name "wf::pipeline-dev"
+    tab name="pipeline-dev" cwd="$HOME/wayfair/graphql-platform-pipelines" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane {
+                name "edit"
+                command "xplr"
+                focus true
+                size "65%"
+            }
+            pane split_direction="horizontal" {
+                pane {
+                    name "db"
+                    command "docker-compose"
+                    args "run" "--service-ports" "db"
+                    start_suspended true
+                }
+                pane {
+                    name "server"
+                    command "yarn"
+                    args "run" "start:dev"
+                    start_suspended true
+                }
+                pane {
+                    name "cmd"
+                    size "50%"
+                }
+            }
+        }
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}

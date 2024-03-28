@@ -216,4 +216,6 @@ default_layout "default"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
-gefault_mode "normal"
+default_mode "normal"
+
+scrollback_editor "hx"
