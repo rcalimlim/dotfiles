@@ -23,6 +23,6 @@ function _nvm_uninstall --on-event nvm_uninstall
     functions --erase (functions --all | string match --entire --regex -- "^_nvm_")
 end
 
-if status is-interactive && set --query nvm_default_version && ! set --query nvm_current_version
-    nvm use --silent $nvm_default_version
+if status is-interactive && test -f .nvmrc
+    nvm use --silent
 end
