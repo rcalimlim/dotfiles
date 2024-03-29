@@ -17,12 +17,10 @@ end
 # Fisher - pkg man installs are managed via fish_variable lol
 #------------------------------------------------------------------------------
 # fisher - manages itself
-set -ga _fisher_plugins jorgebucaran/fisher
 set -ga _fisher_jorgebucaran_2F_fisher_files ~/.config/fish/functions/fisher.fish
 set -ga _fisher_jorgebucaran_2F_fisher_files ~/.config/fish/completions/fisher.fish
 
 # hydro - speedy git prompt
-set -ga _fisher_plugins jorgebucaran/hydro
 set -ga _fisher_jorgebucaran_2F_hydro_files ~/.config/fish/functions/fish_mode_prompt.fish
 set -ga _fisher_jorgebucaran_2F_hydro_files ~/.config/fish/functions/fish_prompt.fish
 set -ga _fisher_jorgebucaran_2F_hydro_files ~/.config/fish/conf.d/hydro.fish
