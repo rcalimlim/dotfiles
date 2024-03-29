@@ -14,14 +14,14 @@ layout {
             pane split_direction="horizontal" {
                 pane {
                     name "db"
-                    command "docker-compose"
-                    args "run" "--service-ports" "db"
+                    command "fish"
+                    args "-c" "docker-compose run --service-ports db && npx prisma migrate dev"
                     start_suspended true
                 }
                 pane {
                     name "server"
-                    command "yarn"
-                    args "run" "start:dev"
+                    command "fish"
+                    args "-c" "nvm use --silent && yarn start:dev"
                     start_suspended true
                 }
                 pane {
