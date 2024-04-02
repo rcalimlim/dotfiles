@@ -28,4 +28,4 @@ abbr --add x xplr
 
 # zellij - terminal multiplexer
 abbr --add z zellij attach --create
-abbr --add ztab zellij action new-tab -l default
+abbr --add ztab zellij action new-tab
