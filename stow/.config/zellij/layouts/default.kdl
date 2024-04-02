@@ -1,21 +1,43 @@
 layout {
-    tab name="main" {
-        pane size=1 borderless=true {
-            plugin location="zellij:tab-bar"
-        }
-        pane split_direction="vertical" {
+    pane_template name="zjtab" {
+        borderless true
+        plugin location="zellij:tab-bar"
+    }
+
+    pane_template name="zjstatus" {
+        borderless true
+        plugin location="zellij:status-bar"
+    }
+
+    pane_template name="split-edit" split_direction="vertical" {
             pane {
                 name "edit" 
                 focus true
                 size "65%"
             }
             pane split_direction="horizontal" {
-                pane name="top"
-                pane name="bot"
+                children
             }
+    }
+
+    pane_template name="pane-default-dev" {
+        zjtab size=1
+        split-edit
+        zjstatus size=2
+    }
+
+    new_tab_template {
+        pane-default-dev {
+            pane
+            pane
         }
-        pane size=2 borderless=true {
-            plugin location="zellij:status-bar"
+    }
+
+    tab name="home" {
+        pane-default-dev {
+            pane name="health" command="ytop" {
+                args "-ap"
+            }
         }
     }
 }
