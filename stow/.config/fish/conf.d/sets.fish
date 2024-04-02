@@ -34,6 +34,10 @@ set -g hydro_color_pwd dbc4a1
 set -g hydro_color_git 504945
 set -g hydro_color_prompt d79921
 
+# set -g hydro_symbol_prompt_normal_mode "❱"
+# set -g hydro_symbol_prompt_insert_mode "‹"
+# set -g hydro_symbol_prompt_replace_mode hydro_symbol_prompt
+# set -g hydro_symbol_prompt_visual_mode hydro_symbol_prompt
 #------------------------------------------------------------------------------
 # Default settings - here to be copied by conf.d to not have to track
 #                    fish_variables file
