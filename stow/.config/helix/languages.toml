@@ -41,6 +41,12 @@ name = "lua"
 auto-format = true
 
 [[language]]
+name = "vue"
+auto-format = true
+file-types = ["vue"]
+formatter = { command = 'prettier', args = ["--parser", "vue"] }
+
+[[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true
@@ -83,7 +89,7 @@ includeInlayPropertyDeclarationTypeHints = true
 includeInlayVariableTypeHints = true
 
 [language-server.typescript-language-server.config.completions]
-completeFunctionCalls = true
+completeFunctionCalls = false # possibly disable to avoid double (())-ing
 
 [language-server.typescript-language-server.config.javascript.inlayHints]
 includeInlayEnumMemberValueHints = true
