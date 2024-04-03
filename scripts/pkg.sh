@@ -3,6 +3,7 @@
 # brew
 brew install --cask alacritty
 brew install \
+  btop \
   corepack \
   curl \
   eza \
@@ -14,9 +15,9 @@ brew install \
   sql-language-server \
   stow \
   vue-language-server \
-  yarn \
   xplr \
   visual-studio-code
+  # yarn \ # install via corepack
 
 # cargo
 cargo install \

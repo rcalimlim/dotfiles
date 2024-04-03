@@ -34,10 +34,19 @@ layout {
     }
 
     tab name="home" {
-        pane-default-dev {
-            pane name="health" command="ytop" {
-                args "-ap"
+        zjtab size=1
+        pane split_direction="vertical" {
+            pane split_direction="horizontal" {
+                pane command="neofetch"
+                pane focus=true
+            }
+            
+            pane size="80" stacked=true {
+                pane command="btop" expanded=true
+                pane
+                children
             }
         }
+        zjstatus size=2
     }
 }
