@@ -204,7 +204,7 @@ simplified_ui true
 // Options:
 //   - true (default)
 //   - false
-pane_frames false
+pane_frames true
 
 // Choose the theme that is specified in the themes section.
 // Default: default
