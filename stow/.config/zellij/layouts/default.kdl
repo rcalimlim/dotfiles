@@ -41,7 +41,7 @@ layout {
                 pane focus=true
             }
             
-            pane size="80" stacked=true {
+            pane size="82" stacked=true {
                 pane command="btop" expanded=true
                 pane
                 children
