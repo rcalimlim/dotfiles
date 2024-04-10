@@ -43,7 +43,7 @@ layout {
             
             pane size="82" stacked=true {
                 pane command="btop" expanded=true
-                pane
+                pane name="cmd"
                 children
             }
         }
