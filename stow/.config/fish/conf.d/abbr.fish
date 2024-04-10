@@ -23,9 +23,13 @@ abbr --add glog git log --graph --decorate --pretty=oneline --abbrev-commit
 abbr --add ghd git reset --hard
 abbr --add gu git reset HEAD~1
 
+# volta - node/yarn manager
+abbr --add volta-node 'volta install node@$(cat package.json | jq --raw-output .volta.node)'
+abbr --add volta-yarn 'volta install yarn@$(cat package.json | jq --raw-output .volta.yarn)'
+
 # xplr - file explorer
 abbr --add x xplr
 
 # zellij - terminal multiplexer
-abbr --add z zellij attach --create
+abbr --add z zellij -l default
 abbr --add ztab zellij action new-tab
