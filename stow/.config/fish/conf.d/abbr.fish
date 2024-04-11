@@ -34,5 +34,5 @@ abbr --add volta-yarn 'volta install yarn@$(cat package.json | jq --raw-output .
 abbr --add x xplr
 
 # zellij - terminal multiplexer
-abbr --add z zellij -l default
-abbr --add ztab zellij action new-tab
+abbr --add z zellij
+abbr --add ztab zellij action new-tab -c $PWD -l default
