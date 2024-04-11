@@ -11,6 +11,37 @@ layout {
         plugin location="zellij:status-bar"
     }
 
+    pane_template name="with-status-bars" {
+        zjtab size=1
+        children
+        zjstatus size=2
+    }
+
+
+    // basic dev editor setup
+    pane_template name="edit-stacked-nav" {
+        with-status-bars {
+            pane split_direction="vertical" {
+                pane {
+                    command "hx"
+                    args "."
+                    size "120"
+                    focus true
+                    start_suspended true
+                }
+                pane stacked=true {
+                    pane name="dir" {
+                        expanded true
+                        command "eza"
+                        args "--group-directories-first" "--all" "--git-ignore" "-T" "-L" "2"
+                    }
+                    pane name="cmd"
+                    children
+                }
+            }
+        }
+    }
+
     // resource dashboard
     tab name="dash" focus=true {
         zjtab size=1
@@ -27,9 +58,8 @@ layout {
         zjstatus size=2
     }
 
-    tab name="main" {
-        zjtab size=1
-        pane
-        zjstatus size=2
+    // default new tab template
+    new_tab_template {
+        edit-stacked-nav
     }
 }
