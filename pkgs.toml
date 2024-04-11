@@ -1,0 +1,27 @@
+# -----------------------------------------------------------------------------
+# List of packages to install
+# -----------------------------------------------------------------------------
+name = "Dotfiles package list"
+
+[brew]
+bat = { pkg = "bat", desc = "modern cat" }
+corepack = { pkg = "corepack", desc = "node binary managers" }
+curl = { pkg = "curl", desc = "ubiquitous http client" }
+eza = { pkg = "eza", desc = "modern ls replacement" }
+fish = { pkg = "fish", desc = "non-POSIX shell" }
+fzf = { pkg = "fzf", desc = "fast file fuzzy searcher" }
+helix = { pkg = "helix", desc = "nvim with working defaults" }
+node = { pkg = "node", desc = "javascript" }
+ripgrep = { pkg = "ripgrep", desc = "rust grep" }
+sql-language-server = { pkg = "sql-language-server", desc = "sql lsp" }
+stow = { pkg = "stow", desc = "gnu stow to manage dotfiles" }
+taplo = { pkg = "taplo", desc = "toml lsp" }
+visual-studio-code = { pkg = "visual-studio-code", desc = "backup editor" }
+xplr = { pkg = "xplr", desc = "tui file browser with visible shortcuts" }
+
+[cargo]
+bottom = { pkg = "bottom", desc = "tui resource dash and manager" }
+zellij = { pkg = "zellij", desc = "tui terminal multiplexer" }
+
+[go]
+wego = { pkg = "github.com/schachmat/wego@latest", desc = "tui weather" }

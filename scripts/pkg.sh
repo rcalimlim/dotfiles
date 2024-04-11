@@ -1,24 +1,40 @@
 #!/bin/bash
 
-# brew
-brew install --cask alacritty
-brew install \
-  btop \
-  corepack \
-  curl \
-  eza \
-  fish \
-  fzf \
-  helix \
-  node \
-  ripgrep \
-  sql-language-server \
-  stow \
-  vue-language-server \
-  xplr \
-  visual-studio-code
-  # yarn \ # install via corepack
+# -----------------------------------------------------------------------------
+# Utils
+# -----------------------------------------------------------------------------
+get_pkgs() {
+    local prefix="$1"
+    local cmd="taplo get -f pkgs.toml -o value '${prefix}.*.pkg'"
+    eval "$cmd"
+}
 
-# cargo
-cargo install \
-  zellij
+cat_list() {
+  local list="$1"
+  local cmd="tr '\n' ' ' <<< $list"
+  eval "$cmd"
+}
+
+# -----------------------------------------------------------------------------
+# Install brew packages
+# -----------------------------------------------------------------------------
+brew_pkg_list=$(get_pkgs "brew")
+brew_pkgs=$(cat_list "$brew_pkg_list")
+
+brew install $brew_pkgs
+
+# -----------------------------------------------------------------------------
+# Install cargo pkgs
+# -----------------------------------------------------------------------------
+cargo_pkg_list=$(get_pkgs "cargo")
+cargo_pkgs=$(cat_list "$cargo_pkg_list")
+
+cargo install --locked $cargo_pkgs
+
+# -----------------------------------------------------------------------------
+# Install go pkgs
+# -----------------------------------------------------------------------------
+go_pkg_list=$(get_pkgs "go")
+go_pkgs=$(cat_list "$go_pkg_list")
+
+go install $go_pkgs

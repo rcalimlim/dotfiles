@@ -18,6 +18,7 @@ brew install \
   taplo \
   tree-sitter \
   vscode-langservers-extracted \
+  vue-language-server \
   yaml-language-server \
   zls
 
