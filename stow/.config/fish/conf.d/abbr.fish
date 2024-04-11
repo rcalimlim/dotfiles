@@ -23,6 +23,9 @@ abbr --add glog git log --graph --decorate --pretty=oneline --abbrev-commit
 abbr --add ghd git reset --hard
 abbr --add gu git reset HEAD~1
 
+# golang - because I took go
+abbr --ad gol /opt/homebrew/bin/go
+
 # volta - node/yarn manager
 abbr --add volta-node 'volta install node@$(cat package.json | jq --raw-output .volta.node)'
 abbr --add volta-yarn 'volta install yarn@$(cat package.json | jq --raw-output .volta.yarn)'

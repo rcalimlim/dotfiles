@@ -1,52 +1,35 @@
 layout {
+    // builtin tab bar (top)
     pane_template name="zjtab" {
         borderless true
         plugin location="zellij:tab-bar"
     }
 
+    // builtin status bar (bottom)
     pane_template name="zjstatus" {
         borderless true
         plugin location="zellij:status-bar"
     }
 
-    pane_template name="split-edit" split_direction="vertical" {
-            pane {
-                name "edit" 
-                focus true
-                size "65%"
-            }
-            pane split_direction="horizontal" {
-                children
-            }
-    }
-
-    pane_template name="pane-default-dev" {
+    // resource dashboard
+    tab name="dash" focus=true {
         zjtab size=1
-        split-edit
+        pane split_direction="vertical" {
+            pane size="60%" split_direction="horizontal" {
+                pane size="70%" command="btm"
+                pane name="cmd" focus=true
+            }
+        
+            pane {
+                pane command="neofetch" size="23"
+            }
+        }
         zjstatus size=2
     }
 
-    new_tab_template {
-        pane-default-dev {
-            pane
-            pane
-        }
-    }
-
-    tab name="home" {
+    tab name="main" {
         zjtab size=1
-        pane split_direction="vertical" {
-            pane split_direction="horizontal" {
-                pane command="neofetch"
-                pane focus=true
-            }
-            
-            pane size="82" stacked=true {
-                pane command="btop" expanded=true
-                pane name="cmd"
-                children
-            }
-        }
+        pane
         zjstatus size=2
     }
 }

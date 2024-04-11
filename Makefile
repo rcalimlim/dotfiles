@@ -22,6 +22,10 @@ utils.submodules.update:
 # main
 install: install.pkg install.lsp install.fish install.post
 
+# install installation dependencies and other pre-install steps
+install.pre:
+	sh $(scripts_dir)/pre-install.sh
+
 # install main binaries
 install.pkg:
 	sh $(scripts_dir)/pkg.sh
