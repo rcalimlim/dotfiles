@@ -1,0 +1,43 @@
+#:schema ./schema.json
+# -----------------------------------------------------------------------------
+# Flags
+# -----------------------------------------------------------------------------
+[flags]
+  enable_gpu_memory = true
+  group_processes = true
+  left_legend = true
+  # process_command = true
+  temperature_type = "f"
+
+[processes]
+  columns = ["PID", "Name", "CPU%", "Mem%", "R/s", "W/s"]
+
+
+# -----------------------------------------------------------------------------
+# Layout
+# -----------------------------------------------------------------------------
+[[row]]
+  [[row.child]]
+    ratio = 2
+    [[row.child.child]]
+      ratio = 3
+      type = "cpu"
+    [[row.child.child]]
+      ratio = 4
+      type = "proc"
+  [[row.child]]
+    [[row.child.child]]
+      type = "mem"
+    [[row.child.child]]
+      type = "net"
+    [[row.child.child]]
+      type = "disk"
+      # [[row]]
+      #   ratio = 3
+      #   [[row.child]]
+      #     default = true
+      #     ratio = 4
+      #     type = "proc"
+      #   [[row.child]]
+      #     ratio = 3
+      #     type = "net"
