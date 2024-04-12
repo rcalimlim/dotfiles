@@ -33,7 +33,7 @@ layout {
                     pane name="dir" {
                         expanded true
                         command "eza"
-                        args "--group-directories-first" "--all" "--git-ignore" "-T" "-L" "2"
+                        args "--group-directories-first" "--all" "--git-ignore" "-T" "-L" "1"
                     }
                     pane name="cmd"
                     children
@@ -46,13 +46,17 @@ layout {
     tab name="dash" focus=true {
         zjtab size=1
         pane split_direction="vertical" {
-            pane size="60%" split_direction="horizontal" {
-                pane size="70%" command="btm"
-                pane name="cmd" focus=true
+            pane size="80" split_direction="horizontal" {
+                pane command="neofetch" size=22
+                pane {
+                    command "fish"
+                    args "-c" "curl -s 'wttr.in/40.67,-73.98?1nFAq'"
+                }
             }
         
-            pane {
-                pane command="neofetch" size="23"
+            pane split_direction="horizontal" {
+                pane size="60%" command="btm"
+                pane name="cmd" focus=true
             }
         }
         zjstatus size=2
