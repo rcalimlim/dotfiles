@@ -1,6 +1,9 @@
 #------------------------------------------------------------------------------
 # Abbreviations (aliases that expand)
 #------------------------------------------------------------------------------
+# bat - modern cat
+abbr --add cat bat --theme gruvbox-dark
+
 # clear term
 abbr --add c clear
 
