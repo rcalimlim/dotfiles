@@ -13,6 +13,9 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
+# wego (weather app) config location
+set -g WEGORC ~/.config/wego/.wegorc
+
 #------------------------------------------------------------------------------
 # Fisher - pkg man installs are managed via fish_variable lol
 #------------------------------------------------------------------------------

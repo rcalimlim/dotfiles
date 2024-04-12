@@ -1,2 +1,8 @@
+# these get rebuilt
 stow/.config/fish/fish_variables
+
+# work
 stow/.config/gcloud
+
+# contains an API key
+.wegorc 
