@@ -19,7 +19,7 @@ abbr --add gs git status
 abbr --add gc git commit
 abbr --add go git checkout
 abbr --add gb git branch
-abbr --add gd 'git diff --name-only --relative --diff-filter=d | xargs bat --diff'
+abbr --add gd git diff
 abbr --add gp git push
 abbr --add gr git reset head
 abbr --add glog git log --graph --decorate --pretty=oneline --abbrev-commit

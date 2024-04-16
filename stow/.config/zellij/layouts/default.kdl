@@ -22,6 +22,10 @@ layout {
     pane_template name="edit-stacked-nav" {
         with-status-bars {
             pane split_direction="vertical" {
+                pane size="25%"{
+                    borderless true
+                    plugin location="file:/$HOME/.config/zellij/plugins/zj-keys/target/wasm32-wasi/debug/zj-keys.wasm"
+                }
                 pane {
                     command "hx"
                     args "."

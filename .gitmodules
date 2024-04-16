@@ -4,3 +4,6 @@
 [submodule "stow/.config/xplr/plugins/fzf"]
 	path = stow/.config/xplr/plugins/fzf
 	url = https://github.com/sayanarijit/fzf.xplr
+[submodule "stow/.config/zellij/plugins/zj-keys"]
+	path = stow/.config/zellij/plugins/zj-keys
+	url = https://github.com/rcalimlim/zj-keys.git
