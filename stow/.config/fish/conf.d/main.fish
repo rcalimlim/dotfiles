@@ -23,6 +23,6 @@ if status is-interactive
 
     # zellij terminal multiplexer auto attach on start
     set ZELLIJ_AUTO_ATTACH true
-    eval (zellij setup --generate-auto-start fish | string collect)
+    # zellij attach --create
 end
 
