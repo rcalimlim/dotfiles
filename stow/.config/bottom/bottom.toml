@@ -12,7 +12,6 @@
 [processes]
   columns = ["PID", "Name", "CPU%", "Mem%", "R/s", "W/s"]
 
-
 # -----------------------------------------------------------------------------
 # Layout
 # -----------------------------------------------------------------------------
@@ -32,12 +31,3 @@
       type = "net"
     [[row.child.child]]
       type = "disk"
-      # [[row]]
-      #   ratio = 3
-      #   [[row.child]]
-      #     default = true
-      #     ratio = 4
-      #     type = "proc"
-      #   [[row.child]]
-      #     ratio = 3
-      #     type = "net"

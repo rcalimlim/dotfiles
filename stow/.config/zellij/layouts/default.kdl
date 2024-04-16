@@ -30,12 +30,9 @@ layout {
                     start_suspended true
                 }
                 pane stacked=true {
-                    pane name="dir" {
-                        expanded true
-                        command "eza"
-                        args "--group-directories-first" "--all" "--git-ignore" "-T" "-L" "1"
-                    }
-                    pane name="cmd"
+                    pane name="a" expanded=true
+                    pane name="b"
+                    pane name="c"
                     children
                 }
             }

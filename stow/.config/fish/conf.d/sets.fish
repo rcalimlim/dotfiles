@@ -16,6 +16,9 @@ end
 # wego (weather app) config location
 set -g WEGORC ~/.config/wego/.wegorc
 
+# man - use bat as the colorizing pager
+set -g MANPAGER "fish -c 'col -bx | bat -l man -p'"
+
 #------------------------------------------------------------------------------
 # Fisher - pkg man installs are managed via fish_variable lol
 #------------------------------------------------------------------------------
