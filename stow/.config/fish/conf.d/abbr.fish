@@ -6,6 +6,9 @@ abbr --add cat bat --theme gruvbox-dark
 
 # clear term
 abbr --add c clear
+abbr --add cl clear
+abbr --add cle clear
+abbr --add clea clear
 
 # eza - modern ls alternative
 abbr --add l eza
