@@ -21,6 +21,7 @@ xplr = { pkg = "xplr", desc = "tui file browser with visible shortcuts" }
 
 [cargo]
 bottom = { pkg = "bottom", desc = "tui resource dash and manager" }
+git-delta = { pkg = "git-delta", desc = "fancy diff pager" }
 zellij = { pkg = "zellij", desc = "tui terminal multiplexer" }
 
 [go]
