@@ -48,7 +48,7 @@ layout {
         zjtab size=1
         pane split_direction="vertical" {
             pane size="80" split_direction="horizontal" {
-                pane command="neofetch" size=22
+                pane command="neofetch" size=23
                 pane {
                     command "fish"
                     args "-c" "curl -s 'wttr.in/40.67,-73.98?1nFAq'"
