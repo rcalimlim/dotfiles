@@ -6,6 +6,7 @@ name = "Dotfiles package list"
 [brew]
 bat = { pkg = "bat", desc = "modern cat" }
 corepack = { pkg = "corepack", desc = "node binary managers" }
+cmake = { pkg = "cmake", desc = "cmake" }
 curl = { pkg = "curl", desc = "ubiquitous http client" }
 eza = { pkg = "eza", desc = "modern ls replacement" }
 fish = { pkg = "fish", desc = "non-POSIX shell" }
@@ -21,6 +22,7 @@ xplr = { pkg = "xplr", desc = "tui file browser with visible shortcuts" }
 
 [cargo]
 bottom = { pkg = "bottom", desc = "tui resource dash and manager" }
+deno = { pkg = "deno", desc = "rust node.js" }
 git-delta = { pkg = "git-delta", desc = "fancy diff pager" }
 zellij = { pkg = "zellij", desc = "tui terminal multiplexer" }
 
