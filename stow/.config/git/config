@@ -5,6 +5,7 @@
     diffFilter = delta --color-only --features=interactive
 
 [delta]
+    dark = true
     features = decorations
     hyperlinks = true
     line-numbers = true
