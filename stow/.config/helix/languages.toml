@@ -23,7 +23,9 @@ auto-format = true
 [[language]]
 name = "typescript"
 language-servers = [
-  "typescript-language-server", # disable to avoid duplicate diagnostics
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
   "eslint",
 ]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
@@ -100,15 +102,6 @@ hostInfo = "helix"
 
 [language-server.typescript-language-server.config.completions]
 completeFunctionCalls = false # possibly disable to avoid double (())-ing
-
-# [language-server.typescript-language-server.config.javascript.inlayHints]
-# includeInlayEnumMemberValueHints = true
-# includeInlayFunctionLikeReturnTypeHints = true
-# includeInlayFunctionParameterTypeHints = true
-# includeInlayParameterNameHints = "all"
-# includeInlayParameterNameHintsWhenArgumentMatchesName = true
-# includeInlayPropertyDeclarationTypeHints = true
-# includeInlayVariableTypeHints = true
 
 [language-server.typescript-language-server.config.typescript.inlayHints]
 includeInlayEnumMemberValueHints = true
