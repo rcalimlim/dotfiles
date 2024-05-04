@@ -1,52 +1,17 @@
 layout {
-    // builtin tab bar (top)
-    pane_template name="zjtab" {
-        borderless true
-        plugin location="zellij:tab-bar"
-    }
-
-    // builtin status bar (bottom)
-    pane_template name="zjstatus" {
-        borderless true
-        plugin location="zellij:status-bar"
-    }
-
-    pane_template name="with-status-bars" {
-        zjtab size=1
-        children
-        zjstatus size=2
-    }
-
-
-    // basic dev editor setup
-    pane_template name="edit-stacked-nav" {
-        with-status-bars {
-            pane split_direction="vertical" {
-                pane size="25%"{
-                    borderless true
-                    plugin location="file:/$HOME/.config/zellij/plugins/zj-keys/target/wasm32-wasi/debug/zj-keys.wasm"
-                }
-                pane {
-                    command "hx"
-                    args "."
-                    size "120"
-                    focus true
-                    start_suspended true
-                }
-                pane stacked=true {
-                    pane name="a" expanded=true
-                    pane name="b"
-                    pane name="c"
-                    children
-                }
-            }
-        }
+    pane_template name="ui" {
+       pane size=1 borderless=true {
+           plugin location="zellij:tab-bar"
+       }
+       children
+       pane size=2 borderless=true {
+           plugin location="zellij:status-bar"
+       }
     }
 
     // resource dashboard
-    tab name="dash" focus=true {
-        zjtab size=1
-        pane split_direction="vertical" {
+    tab_template name="dash" {
+        ui split_direction="vertical" {
             pane size="80" split_direction="horizontal" {
                 pane command="neofetch" size=23
                 pane {
@@ -60,11 +25,24 @@ layout {
                 pane name="cmd" focus=true
             }
         }
-        zjstatus size=2
     }
+
+    // start dash by default
+    dash name="dash"
 
     // default new tab template
     new_tab_template {
-        edit-stacked-nav
+        ui {
+            pane split_direction="vertical" {
+                pane size="70%" focus=true start_suspended=true {
+                    command "hx"; args ".";
+                }
+                pane stacked=true {
+                    pane name="a" expanded=true
+                    pane name="b"
+                    pane name="c"
+                }
+            }
+        }
     }
 }
