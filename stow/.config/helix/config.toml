@@ -12,6 +12,9 @@ insert = "bar"
 normal = "block"
 select = "block"
 
+[editor.gutters.line-numbers]
+min-width = 20
+
 [editor.indent-guides]
 render = true
 
