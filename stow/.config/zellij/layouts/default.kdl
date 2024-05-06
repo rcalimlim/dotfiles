@@ -13,7 +13,7 @@ layout {
     tab_template name="dash" {
         ui split_direction="vertical" {
             pane size="80" split_direction="horizontal" {
-                pane command="neofetch" size=23
+                pane command="macchina"
                 pane {
                     command "fish"
                     args "-c" "curl -s 'wttr.in/40.67,-73.98?1nFAq'"
