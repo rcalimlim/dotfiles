@@ -10,7 +10,7 @@ args = ["--login"]
 
 [font]
 normal = { family = "MesloLGS NF" }
-size = 21
+size = 19.5
 
 [window]
 decorations = "None"
