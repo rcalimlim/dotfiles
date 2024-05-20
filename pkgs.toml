@@ -5,6 +5,7 @@ name = "Dotfiles package list"
 
 [brew]
 bat = { pkg = "bat", desc = "modern cat" }
+bluesnooze = { pkg = "bluesnooze", desc = "turns off bluetooth when comp sleeps" }
 corepack = { pkg = "corepack", desc = "node binary managers" }
 cmake = { pkg = "cmake", desc = "cmake" }
 curl = { pkg = "curl", desc = "ubiquitous http client" }
