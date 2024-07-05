@@ -13,7 +13,7 @@ normal = "block"
 select = "block"
 
 [editor.gutters.line-numbers]
-min-width = 20
+min-width = 6
 
 [editor.indent-guides]
 render = true

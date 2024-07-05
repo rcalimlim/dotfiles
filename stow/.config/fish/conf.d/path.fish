@@ -17,3 +17,4 @@ fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/share/nvim/mason/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $(go env GOPATH)/bin
+fish_add_path /Library/Frameworks/Python.framework/Versions/3.11/bin/
