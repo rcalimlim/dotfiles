@@ -32,6 +32,23 @@ formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
+name = "python"
+language-servers = ["pylsp"]
+roots = [".git"]
+workspace-lsp-roots = ["src/updater"]
+auto-format = true
+
+[language-server.pylsp.config.pylsp.plugins]
+flake8 = { enabled = false }
+autopep8 = { enabled = false }
+mccabe = { enabled = false }
+pycodestyle = { enabled = false }
+pyflakes = { enabled = true }
+pylint = { enabled = true }
+yapf = { enabled = false }
+# ruff = { enabled = false, ignore = ["F401"], lineLength = 120 }
+
+[[language]]
 name = "toml"
 language-servers = ["taplo"]
 formatter = { command = "taplo", args = ["fmt", "-"] }
