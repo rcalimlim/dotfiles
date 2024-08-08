@@ -20,7 +20,7 @@ utils.submodules.update:
 # Installation
 #------------------------------------------------------------------------------
 # main
-install: install.pkg install.lsp install.fish install.post
+install: install.pre install.pkg install.lsp install.fish install.post
 
 # install installation dependencies and other pre-install steps
 install.pre:

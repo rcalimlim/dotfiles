@@ -12,7 +12,8 @@ curl = { pkg = "curl", desc = "ubiquitous http client" }
 eza = { pkg = "eza", desc = "modern ls replacement" }
 fish = { pkg = "fish", desc = "non-POSIX shell" }
 fzf = { pkg = "fzf", desc = "fast file fuzzy searcher" }
-helix = { pkg = "helix", desc = "nvim with working defaults" }
+go = { go = "go", desc = "golang" }
+hx = { pkg = "helix", desc = "nvim with working defaults" }
 node = { pkg = "node", desc = "javascript" }
 ripgrep = { pkg = "ripgrep", desc = "rust grep" }
 sql-language-server = { pkg = "sql-language-server", desc = "sql lsp" }
@@ -22,6 +23,7 @@ visual-studio-code = { pkg = "visual-studio-code", desc = "backup editor" }
 xplr = { pkg = "xplr", desc = "tui file browser with visible shortcuts" }
 
 [cargo]
+alacritty = { pkg = "alacritty", desc = "terminal emulator" }
 bottom = { pkg = "bottom", desc = "tui resource dash and manager" }
 deno = { pkg = "deno", desc = "rust node.js" }
 git-delta = { pkg = "git-delta", desc = "fancy diff pager" }

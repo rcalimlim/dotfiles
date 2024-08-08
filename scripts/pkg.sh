@@ -21,7 +21,9 @@ cat_list() {
 brew_pkg_list=$(get_pkgs "brew")
 brew_pkgs=$(cat_list "$brew_pkg_list")
 
-brew install $brew_pkgs
+for brew_pkg in "${brew_pkgs[@]}"; do
+    brew install $brew_pkg
+done
 
 # -----------------------------------------------------------------------------
 # Install cargo pkgs
@@ -29,7 +31,12 @@ brew install $brew_pkgs
 cargo_pkg_list=$(get_pkgs "cargo")
 cargo_pkgs=$(cat_list "$cargo_pkg_list")
 
-cargo install --locked $cargo_pkgs
+echo $cargo_pkgs
+
+# cargo install --locked $cargo_pkgs
+for cargo_pkg in "${cargo_pkgs[@]}"; do
+    cargo install --locked $cargo_pkg
+done
 
 # -----------------------------------------------------------------------------
 # Install go pkgs
@@ -37,4 +44,6 @@ cargo install --locked $cargo_pkgs
 go_pkg_list=$(get_pkgs "go")
 go_pkgs=$(cat_list "$go_pkg_list")
 
-go install $go_pkgs
+for go_pkg in "${go_pkgs[@]}"; do
+    go install $go_pkg
+done
