@@ -28,3 +28,6 @@
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
 
+# git identity management
+[includeIf "gitdir:~/dis/"]
+    path = ~/dis/.gitconfig_include
