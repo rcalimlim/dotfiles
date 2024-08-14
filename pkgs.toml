@@ -14,6 +14,7 @@ fish = { pkg = "fish", desc = "non-POSIX shell" }
 fzf = { pkg = "fzf", desc = "fast file fuzzy searcher" }
 go = { go = "go", desc = "golang" }
 hx = { pkg = "helix", desc = "nvim with working defaults" }
+n = { pkg = "n", desc = "node version manager (nvm alternative)" }
 node = { pkg = "node", desc = "javascript" }
 ripgrep = { pkg = "ripgrep", desc = "rust grep" }
 sql-language-server = { pkg = "sql-language-server", desc = "sql lsp" }
