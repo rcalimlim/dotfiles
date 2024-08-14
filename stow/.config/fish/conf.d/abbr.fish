@@ -32,10 +32,6 @@ abbr --add gu git reset HEAD~1
 # golang - because I took go
 abbr --ad gol /opt/homebrew/bin/go
 
-# volta - node/yarn manager
-abbr --add volta-node 'volta install node@$(cat package.json | jq --raw-output .volta.node)'
-abbr --add volta-yarn 'volta install yarn@$(cat package.json | jq --raw-output .volta.yarn)'
-
 # xplr - file explorer
 abbr --add x xplr
 

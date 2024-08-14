@@ -7,9 +7,9 @@ set -g fish_key_bindings fish_vi_key_bindings # vi bindings
 set -g fish_term24bit 1 # force true color
 
 # pnpm start
-set -gx PNPM_HOME "/Users/ross/Library/pnpm"
+set -gx PNPM_HOME /Users/ross/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
@@ -18,6 +18,11 @@ set -g WEGORC ~/.config/wego/.wegorc
 
 # man - use bat as the colorizing pager
 set -g MANPAGER "fish -c 'col -bx | bat -l man -p'"
+
+#------------------------------------------------------------------------------
+# n - node version mngr
+#------------------------------------------------------------------------------
+set -gx N_PREFIX $HOME/.n
 
 #------------------------------------------------------------------------------
 # Fisher - pkg man installs are managed via fish_variable lol
