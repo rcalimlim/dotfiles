@@ -19,3 +19,4 @@ fish_add_path $HOME/.local/bin
 fish_add_path $(go env GOPATH)/bin
 fish_add_path /Library/Frameworks/Python.framework/Versions/3.11/bin/
 fish_add_path $N_PREFIX/bin # n - node ver man, assigned in sets.fish
+fish_add_path $PYENV_ROOT/bin

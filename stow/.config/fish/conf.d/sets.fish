@@ -19,6 +19,10 @@ set -g WEGORC ~/.config/wego/.wegorc
 # man - use bat as the colorizing pager
 set -g MANPAGER "fish -c 'col -bx | bat -l man -p'"
 
+# python
+set -gx PYENV_ROOT $HOME/.pyenv
+status is-interactive; and pyenv init - | source
+
 #------------------------------------------------------------------------------
 # n - node version mngr
 #------------------------------------------------------------------------------
