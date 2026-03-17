@@ -30,5 +30,5 @@ abbr --add glog git log --graph --decorate --pretty=oneline --abbrev-commit
 abbr --add gol /opt/homebrew/bin/go
 
 # zellij
-abbr --add z zellij attach --create
-abbr --add ztab zellij action new-tab -c \$PWD -l default
+abbr --add z zellij
+# abbr --add ztab zellij action new-tab -c \$PWD -l default

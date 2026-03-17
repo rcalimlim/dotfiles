@@ -6,8 +6,8 @@ format = "[$branch(:$remote_branch)]($style) "
 symbol = ""
 
 [git_status]
-format = "($all_status$ahead_behind) "
-stashed = "$${count} "
+format = "($all_status$ahead_behind)"
+stashed = "\\$${count} "
 conflicted = "=${count} "
 untracked = "?${count} "
 modified = "!${count} "
