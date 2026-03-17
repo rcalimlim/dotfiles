@@ -5,12 +5,13 @@
 - shell: `fish`
 - multiplexer: `zellij`
 - file browser: `xplr`
-- ls: `eza`
 - editor: `helix`
 
-## installation
+## usage
 
-### manual
-* clone this repo into where you want to store it: `git clone https://github.com/rcalimlim/dotfiles`
-* cd into the cloned repo: `cd [SOME PATH]/dotfiles`
-* `make install` will run a series of make steps to install and configure pkgs
+```sh
+git clone https://github.com/rcalimlim/dotfiles
+cd dotfiles
+make stow    # deploy configs via stow
+make unstow  # remove symlinks
+```
