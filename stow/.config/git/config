@@ -31,3 +31,9 @@
 # git identity management
 [includeIf "gitdir:~/dis/"]
     path = ~/dis/.gitconfig_include
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
