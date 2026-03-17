@@ -31,3 +31,8 @@
 # git identity management
 [includeIf "gitdir:~/dis/"]
     path = ~/dis/.gitconfig_include
+[push]
+	autoSetupRemote = true
+[user]
+	email = ross.calimlim.-nd@disney.com
+	name = Ross F. Calimlim

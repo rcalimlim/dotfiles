@@ -27,11 +27,8 @@ layout {
         }
     }
 
-    // start dash by default
-    dash name="dash"
-
-    // default new tab template
-    new_tab_template {
+    // main dev pane
+    tab_template name="dev" {
         ui {
             pane split_direction="vertical" {
                 pane size="70%" focus=true start_suspended=true {
@@ -45,4 +42,20 @@ layout {
             }
         }
     }
+
+    // claude tab
+    tab_template name="claude" {
+        ui {
+            pane focus=true {
+                command "claude"
+            }
+        }
+    }
+
+    // start dash by default
+    dev name="dev"
+    claude name="claude"
+
+    // default new tab template
+    // new_tab_template {}
 }

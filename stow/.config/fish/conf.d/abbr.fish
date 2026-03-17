@@ -1,6 +1,9 @@
 #------------------------------------------------------------------------------
 # Abbreviations (aliases that expand)
 #------------------------------------------------------------------------------
+# start alacritty
+abbr --add ala alacritty
+
 # bat - modern cat
 abbr --add cat bat --theme gruvbox-dark
 

@@ -5,4 +5,7 @@ stow/.config/fish/fish_variables
 stow/.config/gcloud
 
 # contains an API key
-.wegorc 
+.wegorc
+
+# credentials
+stow/.config/universal-doc-mcp/

@@ -23,13 +23,28 @@ auto-format = true
 [[language]]
 name = "typescript"
 language-servers = [
-  { name = "typescript-language-server", except-features = [
-    "format",
-  ] },
-  "eslint",
+  "typescript-language-server",
+  "vscode-eslint-language-server",
 ]
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
+formatter = { command = "npx", args = ["prettier", "--parser", "typescript"] }
 auto-format = true
+
+
+# [language-server.vscode-eslint-language-server.config]
+# format = true
+# nodePath = ""
+# onIgnoredFiles = "off"
+# quiet = false
+# rulesCustomizations = []
+# run = "onType"
+# useESLintClass = false
+# validate = "on"
+# codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
+# codeActionOnSave = { mode = "all" }
+# experimental = {}
+# problems = { shortenToSingleLine = false }
+# workingDirectory = { mode = "auto" }
+
 
 [[language]]
 name = "python"
@@ -58,29 +73,7 @@ auto-format = true
 name = "vue"
 auto-format = true
 file-types = ["vue"]
-formatter = { command = 'prettier', args = ["--parser", "vue"] }
-
-#------------------------------------------------------------------------------
-# lsp config: eslint
-#------------------------------------------------------------------------------
-[language-server.eslint]
-command = "vscode-eslint-language-server"
-args = ["--stdio"]
-
-[language-server.eslint.config]
-format = true
-nodePath = ""
-onIgnoredFiles = "off"
-quiet = false
-rulesCustomizations = []
-run = "onType"
-useESLintClass = false
-validate = "on"
-codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
-codeActionOnSave = { mode = "all" }
-experimental = {}
-problems = { shortenToSingleLine = false }
-workingDirectory = { mode = "auto" }
+formatter = { command = "prettier", args = ["--parser", "vue"] }
 
 #------------------------------------------------------------------------------
 # lsp config: graphql

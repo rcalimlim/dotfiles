@@ -20,7 +20,10 @@ ripgrep = { pkg = "ripgrep", desc = "rust grep" }
 sql-language-server = { pkg = "sql-language-server", desc = "sql lsp" }
 stow = { pkg = "stow", desc = "gnu stow to manage dotfiles" }
 taplo = { pkg = "taplo", desc = "toml lsp" }
+typescript = { pkg = "typescript", desc = "typescript" }
+typescript-language-server = { pkg = "typescript-language-server", desc = "ts lsp" }
 visual-studio-code = { pkg = "visual-studio-code", desc = "backup editor" }
+vscode-langservers-extracted = { pkg = "vscode-langservers-extracted", desc = "eslint lsp" }
 xplr = { pkg = "xplr", desc = "tui file browser with visible shortcuts" }
 
 [cargo]

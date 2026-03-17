@@ -1,0 +1,293 @@
+# stenn — streaming subscription API service contracts
+#
+# Each [services.<name>] block defines a service and its endpoints.
+# Manage with: stenn config <command>
+
+[services.token-tool]
+aliases = ["tkn"]
+base_url = "https://token-tool-qa.us-east-1.bamgrid.net"
+verify_ssl = false
+header_style = "none"
+description = "Auth token generation via token-tool-dev"
+
+[services.token-tool.endpoints.get]
+path = "/private/token"
+method = "POST"
+description = "Generate an internal auth token"
+content_type = "application/json; charset=UTF-8"
+
+[services.token-tool.endpoints.get.params]
+partner = { type = "str", default = "disney", help = "Partner/brand", body_key = "partner" }
+token_type = { type = "str", default = "AccountAccessToken", help = "Token type", body_key = "accessTokenType" }
+
+[services.token-tool.endpoints.issue-op-token]
+path = "/private/issue-op-token"
+method = "POST"
+description = "Issue identity-scoped V5/OP token (requires email + password of a test account)"
+
+[services.token-tool.endpoints.issue-op-token.params]
+email = { type = "str", required = true, positional = true, help = "Account email", body_key = "email" }
+password = { type = "str", required = true, positional = true, help = "Account password", body_key = "password" }
+partner = { type = "str", default = "disney", help = "Partner/brand", body_key = "partner" }
+
+[services.cards]
+aliases = ["hts"]
+base_url = "https://waf-elb-default-qa-bamtech.us-east-2.bamgrid.com"
+verify_ssl = false
+header_style = "none"
+description = "CARDS/HTS payment tokenization"
+
+[services.cards.endpoints.apple-pay]
+path = "/applePay/sps"
+method = "POST"
+description = "Create an Apple Pay payment method (sandbox token)"
+auto_token = true
+
+[services.cards.endpoints.apple-pay.params]
+partner = { type = "str", default = "disney", help = "Partner for auto token fetch" }
+transaction_id = { type = "str", default = "32424234", help = "Transaction identifier", body_key = "transactionIdentifier" }
+client_id = { type = "str", default = "12345", help = "Client ID", body_key = "clientId" }
+namespace_id = { type = "int", default = 100, help = "Namespace ID", body_key = "namespaceId" }
+
+[services.account]
+aliases = ["acct", "am"]
+base_url = "https://account-maker-api-techopssvcs-qa.us-east-1.bamgrid.net"
+verify_ssl = false
+header_style = "none"
+description = "Account Maker — account creation and lookup"
+
+[services.account.endpoints.lookup]
+path = "/api/v1/account-details"
+method = "GET"
+description = "Look up an account by email, account ID, or identity ID"
+
+[services.account.endpoints.lookup.params]
+user_ref = { type = "str", required = true, positional = true, help = "Email, account ID, or identity ID", query_key = "user_ref" }
+
+[services.account.endpoints.subscriptions]
+path = "/api/v1/subscriptions/v3"
+method = "GET"
+description = "Get subscriptions for an account from SubV3"
+
+[services.account.endpoints.subscriptions.params]
+identity_id = { type = "str", default = "", help = "Identity ID", query_key = "identityId" }
+account_id = { type = "str", default = "", help = "Account ID", query_key = "accountID" }
+include_churned = { type = "bool", default = false, help = "Include churned subscriptions", query_key = "isChurnedState" }
+
+[services.account.endpoints.offers]
+path = "/api/v2/offers/{platform}"
+method = "GET"
+description = "List available subscription offers"
+
+[services.account.endpoints.offers.params]
+partner = { type = "str", default = "disney", help = "Partner/brand", header_key = "X-BAMTech-Partner" }
+platform = { type = "str", default = "WEB", help = "Platform", path_key = "platform" }
+country = { type = "str", default = "", help = "Country code", query_key = "country" }
+
+[services.account.endpoints.payment-methods]
+path = "/api/v2/payment_methods"
+method = "GET"
+description = "List available payment methods for a partner/country"
+
+[services.account.endpoints.payment-methods.params]
+partner = { type = "str", default = "disney", help = "Partner", query_key = "partner" }
+country = { type = "str", default = "US", help = "Country code", query_key = "country" }
+
+[services.account.endpoints.wallet]
+path = "/api/v2/wallet/payment-methods/{identity_id}"
+method = "GET"
+description = "Get payment methods in an identity's wallet"
+auto_token = true
+
+[services.account.endpoints.wallet.params]
+identity_id = { type = "str", required = true, positional = true, help = "Identity ID", path_key = "identity_id" }
+
+[services.account.endpoints.create]
+path = "/api/v1/account"
+method = "POST"
+description = "Create a new test account"
+
+[services.account.endpoints.create.params]
+partner = { type = "str", default = "disney", help = "Partner/brand", header_key = "X-BAMTech-Partner" }
+identification = { type = "str", default = "service-account", help = "Auth token or 'service-account' for internal use", header_key = "X-BAMTech-Identification" }
+body = { type = "json", required = true, help = "Full JSON request body", raw_body = true }
+
+[services.glo]
+aliases = []
+base_url = "http://glo.staging.hulu.com"
+verify_ssl = true
+header_style = "glo"
+description = "Growth Life Orchestrator — subscription orchestration"
+
+[services.glo.endpoints.signup-preview]
+path = "/v1/signup/preview"
+method = "POST"
+description = "Get a signup preview"
+
+[services.glo.endpoints.signup-preview.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+campaign_type = { type = "str", default = "STANDARD_CAMPAIGN", help = "Campaign type", header_key = "campaign-type" }
+
+[services.glo.endpoints.signup]
+path = "/v2/signup"
+method = "POST"
+description = "Execute a signup (creates real subscription in QA)"
+
+[services.glo.endpoints.signup.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+offer_id = { type = "str", required = true, help = "Offer ID" }
+campaign_id = { type = "str", required = true, help = "Campaign ID" }
+campaign_type = { type = "str", default = "STANDARD_CAMPAIGN", help = "Campaign type", header_key = "campaign-type" }
+payment_method_id = { type = "str", default = "", help = "Payment method ID" }
+payment_method_type = { type = "str", default = "", help = "APM type (e.g. applepay)" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+
+[services.glo.endpoints.offers]
+path = "/v2/offers"
+method = "POST"
+description = "Get available offers"
+
+[services.glo.endpoints.offers.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+campaign_type = { type = "str", default = "STANDARD_CAMPAIGN", help = "Campaign type", header_key = "campaign-type" }
+purchase_flow = { type = "str", default = "SIGNUP_FLOW", help = "Purchase flow (SIGNUP_FLOW, SWITCH_FLOW, etc.)", header_key = "purchase-flow" }
+
+[services.glo.endpoints.agreements]
+path = "/v1/agreements"
+method = "GET"
+description = "Get agreement/subscription details"
+
+[services.glo.endpoints.agreements.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+include_offer = { type = "bool", default = true, help = "Include offer details", query_key = "includeOfferInfo" }
+include_payment = { type = "bool", default = true, help = "Include payment details", query_key = "includePaymentInfo" }
+include_partner = { type = "bool", default = true, help = "Include partner details", query_key = "includePartnerInfo" }
+
+[services.glo.endpoints.switch-preview]
+path = "/v3/switch/preview"
+method = "PUT"
+description = "Get a plan switch preview"
+
+[services.glo.endpoints.switch-preview.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+campaign_type = { type = "str", default = "STANDARD_CAMPAIGN", help = "Campaign type", header_key = "campaign-type" }
+
+[services.glo.endpoints.config]
+path = "/v1/config-data"
+method = "GET"
+description = "Get GLO config data"
+
+[services.glo.endpoints.config.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+user_flow = { type = "str", default = "", help = "User flow context", query_key = "userFlow" }
+
+[services.glo.endpoints.payment-retry-status]
+path = "/v1/agreements/{agreement_id}/retry-status"
+method = "GET"
+description = "Get the payment retry status for an agreement/subscription"
+
+[services.glo.endpoints.payment-retry-status.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+agreement_id = { type = "str", required = true, help = "Agreement ID", path_key = "agreement_id" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+
+[services.glo.endpoints.cancel]
+path = "/v2/agreements/cancel"
+method = "PUT"
+description = "Cancel an agreement/subscription"
+
+[services.glo.endpoints.cancel.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+agreement_id = { type = "str", default = "", help = "Agreement ID to cancel" }
+reason = { type = "str", default = "CUSTOMER_CANCEL", help = "Cancellation reason" }
+
+[services.flex]
+aliases = []
+base_url = "http://growth-life-client-api-qa.us-east-1.bamgrid.net"
+verify_ssl = true
+header_style = "flex"
+description = "Flex (growth-life-client-api) — screens and execution"
+
+[services.flex.endpoints.signup-preview]
+path = "/screens/v2/subscription/preview"
+method = "POST"
+description = "Get the signup preview screen"
+
+[services.flex.endpoints.signup-preview.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+
+[services.flex.endpoints.signup]
+path = "/execution/v2/subscription/signup"
+method = "PUT"
+description = "Execute a signup (creates real subscription in QA)"
+
+[services.flex.endpoints.signup.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+offer_id = { type = "str", required = true, help = "Offer ID" }
+campaign_id = { type = "str", required = true, help = "Campaign ID" }
+payment_method_id = { type = "str", default = "", help = "Payment method ID" }
+payment_method_type = { type = "str", default = "", help = "APM type" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+redemption_code = { type = "str", default = "", help = "Promo/redemption code" }
+zipcode = { type = "str", default = "", help = "Zipcode for tax" }
+
+[services.flex.endpoints.switch-preview]
+path = "/screens/v2/account/plan-switch"
+method = "GET"
+description = "Get the plan switch preview screen"
+
+[services.flex.endpoints.switch-preview.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+
+[services.flex.endpoints.account-details]
+path = "/screens/v2/account/account-details"
+method = "GET"
+description = "Get the account details screen"
+
+[services.flex.endpoints.account-details.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+
+[services.flex.endpoints.change-payment]
+path = "/screens/v1/account/change-payment"
+method = "GET"
+description = "Get the change payment screen"
+
+[services.flex.endpoints.change-payment.params]
+account_id = { type = "str", required = true, help = "Account ID" }
+identity_id = { type = "str", required = true, help = "Identity ID" }
+partner = { type = "str", default = "disney", help = "Partner" }
+country = { type = "str", default = "US", help = "Country code" }
+
