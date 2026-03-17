@@ -1,16 +1,14 @@
 #------------------------------------------------------------------------------
-# Abbreviations (aliases that expand)
+# Abbreviations
 #------------------------------------------------------------------------------
 # bat - modern cat
 abbr --add cat bat --theme gruvbox-dark
 
-# clear term
+# clear
 abbr --add c clear
 abbr --add cl clear
-abbr --add cle clear
-abbr --add clea clear
 
-# eza - modern ls alternative
+# eza - modern ls
 abbr --add l eza
 abbr --add ll eza --group --group-directories-first --all --icons --width 40
 abbr --add lla eza --group --header --group-directories-first --long --all --binary --icons
@@ -24,17 +22,13 @@ abbr --add go git checkout
 abbr --add gb git branch
 abbr --add gd git diff
 abbr --add gp git push
-abbr --add gr git reset head
-abbr --add glog git log --graph --decorate --pretty=oneline --abbrev-commit
-abbr --add ghd git reset --hard
+abbr --add gpl git pull
+abbr --add gr git reset HEAD
 abbr --add gu git reset HEAD~1
+abbr --add ghd git reset --hard
+abbr --add glog git log --graph --decorate --pretty=oneline --abbrev-commit
+abbr --add gol /opt/homebrew/bin/go
 
-# golang - because I took go
-abbr --ad gol /opt/homebrew/bin/go
-
-# xplr - file explorer
-abbr --add x xplr
-
-# zellij - terminal multiplexer
+# zellij
 abbr --add z zellij attach --create
-abbr --add ztab zellij action new-tab -c $PWD -l default
+abbr --add ztab zellij action new-tab -c \$PWD -l default

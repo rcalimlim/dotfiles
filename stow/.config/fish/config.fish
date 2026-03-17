@@ -1,3 +1,2 @@
-# Intentionally left blank
-# See stow/.config/fish/conf.d to edit logically
-# separated config modules
+# See conf.d/ for all configuration
+starship init fish | source
