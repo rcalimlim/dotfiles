@@ -1,11 +1,14 @@
-theme = "gruvbox_dark_soft"
+theme = "gruvbox_hash"
 
 [editor]
-auto-completion = true
-bufferline = "always"
 line-number = "relative"
-mouse = true
+bufferline = "always"
 rulers = [100, 120]
+mouse = true
+auto-save = { after-delay.enable = true }
+text-width = 100
+scrolloff = 5
+shell = ["fish", "-c"]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -20,6 +23,12 @@ render = true
 
 [editor.file-picker]
 hidden = false
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.search]
+smart-case = true
 
 [keys.normal.space]
 c = "toggle_comments"
