@@ -2,6 +2,7 @@
 stow/.config/fish/fish_variables
 
 # work
+stow/.config/cogsworth/
 stow/.config/gcloud
 
 # contains credentials

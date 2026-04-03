@@ -7,7 +7,6 @@
 - multiplexer: `zellij`
 - editor: `helix`
 - version control: `git`, `gh`
-- scheduling: `cogsworth`
 
 ## usage
 
