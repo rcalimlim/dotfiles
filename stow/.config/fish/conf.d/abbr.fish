@@ -1,9 +1,6 @@
 #------------------------------------------------------------------------------
 # Abbreviations
 #------------------------------------------------------------------------------
-# bat - modern cat
-abbr --add cat bat --theme gruvbox-dark
-
 # clear
 abbr --add c clear
 abbr --add cl clear
