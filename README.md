@@ -6,7 +6,6 @@
 - prompt: `starship`
 - multiplexer: `zellij`
 - editor: `helix`
-- syntax highlighting: `bat`
 - version control: `git`, `gh`
 - scheduling: `cogsworth`
 
