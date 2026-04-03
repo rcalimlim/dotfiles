@@ -63,7 +63,7 @@
 "ui.menu.selected" = { fg = "bg2", bg = "blue1", modifiers = ["bold"] }
 "ui.virtual.whitespace" = "bg2"
 "ui.virtual.ruler" = { bg = "bg1" }
-"ui.virtual.inlay-hint" = { fg = "gray1" }
+"ui.virtual.inlay-hint" = { fg = "bg4", modifiers = ["dim", "italic"] }
 "ui.virtual.wrap" = { fg = "bg2" }
 
 "diagnostic.warning" = { underline = { color = "orange1", style = "curl" } }
