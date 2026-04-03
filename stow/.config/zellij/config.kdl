@@ -1,1 +1,3 @@
 theme "gruvbox-dark"
+copy_command "pbcopy"
+copy_on_select true

@@ -1,6 +1,8 @@
 # Starship prompt config
 # Docs: https://starship.rs/config/
 
+add_newline = false
+
 [git_branch]
 format = "[$branch(:$remote_branch)]($style) "
 symbol = ""
