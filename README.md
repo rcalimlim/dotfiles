@@ -1,10 +1,9 @@
 # dotfiles
 
 ## tools
-- terminal: `alacritty`
+- terminal: `ghostty`
 - shell: `fish`
 - multiplexer: `zellij`
-- file browser: `xplr`
 - editor: `helix`
 
 ## usage
