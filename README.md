@@ -37,6 +37,20 @@ This runs `stow --restow -t $HOME -d stow .`, which creates symlinks in
 `~/.config/` pointing back to the files under `stow/.config/`. For example,
 `stow/.config/ghostty/config` becomes `~/.config/ghostty/config`.
 
+### windows terminal (WSL)
+
+Install [MesloLGL Nerd Font Mono](https://www.nerdfonts.com/font-downloads) on Windows, then copy the settings:
+
+```sh
+make stow-windows
+```
+
+This copies `windows-terminal/settings.json` (Gruvbox Material Dark theme, MesloLGL Nerd Font Mono) into the Windows Terminal AppData path. Re-run after any changes to that file. If your Windows username isn't `Ross`, pass it explicitly:
+
+```sh
+make stow-windows WIN_USER=YourName
+```
+
 ### uninstall
 
 Remove all symlinks created by stow:
