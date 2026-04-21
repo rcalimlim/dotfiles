@@ -28,14 +28,18 @@
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
 
+[user]
+    name = Ross F. Calimlim
+    email = ross.calimlim@gmail.com
+
 # git identity management
 [includeIf "gitdir:~/dis/"]
     path = ~/dis/.gitconfig_include
 [credential "https://github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper =
+	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper =
+	helper = !gh auth git-credential
 [init]
 	defaultBranch = main

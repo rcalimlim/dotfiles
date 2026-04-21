@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ -f /usr/bin/pbpaste ]; then
+  /usr/bin/pbpaste "$@"
+elif command -v xclip >/dev/null 2>&1; then
+  xclip -selection clipboard -o "$@"
+fi

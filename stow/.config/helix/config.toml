@@ -1,7 +1,6 @@
 theme = "gruvbox_hash"
 
 [editor]
-clipboard-provider = "pasteboard"
 line-number = "relative"
 bufferline = "always"
 rulers = [100, 120]
@@ -10,6 +9,10 @@ auto-save = { after-delay.enable = true }
 text-width = 100
 scrolloff = 5
 shell = ["fish", "-c"]
+
+[editor.clipboard-provider]
+yank-command = "clip-copy"
+paste-command = "clip-paste"
 
 [editor.cursor-shape]
 insert = "bar"
